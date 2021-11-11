@@ -46,6 +46,7 @@ namespace GUI.fLogin
             // fLogin_Login_btn_close
             // 
             this.fLogin_Login_btn_close.CheckedState.Parent = this.fLogin_Login_btn_close;
+            this.fLogin_Login_btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fLogin_Login_btn_close.CustomImages.Parent = this.fLogin_Login_btn_close;
             this.fLogin_Login_btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.fLogin_Login_btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -225,6 +226,7 @@ namespace GUI.fLogin
             // 
             // Login
             // 
+            this.AcceptButton = this.fLogin_Login_btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));

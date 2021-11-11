@@ -28,5 +28,19 @@ namespace DAO
 
             return result.Rows.Count > 0;
         }
+
+        public bool CheckMSSV(string MSSV)
+        {
+            string query = "USP_CheckMSSV @MSSV ";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { MSSV });
+
+            return result.Rows.Count > 0;
+        }
+        public void InsertAcc(string MSSV, string username, string password)
+        {
+            string query = "USP_InsertAcc @USERNAME , @PASSWORD , @MSSV ";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] {MSSV, username, password });
+        }
     }
 }

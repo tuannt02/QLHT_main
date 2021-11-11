@@ -39,15 +39,19 @@ namespace GUI.fLogin
             lgnSU.ShowDialog();
         }
 
+
+        // Nút Log in
         private void fLogin_Login_btn_login_Click(object sender, EventArgs e)
         {
-            if (Login_BUS.Instance.Login_Check(fLogin_Login_txb_username.Text, fLogin_Login_txb_password.Text))
+            string username = fLogin_Login_txb_username.Text;
+            string password = fLogin_Login_txb_password.Text;
+            if (Login_BUS.Instance.Login_Check(username, password))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ username và password", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                if (Login_BUS.Instance.Login(fLogin_Login_txb_username.Text, fLogin_Login_txb_password.Text))
+                if (Login_BUS.Instance.Login(username, password))
                 {
                     fDashboard.DBoard DBoard = new fDashboard.DBoard();
                     Instance.Hide();

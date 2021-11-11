@@ -127,6 +127,7 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_btn_creAcc.Size = new System.Drawing.Size(396, 56);
             this.fLogin_LoginSignUp_btn_creAcc.TabIndex = 3;
             this.fLogin_LoginSignUp_btn_creAcc.Text = "Create Account";
+            this.fLogin_LoginSignUp_btn_creAcc.Click += new System.EventHandler(this.fLogin_LoginSignUp_btn_creAcc_Click);
             // 
             // fLogin_LoginSignUp_lab_signup
             // 
@@ -299,6 +300,7 @@ namespace GUI.fLogin
             // 
             // LoginSignUp
             // 
+            this.AcceptButton = this.fLogin_LoginSignUp_btn_creAcc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));

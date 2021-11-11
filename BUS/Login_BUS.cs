@@ -23,9 +23,22 @@ namespace BUS
                 return true;
             return false;
         }
+        public bool LoginSignUp_Check(string MSSV, string username, string password)
+        {
+            if (MSSV == "" || username == "" || password == "") return true;
+            return false;
+        }
+        public bool LoginSignUp_CheckMSSVExitst(string MSSV)
+        {
+            return ACCOUNT_DAO.Instance.CheckMSSV(MSSV);
+        }
         public bool Login(string username, string password)
         {
             return ACCOUNT_DAO.Instance.Login(username, password);
+        }
+        public void InsertAcc(string MSSV, string username, string password)
+        {
+            ACCOUNT_DAO.Instance.InsertAcc(MSSV, username, password);
         }
     }
 }
