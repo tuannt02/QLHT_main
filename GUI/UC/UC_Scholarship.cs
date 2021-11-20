@@ -22,6 +22,7 @@ namespace GUI.UC
             //UC_AboutUs_btn_CheckAdmin.Hide();
             
         }
+        #region Methods
         void LoadDataFull()
         {
             UC_AboutUs_dtgv_Show.Rows.Clear();
@@ -43,7 +44,7 @@ namespace GUI.UC
                     item.DVTT,
                 }) ;
             }
-        }
+        } 
         void LoadDataActive()
         {
             UC_AboutUs_dtgv_Show.Rows.Clear();
@@ -110,7 +111,9 @@ namespace GUI.UC
                 });
             }
         }
+        #endregion
 
+        #region Events
         private void UC_AboutUs_btn_Search_Click(object sender, EventArgs e)
         {
             LoadDataFilter();
@@ -135,5 +138,6 @@ namespace GUI.UC
         {
 
         }
+        #endregion
     }
 }

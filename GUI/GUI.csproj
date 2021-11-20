@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\fStudy_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\fStudy_Edit.Designer.cs">
+      <DependentUpon>fStudy_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_AboutUs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +127,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\fStudy_Edit.resx">
+      <DependentUpon>fStudy_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_AboutUs.resx">
       <DependentUpon>UC_AboutUs.cs</DependentUpon>
     </EmbeddedResource>
