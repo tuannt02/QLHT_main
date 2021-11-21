@@ -50,6 +50,7 @@ namespace GUI.UC
             this.btn_Delete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_back = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txt_info = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -62,6 +63,7 @@ namespace GUI.UC
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_info);
             this.panel1.Controls.Add(this.btn_back);
             this.panel1.Controls.Add(this.btn_Add);
             this.panel1.Controls.Add(this.btn_Delete);
@@ -336,12 +338,13 @@ namespace GUI.UC
             this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
             this.btn_Edit.HoverState.Parent = this.btn_Edit;
-            this.btn_Edit.Location = new System.Drawing.Point(305, 16);
+            this.btn_Edit.Location = new System.Drawing.Point(305, 6);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
             this.btn_Edit.Size = new System.Drawing.Size(123, 45);
             this.btn_Edit.TabIndex = 7;
             this.btn_Edit.Text = "Sửa";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Delete
             // 
@@ -362,12 +365,13 @@ namespace GUI.UC
             this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
             this.btn_Delete.HoverState.Parent = this.btn_Delete;
-            this.btn_Delete.Location = new System.Drawing.Point(161, 16);
+            this.btn_Delete.Location = new System.Drawing.Point(161, 6);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.ShadowDecoration.Parent = this.btn_Delete;
             this.btn_Delete.Size = new System.Drawing.Size(123, 45);
             this.btn_Delete.TabIndex = 8;
             this.btn_Delete.Text = "Xóa";
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
@@ -388,12 +392,13 @@ namespace GUI.UC
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.HoverState.Parent = this.btn_Add;
-            this.btn_Add.Location = new System.Drawing.Point(17, 16);
+            this.btn_Add.Location = new System.Drawing.Point(17, 6);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.ShadowDecoration.Parent = this.btn_Add;
             this.btn_Add.Size = new System.Drawing.Size(123, 45);
             this.btn_Add.TabIndex = 9;
             this.btn_Add.Text = "Thêm";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_back
             // 
@@ -416,7 +421,7 @@ namespace GUI.UC
             this.btn_back.Image = global::GUI.Properties.Resources.arrowc;
             this.btn_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_back.ImageSize = new System.Drawing.Size(16, 16);
-            this.btn_back.Location = new System.Drawing.Point(172, 76);
+            this.btn_back.Location = new System.Drawing.Point(17, 76);
             this.btn_back.Name = "btn_back";
             this.btn_back.ShadowDecoration.Parent = this.btn_back;
             this.btn_back.Size = new System.Drawing.Size(99, 45);
@@ -425,6 +430,34 @@ namespace GUI.UC
             this.btn_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_back.TextOffset = new System.Drawing.Point(-3, 0);
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // txt_info
+            // 
+            this.txt_info.BorderThickness = 0;
+            this.txt_info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_info.DefaultText = "";
+            this.txt_info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.DisabledState.Parent = this.txt_info;
+            this.txt_info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txt_info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.FocusedState.Parent = this.txt_info;
+            this.txt_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_info.ForeColor = System.Drawing.Color.Red;
+            this.txt_info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.HoverState.Parent = this.txt_info;
+            this.txt_info.Location = new System.Drawing.Point(122, 51);
+            this.txt_info.Multiline = true;
+            this.txt_info.Name = "txt_info";
+            this.txt_info.PasswordChar = '\0';
+            this.txt_info.PlaceholderText = "";
+            this.txt_info.SelectedText = "";
+            this.txt_info.ShadowDecoration.Parent = this.txt_info;
+            this.txt_info.Size = new System.Drawing.Size(306, 79);
+            this.txt_info.TabIndex = 11;
+            this.txt_info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fScholarship_Edit
             // 
@@ -468,5 +501,6 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2GradientButton btn_Delete;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Edit;
         private Guna.UI2.WinForms.Guna2GradientButton btn_back;
+        private Guna.UI2.WinForms.Guna2TextBox txt_info;
     }
 }
