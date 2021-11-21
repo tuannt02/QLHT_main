@@ -12,8 +12,15 @@ using BUS;
 
 namespace GUI.UC
 {
+    // Khai báo delegate cho mục đích truyền dữ liệu từ UC sang form
+    public delegate void GetDataUC_SCHOtoForm(string MAHB, string TENHB, string TRIGIA, string TGDK, string TGKT, string DVTT); 
+
     public partial class UC_Scholarship : UserControl
     {
+        GetDataUC_SCHOtoForm _GetDataUC_SCHOtoForm = null;
+        public static bool flag = false;
+        public fScholarship_Authorize f1 = null;
+
         private int Recs;
         public UC_Scholarship()
         {
@@ -136,8 +143,27 @@ namespace GUI.UC
 
         private void UC_AboutUs_btn_CheckAdmin_Click(object sender, EventArgs e)
         {
-
+            fScholarship_Authorize a = new fScholarship_Authorize();
+            f1 = a;
+            a.Show();
+            
+        }
+        private void UC_AboutUs_dtgv_Show_SelectionChanged(object sender, EventArgs e)
+        {
+            if(fScholarship_Edit.flag && UC_AboutUs_dtgv_Show.Rows.Count > 0)
+            {
+                _GetDataUC_SCHOtoForm = f1.f2.SetData;
+                _GetDataUC_SCHOtoForm(
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[0].Value.ToString(),
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[1].Value.ToString(),
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[2].Value.ToString(),
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[3].Value.ToString(),
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[4].Value.ToString(),
+                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[6].Value.ToString()
+                    );
+            }
         }
         #endregion
+
     }
 }

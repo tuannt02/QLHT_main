@@ -29,6 +29,7 @@ namespace GUI.fDashboard
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fDashboard_DBoard_btn_AboutUs = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Setting = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -42,11 +43,12 @@ namespace GUI.fDashboard
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
+            this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
             this.uC_Study1 = new GUI.UC.UC_Study();
             this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
-            this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
-            this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
+            this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -356,6 +358,28 @@ namespace GUI.fDashboard
             this.panel3.Size = new System.Drawing.Size(1147, 710);
             this.panel3.TabIndex = 2;
             // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_Dashboard1.TabIndex = 1;
+            // 
+            // uC_AboutUs1
+            // 
+            this.uC_AboutUs1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.uC_AboutUs1.AutoScroll = true;
+            this.uC_AboutUs1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.uC_AboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_AboutUs1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_AboutUs1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AboutUs1.Name = "uC_AboutUs1";
+            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_AboutUs1.TabIndex = 0;
+            this.uC_AboutUs1.Load += new System.EventHandler(this.uC_AboutUs1_Load);
+            // 
             // uC_Study1
             // 
             this.uC_Study1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
@@ -383,27 +407,10 @@ namespace GUI.fDashboard
             this.uC_Scholarship1.Size = new System.Drawing.Size(1147, 710);
             this.uC_Scholarship1.TabIndex = 2;
             // 
-            // uC_Dashboard1
+            // BorderlessF_DBoard
             // 
-            this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 710);
-            this.uC_Dashboard1.TabIndex = 1;
-            // 
-            // uC_AboutUs1
-            // 
-            this.uC_AboutUs1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.uC_AboutUs1.AutoScroll = true;
-            this.uC_AboutUs1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.uC_AboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_AboutUs1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_AboutUs1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AboutUs1.Name = "uC_AboutUs1";
-            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 710);
-            this.uC_AboutUs1.TabIndex = 0;
-            this.uC_AboutUs1.Load += new System.EventHandler(this.uC_AboutUs1_Load);
+            this.BorderlessF_DBoard.BorderRadius = 16;
+            this.BorderlessF_DBoard.ContainerControl = this;
             // 
             // DBoard
             // 
@@ -445,5 +452,6 @@ namespace GUI.fDashboard
         private UC.UC_Setting uC_Setting1;
         private UC.UC_Scholarship uC_Scholarship1;
         private UC.UC_Dashboard uC_Dashboard1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessF_DBoard;
     }
 }

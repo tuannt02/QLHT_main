@@ -34,15 +34,20 @@ namespace GUI.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Scholarship));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Scholarship));
             this.UC_AboutUs_txb_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.UC_AboutUs_btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.UC_AboutUs_btn_All = new Guna.UI2.WinForms.Guna2Button();
             this.UC_AboutUs_btn_Active = new Guna.UI2.WinForms.Guna2Button();
             this.UC_AboutUs_btn_OnLeave = new Guna.UI2.WinForms.Guna2Button();
             this.UC_AboutUs_dtgv_Show = new System.Windows.Forms.DataGridView();
+            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.UC_AboutUs_imgList_ListImg = new System.Windows.Forms.ImageList(this.components);
+            this.UC_AboutUs_lab_Rec = new System.Windows.Forms.Label();
+            this.UC_AboutUs_lab_Fil = new System.Windows.Forms.Label();
+            this.UC_AboutUs_btn_CheckAdmin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +55,6 @@ namespace GUI.UC
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.UC_AboutUs_imgList_ListImg = new System.Windows.Forms.ImageList(this.components);
-            this.UC_AboutUs_lab_Rec = new System.Windows.Forms.Label();
-            this.UC_AboutUs_lab_Fil = new System.Windows.Forms.Label();
-            this.UC_AboutUs_btn_CheckAdmin = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.UC_AboutUs_dtgv_Show)).BeginInit();
             this.SuspendLayout();
             // 
@@ -268,70 +268,7 @@ namespace GUI.UC
             this.UC_AboutUs_dtgv_Show.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.UC_AboutUs_dtgv_Show.Size = new System.Drawing.Size(1088, 473);
             this.UC_AboutUs_dtgv_Show.TabIndex = 10;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 11.36947F;
-            this.Column1.HeaderText = "MAHB";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 25.74703F;
-            this.Column2.HeaderText = "Tên học bổng";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 10.12965F;
-            this.Column3.HeaderText = "Trị giá";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column4.FillWeight = 11.46129F;
-            this.Column4.HeaderText = "TGDK";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column5.FillWeight = 10.54326F;
-            this.Column5.HeaderText = "TGKT";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 8.479889F;
-            this.Column6.HeaderText = "Active";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column7
-            // 
-            this.Column7.FillWeight = 21.31482F;
-            this.Column7.HeaderText = "Nhà tài trợ";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.UC_AboutUs_dtgv_Show.SelectionChanged += new System.EventHandler(this.UC_AboutUs_dtgv_Show_SelectionChanged);
             // 
             // UC_AboutUs_scrbar_main
             // 
@@ -407,6 +344,70 @@ namespace GUI.UC
             this.UC_AboutUs_btn_CheckAdmin.Text = "Xác nhận Admin";
             this.UC_AboutUs_btn_CheckAdmin.Click += new System.EventHandler(this.UC_AboutUs_btn_CheckAdmin_Click);
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 11.36947F;
+            this.Column1.HeaderText = "MAHB";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 25.74703F;
+            this.Column2.HeaderText = "Tên học bổng";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 10.12965F;
+            this.Column3.HeaderText = "Trị giá";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column4.FillWeight = 11.46129F;
+            this.Column4.HeaderText = "TGDK";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column5.FillWeight = 10.54326F;
+            this.Column5.HeaderText = "TGKT";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 8.479889F;
+            this.Column6.HeaderText = "Active";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column7
+            // 
+            this.Column7.FillWeight = 21.31482F;
+            this.Column7.HeaderText = "Nhà tài trợ";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // UC_Scholarship
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -439,6 +440,9 @@ namespace GUI.UC
         private System.Windows.Forms.DataGridView UC_AboutUs_dtgv_Show;
         private Guna.UI2.WinForms.Guna2VScrollBar UC_AboutUs_scrbar_main;
         private System.Windows.Forms.ImageList UC_AboutUs_imgList_ListImg;
+        private System.Windows.Forms.Label UC_AboutUs_lab_Rec;
+        private System.Windows.Forms.Label UC_AboutUs_lab_Fil;
+        private Guna.UI2.WinForms.Guna2GradientButton UC_AboutUs_btn_CheckAdmin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -446,8 +450,5 @@ namespace GUI.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Label UC_AboutUs_lab_Rec;
-        private System.Windows.Forms.Label UC_AboutUs_lab_Fil;
-        private Guna.UI2.WinForms.Guna2GradientButton UC_AboutUs_btn_CheckAdmin;
     }
 }
