@@ -18,7 +18,14 @@ namespace GUI.UC
     public partial class UC_Scholarship : UserControl
     {
         GetDataUC_SCHOtoForm _GetDataUC_SCHOtoForm = null;
-        public static bool flag = false;
+
+        // 0: chế độ All, 1: chế độ Active, 2: chế độ Unactive (Filter)
+        public static int flag = 0;
+
+
+        // Nếu cờ bật thì timer kiểm tra và update lại bảng dữ liệu
+        public static bool flagUpdate = false;
+
         public fScholarship_Authorize f1 = null;
 
         private int Recs;
@@ -32,6 +39,11 @@ namespace GUI.UC
         #region Methods
         void LoadDataFull()
         {
+            fScholarship_Edit.flag = false;
+
+            // Đổi cờ sang chế độ LoadAll
+            flag = 0;
+
             UC_AboutUs_dtgv_Show.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFull();
             Recs = listHS.Count;
@@ -51,9 +63,16 @@ namespace GUI.UC
                     item.DVTT,
                 }) ;
             }
+            if(flagUpdate)
+            fScholarship_Edit.flag = true;
         } 
         void LoadDataActive()
         {
+            fScholarship_Edit.flag = false;
+
+            // Đổi cờ sang chế độ LoadActive
+            flag = 1;
+
             UC_AboutUs_dtgv_Show.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBActive();
             Recs = listHS.Count;
@@ -72,9 +91,16 @@ namespace GUI.UC
                     item.DVTT,
                 });
             }
+            if (flagUpdate)
+                fScholarship_Edit.flag = true;
         }
         void LoadDataUnActive()
         {
+            fScholarship_Edit.flag = false;
+
+            // Đổi cờ sang chế độ LoadUnActive
+            flag = 2;
+
             UC_AboutUs_dtgv_Show.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBUnActive();
 
@@ -96,11 +122,15 @@ namespace GUI.UC
                     item.DVTT,
                 });
             }
+            if (flagUpdate)
+                fScholarship_Edit.flag = true;
         }
-        void LoadDataFilter()
+        void LoadDataFilter(int flag)
         {
+            fScholarship_Edit.flag = false;
+
             UC_AboutUs_dtgv_Show.Rows.Clear();
-            List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFilter(UC_AboutUs_txb_Search.Text);
+            List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFilter(UC_AboutUs_txb_Search.Text,flag);
 
             UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + Recs.ToString();
 
@@ -117,23 +147,27 @@ namespace GUI.UC
                     item.DVTT,
                 });
             }
+            if (flagUpdate)
+                fScholarship_Edit.flag = true;
         }
         #endregion
 
         #region Events
         private void UC_AboutUs_btn_Search_Click(object sender, EventArgs e)
         {
-            LoadDataFilter();
+            LoadDataFilter(flag);
         }
 
         private void UC_AboutUs_btn_All_Click(object sender, EventArgs e)
         {
             LoadDataFull();
+
         }
 
         private void UC_AboutUs_btn_Active_Click(object sender, EventArgs e)
         {
             LoadDataActive();
+
         }
 
         private void UC_AboutUs_btn_OnLeave_Click(object sender, EventArgs e)
@@ -163,7 +197,18 @@ namespace GUI.UC
                     );
             }
         }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if(flagUpdate)
+            {
+                LoadDataFilter(flag);
+                flagUpdate = false;
+            }   
+        }
+
+
         #endregion
 
+       
     }
 }

@@ -57,19 +57,26 @@ namespace GUI.UC
             {
                 if (Hocbong_BUS.Instance.DeleteOneRow(txt_MAHB.Text))
                 {
-                    txt_info.ForeColor = Color.Blue;
-                    txt_info.Text = "Xóa thành công.";
+                    UC_Scholarship.flagUpdate = true;
+                    printInfo("Xóa thành công.", false);
+                    //txt_info.IconLeft = Properties.Resources.check;
+                    //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
+                    //txt_info.Text = "Xóa thành công.";
                 }
                 else
                 {
-                    txt_info.ForeColor = Color.Red;
-                    txt_info.Text = "MAHB không tồn tại.";
+                    printInfo("MAHB không tồn tại.", true);
+                    //txt_info.IconLeft = Properties.Resources.close;
+                    //txt_info.ForeColor = Color.Red;
+                    //txt_info.Text = "MAHB không tồn tại.";
                 }
             }
             else
             {
-                txt_info.ForeColor = Color.Red;
-                txt_info.Text = "Nếu xóa vui lòng nhập duy nhất trường MAHB.";
+                printInfo("Nếu xóa vui lòng nhập duy nhất trường MAHB.", true);
+                //txt_info.IconLeft = Properties.Resources.close;
+                //txt_info.ForeColor = Color.Red;
+                //txt_info.Text = "Nếu xóa vui lòng nhập duy nhất trường MAHB.";
             }
         }
         private void btn_Add_Click(object sender, EventArgs e)
@@ -79,38 +86,77 @@ namespace GUI.UC
                 txt_TRIGIA.Text!= "" &&
                 txt_DVTT.Text!= "")
             {
+                UC_Scholarship.flagUpdate = true;
+
                 Hocbong_BUS.Instance.InsertOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, dtp_TGDK.Value,
                     dtp_TGKT.Value, txt_DVTT.Text);
-                txt_info.ForeColor = Color.Blue;
-                txt_info.Text = "Thêm thành công.";
+                printInfo("Thêm thành công.", false);
+                //txt_info.IconLeft = Properties.Resources.check;
+                //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
+                //txt_info.Text = "Thêm thành công.";
             }
             else
             {
-                txt_info.ForeColor = Color.Red;
-                txt_info.Text = "Thêm thất bại.";
+                printInfo("Thêm thất bại.", true);
+                //txt_info.IconLeft = Properties.Resources.close;
+                //txt_info.ForeColor = Color.Red;
+                //txt_info.Text = "Thêm thất bại.";
             }
         }
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             if(firstMAHB != txt_MAHB.Text)
             {
-                txt_info.ForeColor = Color.Red;
-                txt_info.Text = "Không được sửa MAHB.";
+                printInfo("Không được sửa MAHB.", true);
+                //txt_info.IconLeft = Properties.Resources.close;
+                //txt_info.ForeColor = Color.Red;
+                //txt_info.Text = "Không được sửa MAHB.";
             }
             else if(txt_TENHB.Text == "" || txt_TRIGIA.Text == "" || txt_DVTT.Text == "")
             {
-                txt_info.ForeColor = Color.Red;
-                txt_info.Text = "Vui lòng nhập đầy đủ thông tin các trường.";
+                printInfo("Vui lòng nhập đầy đủ thông tin các trường.", true);
+                //txt_info.IconLeft = Properties.Resources.close;
+                //txt_info.ForeColor = Color.Red;
+                //txt_info.Text = "Vui lòng nhập đầy đủ thông tin các trường.";
             }
             else
             {
+                UC_Scholarship.flagUpdate = true;
                 Hocbong_BUS.Instance.UpdateOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, dtp_TGDK.Value,
                     dtp_TGKT.Value, txt_DVTT.Text);
-                txt_info.ForeColor = Color.Blue;
-                txt_info.Text = "Cập nhật thành công.";
+                printInfo("Cập nhật thành công.", false);
+                //txt_info.IconLeft = Properties.Resources.check;
+                //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
+                //txt_info.Text = "Cập nhật thành công.";
             }
         }
         #endregion
+        private void printInfo(string mes, bool flag)
+        {
+            timer.Enabled = true;
 
+            if(flag)
+            {
+                
+                txt_info.IconLeft = Properties.Resources.close;
+                txt_info.ForeColor = Color.Red;
+                txt_info.Text = mes;
+                txt_info.Show();
+                
+            }
+            else
+            {
+                txt_info.IconLeft = Properties.Resources.check;
+                txt_info.ForeColor = Color.FromArgb(59, 181, 74);
+                txt_info.Text = mes;
+                txt_info.Show();
+            }
+            
+        }
+        private void HideInfo(object sender, EventArgs e)
+        {
+            txt_info.Hide();
+            timer.Enabled = false;
+        }
     }
 }

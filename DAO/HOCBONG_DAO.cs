@@ -60,11 +60,20 @@ namespace DAO
 
             return listHBs;
         }
-        public List<HOCBONG> getListHBFilterfromDB(string key)
+        private string getQuery(int flag)
         {
-            string query = "USP_UC_AboutUsFilter @key ";
+            string query = "";
+            if (flag == 0) query = "USP_UC_AboutUsFilter @key ";
+            else if(flag == 1) query = "USP_UC_AboutUsFilter1 @key ";
+            else if(flag == 2) query = "USP_UC_AboutUsFilter2 @key ";
+            return query;
+        }
+        public List<HOCBONG> getListHBFilterfromDB(string key,int flag)
+        {
+            string query = getQuery(flag);
+            DataTable data;
             List<HOCBONG> listHBs = new List<HOCBONG>();
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { key});
+            data = DataProvider.Instance.ExecuteQuery(query, new object[] { key});
 
             foreach (DataRow item in data.Rows)
             {

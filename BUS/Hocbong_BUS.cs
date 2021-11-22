@@ -41,10 +41,10 @@ namespace BUS
 
             return listHBs;
         }
-        public List<HOCBONG> getListHBFilter(string key)
+        public List<HOCBONG> getListHBFilter(string key,int flag)
         {
             List<HOCBONG> listHBs = new List<HOCBONG>();
-            listHBs = HOCBONG_DAO.Instance.getListHBFilterfromDB(key);
+            listHBs = HOCBONG_DAO.Instance.getListHBFilterfromDB(key,flag);
 
             return listHBs;
         }

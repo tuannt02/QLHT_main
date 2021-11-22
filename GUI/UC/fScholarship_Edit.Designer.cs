@@ -32,6 +32,9 @@ namespace GUI.UC
             this.components = new System.ComponentModel.Container();
             this.BorderlessF_Edit = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_Delete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lab_DVTT = new System.Windows.Forms.Label();
             this.lab_TGKT = new System.Windows.Forms.Label();
@@ -40,17 +43,15 @@ namespace GUI.UC
             this.lab_TENHB = new System.Windows.Forms.Label();
             this.lab_MAHB = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txt_DVTT = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtp_TGKT = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txt_TRIGIA = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TENHB = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MAHB = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtp_TGDK = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txt_DVTT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_Delete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_back = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txt_info = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_back = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -60,6 +61,7 @@ namespace GUI.UC
             // 
             this.BorderlessF_Edit.BorderRadius = 16;
             this.BorderlessF_Edit.ContainerControl = this;
+            this.BorderlessF_Edit.ResizeForm = false;
             // 
             // panel1
             // 
@@ -73,6 +75,87 @@ namespace GUI.UC
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 133);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
+            this.btn_Add.BorderRadius = 4;
+            this.btn_Add.BorderThickness = 1;
+            this.btn_Add.CheckedState.Parent = this.btn_Add;
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Add.CustomImages.Parent = this.btn_Add;
+            this.btn_Add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Add.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Add.DisabledState.Parent = this.btn_Add;
+            this.btn_Add.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Add.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.HoverState.Parent = this.btn_Add;
+            this.btn_Add.Location = new System.Drawing.Point(17, 6);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.ShadowDecoration.Parent = this.btn_Add;
+            this.btn_Add.Size = new System.Drawing.Size(123, 45);
+            this.btn_Add.TabIndex = 9;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
+            this.btn_Delete.BorderRadius = 4;
+            this.btn_Delete.BorderThickness = 1;
+            this.btn_Delete.CheckedState.Parent = this.btn_Delete;
+            this.btn_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Delete.CustomImages.Parent = this.btn_Delete;
+            this.btn_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Delete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Delete.DisabledState.Parent = this.btn_Delete;
+            this.btn_Delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Delete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.ForeColor = System.Drawing.Color.White;
+            this.btn_Delete.HoverState.Parent = this.btn_Delete;
+            this.btn_Delete.Location = new System.Drawing.Point(161, 6);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.ShadowDecoration.Parent = this.btn_Delete;
+            this.btn_Delete.Size = new System.Drawing.Size(123, 45);
+            this.btn_Delete.TabIndex = 8;
+            this.btn_Delete.Text = "Xóa";
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
+            this.btn_Edit.BorderRadius = 4;
+            this.btn_Edit.BorderThickness = 1;
+            this.btn_Edit.CheckedState.Parent = this.btn_Edit;
+            this.btn_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Edit.CustomImages.Parent = this.btn_Edit;
+            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Edit.DisabledState.Parent = this.btn_Edit;
+            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Edit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.HoverState.Parent = this.btn_Edit;
+            this.btn_Edit.Location = new System.Drawing.Point(305, 6);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
+            this.btn_Edit.Size = new System.Drawing.Size(123, 45);
+            this.btn_Edit.TabIndex = 7;
+            this.btn_Edit.Text = "Sửa";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // panel2
             // 
@@ -168,6 +251,32 @@ namespace GUI.UC
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(305, 577);
             this.guna2Panel1.TabIndex = 2;
+            // 
+            // txt_DVTT
+            // 
+            this.txt_DVTT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.txt_DVTT.BorderRadius = 8;
+            this.txt_DVTT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DVTT.DefaultText = "";
+            this.txt_DVTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DVTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DVTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DVTT.DisabledState.Parent = this.txt_DVTT;
+            this.txt_DVTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DVTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txt_DVTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DVTT.FocusedState.Parent = this.txt_DVTT;
+            this.txt_DVTT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DVTT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DVTT.HoverState.Parent = this.txt_DVTT;
+            this.txt_DVTT.Location = new System.Drawing.Point(10, 507);
+            this.txt_DVTT.Name = "txt_DVTT";
+            this.txt_DVTT.PasswordChar = '\0';
+            this.txt_DVTT.PlaceholderText = "Nhập nhà tài trợ";
+            this.txt_DVTT.SelectedText = "";
+            this.txt_DVTT.ShadowDecoration.Parent = this.txt_DVTT;
+            this.txt_DVTT.Size = new System.Drawing.Size(266, 44);
+            this.txt_DVTT.TabIndex = 5;
             // 
             // dtp_TGKT
             // 
@@ -293,112 +402,34 @@ namespace GUI.UC
             this.dtp_TGDK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtp_TGDK.Value = new System.DateTime(2021, 11, 21, 7, 37, 1, 952);
             // 
-            // txt_DVTT
+            // txt_info
             // 
-            this.txt_DVTT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.txt_DVTT.BorderRadius = 8;
-            this.txt_DVTT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DVTT.DefaultText = "";
-            this.txt_DVTT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DVTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DVTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DVTT.DisabledState.Parent = this.txt_DVTT;
-            this.txt_DVTT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DVTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.txt_DVTT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DVTT.FocusedState.Parent = this.txt_DVTT;
-            this.txt_DVTT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DVTT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DVTT.HoverState.Parent = this.txt_DVTT;
-            this.txt_DVTT.Location = new System.Drawing.Point(10, 507);
-            this.txt_DVTT.Name = "txt_DVTT";
-            this.txt_DVTT.PasswordChar = '\0';
-            this.txt_DVTT.PlaceholderText = "Nhập nhà tài trợ";
-            this.txt_DVTT.SelectedText = "";
-            this.txt_DVTT.ShadowDecoration.Parent = this.txt_DVTT;
-            this.txt_DVTT.Size = new System.Drawing.Size(266, 44);
-            this.txt_DVTT.TabIndex = 5;
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
-            this.btn_Edit.BorderRadius = 4;
-            this.btn_Edit.BorderThickness = 1;
-            this.btn_Edit.CheckedState.Parent = this.btn_Edit;
-            this.btn_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Edit.CustomImages.Parent = this.btn_Edit;
-            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Edit.DisabledState.Parent = this.btn_Edit;
-            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Edit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.HoverState.Parent = this.btn_Edit;
-            this.btn_Edit.Location = new System.Drawing.Point(305, 6);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
-            this.btn_Edit.Size = new System.Drawing.Size(123, 45);
-            this.btn_Edit.TabIndex = 7;
-            this.btn_Edit.Text = "Sửa";
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
-            this.btn_Delete.BorderRadius = 4;
-            this.btn_Delete.BorderThickness = 1;
-            this.btn_Delete.CheckedState.Parent = this.btn_Delete;
-            this.btn_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Delete.CustomImages.Parent = this.btn_Delete;
-            this.btn_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Delete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Delete.DisabledState.Parent = this.btn_Delete;
-            this.btn_Delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Delete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.ForeColor = System.Drawing.Color.White;
-            this.btn_Delete.HoverState.Parent = this.btn_Delete;
-            this.btn_Delete.Location = new System.Drawing.Point(161, 6);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.ShadowDecoration.Parent = this.btn_Delete;
-            this.btn_Delete.Size = new System.Drawing.Size(123, 45);
-            this.btn_Delete.TabIndex = 8;
-            this.btn_Delete.Text = "Xóa";
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
-            this.btn_Add.BorderRadius = 4;
-            this.btn_Add.BorderThickness = 1;
-            this.btn_Add.CheckedState.Parent = this.btn_Add;
-            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Add.CustomImages.Parent = this.btn_Add;
-            this.btn_Add.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Add.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Add.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Add.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Add.DisabledState.Parent = this.btn_Add;
-            this.btn_Add.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Add.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.HoverState.Parent = this.btn_Add;
-            this.btn_Add.Location = new System.Drawing.Point(17, 6);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.ShadowDecoration.Parent = this.btn_Add;
-            this.btn_Add.Size = new System.Drawing.Size(123, 45);
-            this.btn_Add.TabIndex = 9;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.txt_info.BorderThickness = 0;
+            this.txt_info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_info.DefaultText = "";
+            this.txt_info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.DisabledState.Parent = this.txt_info;
+            this.txt_info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txt_info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.FocusedState.Parent = this.txt_info;
+            this.txt_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(181)))), ((int)(((byte)(74)))));
+            this.txt_info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.HoverState.Parent = this.txt_info;
+            this.txt_info.IconLeftOffset = new System.Drawing.Point(0, -12);
+            this.txt_info.IconLeftSize = new System.Drawing.Size(24, 24);
+            this.txt_info.Location = new System.Drawing.Point(122, 51);
+            this.txt_info.Multiline = true;
+            this.txt_info.Name = "txt_info";
+            this.txt_info.PasswordChar = '\0';
+            this.txt_info.PlaceholderText = "";
+            this.txt_info.SelectedText = "";
+            this.txt_info.ShadowDecoration.Parent = this.txt_info;
+            this.txt_info.Size = new System.Drawing.Size(306, 70);
+            this.txt_info.TabIndex = 11;
             // 
             // btn_back
             // 
@@ -431,33 +462,10 @@ namespace GUI.UC
             this.btn_back.TextOffset = new System.Drawing.Point(-3, 0);
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // txt_info
+            // timer
             // 
-            this.txt_info.BorderThickness = 0;
-            this.txt_info.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_info.DefaultText = "";
-            this.txt_info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_info.DisabledState.Parent = this.txt_info;
-            this.txt_info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.txt_info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_info.FocusedState.Parent = this.txt_info;
-            this.txt_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_info.ForeColor = System.Drawing.Color.Red;
-            this.txt_info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_info.HoverState.Parent = this.txt_info;
-            this.txt_info.Location = new System.Drawing.Point(122, 51);
-            this.txt_info.Multiline = true;
-            this.txt_info.Name = "txt_info";
-            this.txt_info.PasswordChar = '\0';
-            this.txt_info.PlaceholderText = "";
-            this.txt_info.SelectedText = "";
-            this.txt_info.ShadowDecoration.Parent = this.txt_info;
-            this.txt_info.Size = new System.Drawing.Size(306, 79);
-            this.txt_info.TabIndex = 11;
-            this.txt_info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.HideInfo);
             // 
             // fScholarship_Edit
             // 
@@ -502,5 +510,6 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2GradientButton btn_Edit;
         private Guna.UI2.WinForms.Guna2GradientButton btn_back;
         private Guna.UI2.WinForms.Guna2TextBox txt_info;
+        private System.Windows.Forms.Timer timer;
     }
 }
