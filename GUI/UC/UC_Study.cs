@@ -13,7 +13,7 @@ using DTO;
 namespace GUI.UC
 {
     public delegate void GetDataUCtoForm(string mssv, string namhoc, string hocky, string mamh, string QT, string GK, string TH, string CK);
-
+    public delegate void GetValue(string QT, string GK, string TH, string CK);
     public partial class UC_Study : UserControl
     {
         GetDataUCtoForm _GetDataUCtoForm = null;
@@ -21,7 +21,7 @@ namespace GUI.UC
         public UC_Study()
         {
             InitializeComponent();
-            
+            //dtgv_Show1.Hide();
         }
 
 
@@ -34,7 +34,7 @@ namespace GUI.UC
                 string cbHocKy = UC_Study_cb_HocKy.Text;
                 string cbKhoa = UC_Study_cb_Khoa.Text;
                 string txbMSSV = UC_Study_txb_MSSV.Text;
-                UC_Study_dtgv_Show1.Rows.Clear();
+                dtgv.Rows.Clear();
                 if (Kqht_BUS.Instance.KQHT_Search_Check(cbNamHoc, cbHocKy, cbKhoa, txbMSSV))
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin cần tìm kiếm",
                         "Thông báo",
@@ -52,7 +52,7 @@ namespace GUI.UC
                         UC_Study_lab_Name.Text = "Not found";
                     foreach (KQHT item in DS_kqht)
                     {
-                        UC_Study_dtgv_Show1.Rows.Add(new object[] {
+                        dtgv.Rows.Add(new object[] {
                             item.MAMH,
                             item.TENMH,
                             item.SOTC,
@@ -60,7 +60,8 @@ namespace GUI.UC
                             item.GK,
                             item.TH,
                             item.CK,
-                            item.TBMON
+                            item.TBMON,
+                            null
                             });
                     }
                 //}
@@ -69,30 +70,39 @@ namespace GUI.UC
 
         private void UC_Study_btn_Edit_Click(object sender, EventArgs e)
         {
-            fStudy_Edit fEdit = new fStudy_Edit();
+            fStudy_Edit fEdit = new fStudy_Edit(ChangeInfo_dtgv);
+
             flag = true;
             _GetDataUCtoForm = fEdit.SetValue;
             fEdit.Show();
         }
 
-        private void UC_Study_dtgv_Show1_SelectionChanged(object sender, EventArgs e)
+        
+        public void ChangeInfo_dtgv(string QT, string GK, string TH, string CK)
         {
-            if(flag && UC_Study_dtgv_Show1.SelectedRows.Count>0)
+            dtgv.SelectedRows[0].Cells[3].Value = QT;
+            dtgv.SelectedRows[0].Cells[4].Value = GK;
+            dtgv.SelectedRows[0].Cells[5].Value = TH;
+            dtgv.SelectedRows[0].Cells[6].Value = CK;
+            dtgv.SelectedRows[0].Cells[7].Value = (int.Parse(QT) * 0.1 + int.Parse(GK) * 0.2 + int.Parse(TH) * 0.2 + int.Parse(CK) * 0.5).ToString();
+        }
+        #endregion
+
+        private void dtgv_SelectionChanged(object sender, EventArgs e)
+        {
+            if (flag && dtgv.SelectedRows.Count > 0)
             {
                 _GetDataUCtoForm(
                     UC_Study_txb_MSSV.Text,
                     UC_Study_cb_NamHoc.Text,
                     UC_Study_cb_HocKy.Text,
-                    UC_Study_dtgv_Show1.SelectedRows[0].Cells[0].Value.ToString(),
-                    UC_Study_dtgv_Show1.SelectedRows[0].Cells[3].Value.ToString(),
-                    UC_Study_dtgv_Show1.SelectedRows[0].Cells[4].Value.ToString(),
-                    UC_Study_dtgv_Show1.SelectedRows[0].Cells[5].Value.ToString(),
-                    UC_Study_dtgv_Show1.SelectedRows[0].Cells[6].Value.ToString());
+                    dtgv.SelectedRows[0].Cells[0].Value.ToString(),
+                    dtgv.SelectedRows[0].Cells[3].Value.ToString(),
+                    dtgv.SelectedRows[0].Cells[4].Value.ToString(),
+                    dtgv.SelectedRows[0].Cells[5].Value.ToString(),
+                    dtgv.SelectedRows[0].Cells[6].Value.ToString());
 
-            }   
+            }
         }
-
-        #endregion
-
     }
 }

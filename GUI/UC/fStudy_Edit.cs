@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+
 
 namespace GUI.UC
 {
     public partial class fStudy_Edit : Form
     {
-        public fStudy_Edit()
+        public GetValue send;
+        public fStudy_Edit(GetValue sender)
         {
             InitializeComponent();
+            send = sender;
         }
 
         public void SetValue(string mssv, string namhoc, string hocky, string mamh, string QT, string GK, string TH, string CK)
@@ -29,45 +33,37 @@ namespace GUI.UC
             txb_CK.Text = CK;
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private bool checkDiem(string s)
         {
-            //if (checkDiem(txbTH.Text) == checkDiem(txbQT.Text) == checkDiem(txbGK.Text) == checkDiem(txbCK.Text) == true)
-            //{
-            //    KQHT_BUS.Instance.Edit_dtgv(float.Parse(txbQT.Text), float.Parse(txbGK.Text), float.Parse(txbTH.Text), float.Parse(txbCK.Text), txbMSSV.Text, txbNamHoc.Text, txbHocKy.Text, labMaMH.Text);
-            //
-            //
-            //
-            //    this.send(txbQT.Text, txbGK.Text, txbTH.Text, txbCK.Text);
-            //
-            //
-            //
-            //    MessageBox.Show("Thay đổi dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //
-            //
-            //
-            //else MessageBox.Show("Thay đổi dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            #region kiểm tra điểm nhập vào
+            try
+            {
+                if (0 <= float.Parse(s) && float.Parse(s) <= 10 || s == "")
+                    return true;
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+            #endregion
         }
 
-        //private void btnChange_Click(object sender, EventArgs e)
-        //{
-        //    if (checkDiem(txbTH.Text) == checkDiem(txbQT.Text) == checkDiem(txbGK.Text) == checkDiem(txbCK.Text) == true)
-        //    {
-        //        KQHT_BUS.Instance.Edit_dtgv(float.Parse(txbQT.Text), float.Parse(txbGK.Text), float.Parse(txbTH.Text), float.Parse(txbCK.Text), txbMSSV.Text, int.Parse(txbNamHoc.Text), txbHocKy.Text, labMaMH.Text);
-        //
-        //
-        //
-        //        this.send(txbQT.Text, txbGK.Text, txbTH.Text, txbCK.Text);
-        //
-        //
-        //
-        //        MessageBox.Show("Thay đổi dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //
-        //
-        //
-        //    else MessageBox.Show("Thay đổi dữ liệu không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //}
+        private void btn_change_Click(object sender, EventArgs e)
+        {
+            if (checkDiem(txb_TH.Text) == checkDiem(txb_QT.Text) == 
+                checkDiem(txb_GK.Text) == checkDiem(txb_CK.Text) == true)
+            {
+                Kqht_BUS.Instance.Edit_dtgv(
+                    float.Parse(txb_QT.Text), float.Parse(txb_GK.Text), 
+                    float.Parse(txb_TH.Text), float.Parse(txb_CK.Text), 
+                    txb_MSSV.Text, txb_NamHoc.Text, 
+                    txb_HocKy.Text, lab_MAMH.Text);
 
+                this.send(txb_QT.Text, txb_GK.Text, txb_TH.Text, txb_CK.Text);
+                MessageBox.Show("Thay đổi dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }

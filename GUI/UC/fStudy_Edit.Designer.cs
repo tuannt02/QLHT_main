@@ -214,7 +214,7 @@ namespace GUI.UC
             this.btn_change.Size = new System.Drawing.Size(180, 50);
             this.btn_change.TabIndex = 13;
             this.btn_change.Text = "Change";
-            this.btn_change.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.btn_change.Click += new System.EventHandler(this.btn_change_Click);
             // 
             // label8
             // 

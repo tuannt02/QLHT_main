@@ -44,7 +44,7 @@ namespace GUI.UC
             // Đổi cờ sang chế độ LoadAll
             flag = 0;
 
-            UC_AboutUs_dtgv_Show.Rows.Clear();
+            dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFull();
             Recs = listHS.Count;
             UC_AboutUs_lab_Rec.Text = "Records: " + listHS.Count.ToString();
@@ -52,7 +52,7 @@ namespace GUI.UC
 
             foreach (HOCBONG item in listHS)
             {
-                UC_AboutUs_dtgv_Show.Rows.Add(new object[]
+                dtgv_ShowHB.Rows.Add(new object[]
                 {
                     item.MAHB,
                     item.TENHB,
@@ -73,14 +73,14 @@ namespace GUI.UC
             // Đổi cờ sang chế độ LoadActive
             flag = 1;
 
-            UC_AboutUs_dtgv_Show.Rows.Clear();
+            dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBActive();
             Recs = listHS.Count;
             UC_AboutUs_lab_Rec.Text = "Records: " + listHS.Count.ToString();
             UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
             foreach (HOCBONG item in listHS)
             {
-                UC_AboutUs_dtgv_Show.Rows.Add(new object[]
+                dtgv_ShowHB.Rows.Add(new object[]
                 {
                     item.MAHB,
                     item.TENHB,
@@ -101,7 +101,7 @@ namespace GUI.UC
             // Đổi cờ sang chế độ LoadUnActive
             flag = 2;
 
-            UC_AboutUs_dtgv_Show.Rows.Clear();
+            dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBUnActive();
 
             Recs = listHS.Count;
@@ -111,7 +111,7 @@ namespace GUI.UC
 
             foreach (HOCBONG item in listHS)
             {
-                UC_AboutUs_dtgv_Show.Rows.Add(new object[]
+                dtgv_ShowHB.Rows.Add(new object[]
                 {
                     item.MAHB,
                     item.TENHB,
@@ -129,14 +129,14 @@ namespace GUI.UC
         {
             fScholarship_Edit.flag = false;
 
-            UC_AboutUs_dtgv_Show.Rows.Clear();
+            dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFilter(UC_AboutUs_txb_Search.Text,flag);
 
             UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + Recs.ToString();
 
             foreach (HOCBONG item in listHS)
             {
-                UC_AboutUs_dtgv_Show.Rows.Add(new object[]
+                dtgv_ShowHB.Rows.Add(new object[]
                 {
                     item.MAHB,
                     item.TENHB,
@@ -184,16 +184,16 @@ namespace GUI.UC
         }
         private void UC_AboutUs_dtgv_Show_SelectionChanged(object sender, EventArgs e)
         {
-            if(fScholarship_Edit.flag && UC_AboutUs_dtgv_Show.Rows.Count > 0)
+            if(fScholarship_Edit.flag && dtgv_ShowHB.Rows.Count > 0)
             {
                 _GetDataUC_SCHOtoForm = f1.f2.SetData;
                 _GetDataUC_SCHOtoForm(
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[0].Value.ToString(),
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[1].Value.ToString(),
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[2].Value.ToString(),
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[3].Value.ToString(),
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[4].Value.ToString(),
-                    UC_AboutUs_dtgv_Show.SelectedRows[0].Cells[6].Value.ToString()
+                    dtgv_ShowHB.SelectedRows[0].Cells[0].Value.ToString(),
+                    dtgv_ShowHB.SelectedRows[0].Cells[1].Value.ToString(),
+                    dtgv_ShowHB.SelectedRows[0].Cells[2].Value.ToString(),
+                    dtgv_ShowHB.SelectedRows[0].Cells[3].Value.ToString(),
+                    dtgv_ShowHB.SelectedRows[0].Cells[4].Value.ToString(),
+                    dtgv_ShowHB.SelectedRows[0].Cells[6].Value.ToString()
                     );
             }
         }

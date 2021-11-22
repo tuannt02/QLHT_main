@@ -29,6 +29,12 @@ namespace GUI.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UC_Study_lab_Name = new System.Windows.Forms.Label();
             this.UC_Study_cb_NamHoc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.UC_Study_cb_HocKy = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -36,23 +42,24 @@ namespace GUI.UC
             this.UC_Study_txb_MSSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.UC_Study_btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UC_Study_btn_ListKhoa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.UC_Study_btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.UC_Study_dtgv_Show1 = new System.Windows.Forms.DataGridView();
-            this.UC_Study_btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.UC_Study_btn_ListKhoa = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgv = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UC_Study_dtgv_Show1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.SuspendLayout();
             // 
             // UC_Study_lab_Name
@@ -204,10 +211,53 @@ namespace GUI.UC
             this.panel1.Controls.Add(this.UC_Study_btn_ListKhoa);
             this.panel1.Controls.Add(this.UC_Study_btn_Edit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 593);
+            this.panel1.Location = new System.Drawing.Point(0, 618);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 117);
+            this.panel1.Size = new System.Drawing.Size(1147, 92);
             this.panel1.TabIndex = 10;
+            // 
+            // UC_Study_btn_ListKhoa
+            // 
+            this.UC_Study_btn_ListKhoa.BorderRadius = 16;
+            this.UC_Study_btn_ListKhoa.CheckedState.Parent = this.UC_Study_btn_ListKhoa;
+            this.UC_Study_btn_ListKhoa.CustomImages.Parent = this.UC_Study_btn_ListKhoa;
+            this.UC_Study_btn_ListKhoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UC_Study_btn_ListKhoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UC_Study_btn_ListKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UC_Study_btn_ListKhoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UC_Study_btn_ListKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UC_Study_btn_ListKhoa.DisabledState.Parent = this.UC_Study_btn_ListKhoa;
+            this.UC_Study_btn_ListKhoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UC_Study_btn_ListKhoa.ForeColor = System.Drawing.Color.White;
+            this.UC_Study_btn_ListKhoa.HoverState.Parent = this.UC_Study_btn_ListKhoa;
+            this.UC_Study_btn_ListKhoa.Location = new System.Drawing.Point(961, 23);
+            this.UC_Study_btn_ListKhoa.Name = "UC_Study_btn_ListKhoa";
+            this.UC_Study_btn_ListKhoa.ShadowDecoration.Parent = this.UC_Study_btn_ListKhoa;
+            this.UC_Study_btn_ListKhoa.Size = new System.Drawing.Size(142, 45);
+            this.UC_Study_btn_ListKhoa.TabIndex = 11;
+            this.UC_Study_btn_ListKhoa.Text = "Danh sách";
+            // 
+            // UC_Study_btn_Edit
+            // 
+            this.UC_Study_btn_Edit.BorderRadius = 16;
+            this.UC_Study_btn_Edit.CheckedState.Parent = this.UC_Study_btn_Edit;
+            this.UC_Study_btn_Edit.CustomImages.Parent = this.UC_Study_btn_Edit;
+            this.UC_Study_btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UC_Study_btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UC_Study_btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UC_Study_btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UC_Study_btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UC_Study_btn_Edit.DisabledState.Parent = this.UC_Study_btn_Edit;
+            this.UC_Study_btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.UC_Study_btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.UC_Study_btn_Edit.HoverState.Parent = this.UC_Study_btn_Edit;
+            this.UC_Study_btn_Edit.Location = new System.Drawing.Point(781, 23);
+            this.UC_Study_btn_Edit.Name = "UC_Study_btn_Edit";
+            this.UC_Study_btn_Edit.ShadowDecoration.Parent = this.UC_Study_btn_Edit;
+            this.UC_Study_btn_Edit.Size = new System.Drawing.Size(142, 45);
+            this.UC_Study_btn_Edit.TabIndex = 10;
+            this.UC_Study_btn_Edit.Text = "Edit";
+            this.UC_Study_btn_Edit.Click += new System.EventHandler(this.UC_Study_btn_Edit_Click);
             // 
             // panel2
             // 
@@ -225,135 +275,156 @@ namespace GUI.UC
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.UC_Study_dtgv_Show1);
+            this.guna2Panel1.Controls.Add(this.dtgv);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 191);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1147, 402);
+            this.guna2Panel1.Size = new System.Drawing.Size(1147, 427);
             this.guna2Panel1.TabIndex = 12;
             // 
-            // UC_Study_dtgv_Show1
+            // dtgv
             // 
-            this.UC_Study_dtgv_Show1.AllowUserToAddRows = false;
-            this.UC_Study_dtgv_Show1.AllowUserToDeleteRows = false;
-            this.UC_Study_dtgv_Show1.AllowUserToOrderColumns = true;
-            this.UC_Study_dtgv_Show1.AllowUserToResizeRows = false;
-            this.UC_Study_dtgv_Show1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.UC_Study_dtgv_Show1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.UC_Study_dtgv_Show1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.UC_Study_dtgv_Show1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UC_Study_dtgv_Show1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.UC_Study_dtgv_Show1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UC_Study_dtgv_Show1.Location = new System.Drawing.Point(0, 0);
-            this.UC_Study_dtgv_Show1.Name = "UC_Study_dtgv_Show1";
-            this.UC_Study_dtgv_Show1.RowHeadersVisible = false;
-            this.UC_Study_dtgv_Show1.RowHeadersWidth = 62;
-            this.UC_Study_dtgv_Show1.RowTemplate.Height = 28;
-            this.UC_Study_dtgv_Show1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.UC_Study_dtgv_Show1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UC_Study_dtgv_Show1.Size = new System.Drawing.Size(1147, 402);
-            this.UC_Study_dtgv_Show1.TabIndex = 0;
-            this.UC_Study_dtgv_Show1.SelectionChanged += new System.EventHandler(this.UC_Study_dtgv_Show1_SelectionChanged);
+            this.dtgv.AllowUserToAddRows = false;
+            this.dtgv.AllowUserToDeleteRows = false;
+            this.dtgv.AllowUserToOrderColumns = true;
+            this.dtgv.AllowUserToResizeRows = false;
+            this.dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgv.ColumnHeadersHeight = 40;
+            this.dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.Column9,
+            this.Column10,
+            this.dataGridViewImageColumn1});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(206)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgv.EnableHeadersVisualStyles = false;
+            this.dtgv.Location = new System.Drawing.Point(0, 0);
+            this.dtgv.MultiSelect = false;
+            this.dtgv.Name = "dtgv";
+            this.dtgv.ReadOnly = true;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgv.RowHeadersVisible = false;
+            this.dtgv.RowHeadersWidth = 62;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.dtgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgv.RowTemplate.Height = 50;
+            this.dtgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgv.Size = new System.Drawing.Size(1147, 427);
+            this.dtgv.TabIndex = 11;
+            this.dtgv.SelectionChanged += new System.EventHandler(this.dtgv_SelectionChanged);
             // 
-            // UC_Study_btn_Edit
+            // dataGridViewTextBoxColumn1
             // 
-            this.UC_Study_btn_Edit.BorderRadius = 16;
-            this.UC_Study_btn_Edit.CheckedState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.CustomImages.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UC_Study_btn_Edit.DisabledState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_btn_Edit.HoverState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Location = new System.Drawing.Point(781, 36);
-            this.UC_Study_btn_Edit.Name = "UC_Study_btn_Edit";
-            this.UC_Study_btn_Edit.ShadowDecoration.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Size = new System.Drawing.Size(142, 45);
-            this.UC_Study_btn_Edit.TabIndex = 10;
-            this.UC_Study_btn_Edit.Text = "Edit";
-            this.UC_Study_btn_Edit.Click += new System.EventHandler(this.UC_Study_btn_Edit_Click);
+            this.dataGridViewTextBoxColumn1.FillWeight = 27.60738F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "MAMH";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // UC_Study_btn_ListKhoa
+            // dataGridViewTextBoxColumn2
             // 
-            this.UC_Study_btn_ListKhoa.BorderRadius = 16;
-            this.UC_Study_btn_ListKhoa.CheckedState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.CustomImages.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_ListKhoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_ListKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_btn_ListKhoa.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_btn_ListKhoa.HoverState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Location = new System.Drawing.Point(959, 36);
-            this.UC_Study_btn_ListKhoa.Name = "UC_Study_btn_ListKhoa";
-            this.UC_Study_btn_ListKhoa.ShadowDecoration.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Size = new System.Drawing.Size(142, 45);
-            this.UC_Study_btn_ListKhoa.TabIndex = 11;
-            this.UC_Study_btn_ListKhoa.Text = "Danh sách";
+            this.dataGridViewTextBoxColumn2.FillWeight = 49.23939F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên môn học";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // Column1
+            // dataGridViewTextBoxColumn3
             // 
-            this.Column1.HeaderText = "MAMH";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
+            this.dataGridViewTextBoxColumn3.FillWeight = 31.32404F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Số TC";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // Column2
+            // dataGridViewTextBoxColumn4
             // 
-            this.Column2.HeaderText = "Tên môn học";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn4.FillWeight = 45.60638F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quá trình";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // Column3
+            // dataGridViewTextBoxColumn5
             // 
-            this.Column3.HeaderText = "Số tín chỉ";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn5.FillWeight = 29.37265F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Giữa kỳ";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // Column4
+            // dataGridViewTextBoxColumn6
             // 
-            this.Column4.HeaderText = "Quá trình";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
+            this.dataGridViewTextBoxColumn6.FillWeight = 41.36973F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Thực hành";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // Column5
+            // Column9
             // 
-            this.Column5.HeaderText = "Giữa kỳ";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
+            this.Column9.FillWeight = 29.73977F;
+            this.Column9.HeaderText = "Cuối kỳ";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
-            // Column6
+            // Column10
             // 
-            this.Column6.HeaderText = "Thực hành";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
+            this.Column10.FillWeight = 27.79487F;
+            this.Column10.HeaderText = "TB môn";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
-            // Column7
+            // dataGridViewImageColumn1
             // 
-            this.Column7.HeaderText = "Cuối kỳ";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "TB Môn";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
+            this.dataGridViewImageColumn1.FillWeight = 16.99122F;
+            this.dataGridViewImageColumn1.HeaderText = "Pass";
+            this.dataGridViewImageColumn1.MinimumWidth = 8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // UC_Study
             // 
@@ -369,7 +440,7 @@ namespace GUI.UC
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.UC_Study_dtgv_Show1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,14 +458,15 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2GradientButton UC_Study_btn_Edit;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.DataGridView UC_Study_dtgv_Show1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridView dtgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
