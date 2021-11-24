@@ -39,7 +39,7 @@ namespace GUI.fDashboard
 
         private void fDashboard_DBoard_btn_Study_CheckedChanged(object sender, EventArgs e)
         {
-            if (fDashboard_DBoard_btn_Study.Checked) uC_Study1.BringToFront();
+            if (fDashboard_DBoard_btn_Study.Checked) uC_Study_Main1.BringToFront();
         }
 
         private void fDashboard_DBoard_btn_Setting_CheckedChanged(object sender, EventArgs e)

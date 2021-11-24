@@ -114,17 +114,17 @@
     <Compile Include="UC\UC_Setting.Designer.cs">
       <DependentUpon>UC_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_Study_Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Study_Edit.Designer.cs">
+      <DependentUpon>UC_Study_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_Study.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UC_Study.Designer.cs">
       <DependentUpon>UC_Study.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC_Study_Main.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_Study_Main.Designer.cs">
-      <DependentUpon>UC_Study_Main.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fDashboard\DBoard.resx">
       <DependentUpon>DBoard.cs</DependentUpon>
@@ -166,11 +166,11 @@
     <EmbeddedResource Include="UC\UC_Setting.resx">
       <DependentUpon>UC_Setting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Study_Edit.resx">
+      <DependentUpon>UC_Study_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Study.resx">
       <DependentUpon>UC_Study.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_Study_Main.resx">
-      <DependentUpon>UC_Study_Main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
