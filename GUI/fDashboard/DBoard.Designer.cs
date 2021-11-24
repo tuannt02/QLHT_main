@@ -49,6 +49,7 @@ namespace GUI.fDashboard
             this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
             this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -342,20 +343,21 @@ namespace GUI.fDashboard
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(293, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 100);
+            this.panel2.Size = new System.Drawing.Size(1147, 74);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uC_Study_Main1);
             this.panel3.Controls.Add(this.uC_Dashboard1);
             this.panel3.Controls.Add(this.uC_AboutUs1);
             this.panel3.Controls.Add(this.uC_Study1);
             this.panel3.Controls.Add(this.uC_Setting1);
             this.panel3.Controls.Add(this.uC_Scholarship1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(293, 100);
+            this.panel3.Location = new System.Drawing.Point(293, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1147, 710);
+            this.panel3.Size = new System.Drawing.Size(1147, 736);
             this.panel3.TabIndex = 2;
             // 
             // uC_Dashboard1
@@ -364,7 +366,7 @@ namespace GUI.fDashboard
             this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
             this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Dashboard1.TabIndex = 1;
             // 
             // uC_AboutUs1
@@ -376,7 +378,7 @@ namespace GUI.fDashboard
             this.uC_AboutUs1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_AboutUs1.Location = new System.Drawing.Point(0, 0);
             this.uC_AboutUs1.Name = "uC_AboutUs1";
-            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 736);
             this.uC_AboutUs1.TabIndex = 0;
             this.uC_AboutUs1.Load += new System.EventHandler(this.uC_AboutUs1_Load);
             // 
@@ -386,7 +388,7 @@ namespace GUI.fDashboard
             this.uC_Study1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Study1.Location = new System.Drawing.Point(0, 0);
             this.uC_Study1.Name = "uC_Study1";
-            this.uC_Study1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_Study1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Study1.TabIndex = 4;
             // 
             // uC_Setting1
@@ -395,7 +397,7 @@ namespace GUI.fDashboard
             this.uC_Setting1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Setting1.Location = new System.Drawing.Point(0, 0);
             this.uC_Setting1.Name = "uC_Setting1";
-            this.uC_Setting1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_Setting1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Setting1.TabIndex = 3;
             // 
             // uC_Scholarship1
@@ -404,13 +406,20 @@ namespace GUI.fDashboard
             this.uC_Scholarship1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Scholarship1.Location = new System.Drawing.Point(0, 0);
             this.uC_Scholarship1.Name = "uC_Scholarship1";
-            this.uC_Scholarship1.Size = new System.Drawing.Size(1147, 710);
+            this.uC_Scholarship1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Scholarship1.TabIndex = 2;
             // 
             // BorderlessF_DBoard
             // 
             this.BorderlessF_DBoard.BorderRadius = 16;
             this.BorderlessF_DBoard.ContainerControl = this;
+            // 
+            // uC_Study_Main1
+            // 
+            this.uC_Study_Main1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Study_Main1.Name = "uC_Study_Main1";
+            this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Study_Main1.TabIndex = 5;
             // 
             // DBoard
             // 
@@ -453,5 +462,6 @@ namespace GUI.fDashboard
         private UC.UC_Scholarship uC_Scholarship1;
         private UC.UC_Dashboard uC_Dashboard1;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessF_DBoard;
+        private UC.UC_Study_Main uC_Study_Main1;
     }
 }

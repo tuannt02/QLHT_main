@@ -49,6 +49,16 @@ namespace GUI.UC
             #endregion
         }
 
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        //private void btn_change_Click(object sender, EventArgs e)
+        //{
+        //
+        //}
+
         private void btn_change_Click(object sender, EventArgs e)
         {
             if (checkDiem(txb_TH.Text) == checkDiem(txb_QT.Text) == 
@@ -59,11 +69,11 @@ namespace GUI.UC
                     float.Parse(txb_TH.Text), float.Parse(txb_CK.Text), 
                     txb_MSSV.Text, txb_NamHoc.Text, 
                     txb_HocKy.Text, lab_MAMH.Text);
-
+        
                 this.send(txb_QT.Text, txb_GK.Text, txb_TH.Text, txb_CK.Text);
                 MessageBox.Show("Thay đổi dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+        
         }
     }
 }

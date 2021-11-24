@@ -30,10 +30,10 @@ namespace GUI.UC
         {
             //if (UC_Study_btn_ListKhoa.Text == "Danh sách")
             //{
-                string cbNamHoc = UC_Study_cb_NamHoc.Text;
-                string cbHocKy = UC_Study_cb_HocKy.Text;
-                string cbKhoa = UC_Study_cb_Khoa.Text;
-                string txbMSSV = UC_Study_txb_MSSV.Text;
+                string cbNamHoc = cb_NamHoc.Text;
+                string cbHocKy = cb_HocKy.Text;
+                string cbKhoa = cb_Khoa.Text;
+                string txbMSSV = txb_MSSV.Text;
                 dtgv.Rows.Clear();
                 if (Kqht_BUS.Instance.KQHT_Search_Check(cbNamHoc, cbHocKy, cbKhoa, txbMSSV))
                     MessageBox.Show("Vui lòng điền đầy đủ thông tin cần tìm kiếm",
@@ -93,9 +93,9 @@ namespace GUI.UC
             if (flag && dtgv.SelectedRows.Count > 0)
             {
                 _GetDataUCtoForm(
-                    UC_Study_txb_MSSV.Text,
-                    UC_Study_cb_NamHoc.Text,
-                    UC_Study_cb_HocKy.Text,
+                    txb_MSSV.Text,
+                    cb_NamHoc.Text,
+                    cb_HocKy.Text,
                     dtgv.SelectedRows[0].Cells[0].Value.ToString(),
                     dtgv.SelectedRows[0].Cells[3].Value.ToString(),
                     dtgv.SelectedRows[0].Cells[4].Value.ToString(),
@@ -103,6 +103,11 @@ namespace GUI.UC
                     dtgv.SelectedRows[0].Cells[6].Value.ToString());
 
             }
+        }
+
+        private void txb_MSSV_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

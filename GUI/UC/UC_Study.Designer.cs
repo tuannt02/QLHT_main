@@ -36,14 +36,13 @@ namespace GUI.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UC_Study_lab_Name = new System.Windows.Forms.Label();
-            this.UC_Study_cb_NamHoc = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.UC_Study_cb_HocKy = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.UC_Study_cb_Khoa = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.UC_Study_txb_MSSV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.UC_Study_btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.cb_NamHoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_HocKy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_Khoa = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txb_MSSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UC_Study_btn_ListKhoa = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.UC_Study_btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_ListKhoa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgv = new System.Windows.Forms.DataGridView();
@@ -56,6 +55,7 @@ namespace GUI.UC
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -68,219 +68,215 @@ namespace GUI.UC
             this.UC_Study_lab_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.UC_Study_lab_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UC_Study_lab_Name.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_lab_Name.Location = new System.Drawing.Point(486, 144);
+            this.UC_Study_lab_Name.Location = new System.Drawing.Point(489, 91);
             this.UC_Study_lab_Name.Name = "UC_Study_lab_Name";
             this.UC_Study_lab_Name.Size = new System.Drawing.Size(156, 32);
             this.UC_Study_lab_Name.TabIndex = 4;
             this.UC_Study_lab_Name.Text = "Tên sinh viên";
             // 
-            // UC_Study_cb_NamHoc
+            // cb_NamHoc
             // 
-            this.UC_Study_cb_NamHoc.BackColor = System.Drawing.Color.Transparent;
-            this.UC_Study_cb_NamHoc.BorderRadius = 16;
-            this.UC_Study_cb_NamHoc.BorderThickness = 2;
-            this.UC_Study_cb_NamHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.UC_Study_cb_NamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.UC_Study_cb_NamHoc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.UC_Study_cb_NamHoc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_NamHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_NamHoc.FocusedState.Parent = this.UC_Study_cb_NamHoc;
-            this.UC_Study_cb_NamHoc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.UC_Study_cb_NamHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.UC_Study_cb_NamHoc.HoverState.Parent = this.UC_Study_cb_NamHoc;
-            this.UC_Study_cb_NamHoc.IntegralHeight = false;
-            this.UC_Study_cb_NamHoc.ItemHeight = 40;
-            this.UC_Study_cb_NamHoc.Items.AddRange(new object[] {
+            this.cb_NamHoc.BackColor = System.Drawing.Color.Transparent;
+            this.cb_NamHoc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.cb_NamHoc.BorderRadius = 16;
+            this.cb_NamHoc.BorderThickness = 2;
+            this.cb_NamHoc.CustomizableEdges.BottomRight = false;
+            this.cb_NamHoc.CustomizableEdges.TopRight = false;
+            this.cb_NamHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_NamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_NamHoc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.cb_NamHoc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_NamHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_NamHoc.FocusedState.Parent = this.cb_NamHoc;
+            this.cb_NamHoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_NamHoc.ForeColor = System.Drawing.Color.White;
+            this.cb_NamHoc.HoverState.Parent = this.cb_NamHoc;
+            this.cb_NamHoc.IntegralHeight = false;
+            this.cb_NamHoc.ItemHeight = 40;
+            this.cb_NamHoc.Items.AddRange(new object[] {
             "2016 - 2017",
             "2017 - 2018",
             "2018 - 2019",
             "2019 - 2020",
             "2020 - 2021",
             "2021 - 2022"});
-            this.UC_Study_cb_NamHoc.ItemsAppearance.Parent = this.UC_Study_cb_NamHoc;
-            this.UC_Study_cb_NamHoc.Location = new System.Drawing.Point(16, 21);
-            this.UC_Study_cb_NamHoc.Name = "UC_Study_cb_NamHoc";
-            this.UC_Study_cb_NamHoc.ShadowDecoration.Parent = this.UC_Study_cb_NamHoc;
-            this.UC_Study_cb_NamHoc.Size = new System.Drawing.Size(169, 46);
-            this.UC_Study_cb_NamHoc.TabIndex = 5;
+            this.cb_NamHoc.ItemsAppearance.Parent = this.cb_NamHoc;
+            this.cb_NamHoc.Location = new System.Drawing.Point(16, 21);
+            this.cb_NamHoc.Name = "cb_NamHoc";
+            this.cb_NamHoc.ShadowDecoration.Parent = this.cb_NamHoc;
+            this.cb_NamHoc.Size = new System.Drawing.Size(169, 46);
+            this.cb_NamHoc.TabIndex = 5;
+            this.cb_NamHoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // UC_Study_cb_HocKy
+            // cb_HocKy
             // 
-            this.UC_Study_cb_HocKy.BackColor = System.Drawing.Color.Transparent;
-            this.UC_Study_cb_HocKy.BorderRadius = 16;
-            this.UC_Study_cb_HocKy.BorderThickness = 2;
-            this.UC_Study_cb_HocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.UC_Study_cb_HocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.UC_Study_cb_HocKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.UC_Study_cb_HocKy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_HocKy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_HocKy.FocusedState.Parent = this.UC_Study_cb_HocKy;
-            this.UC_Study_cb_HocKy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.UC_Study_cb_HocKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.UC_Study_cb_HocKy.HoverState.Parent = this.UC_Study_cb_HocKy;
-            this.UC_Study_cb_HocKy.IntegralHeight = false;
-            this.UC_Study_cb_HocKy.ItemHeight = 40;
-            this.UC_Study_cb_HocKy.Items.AddRange(new object[] {
+            this.cb_HocKy.BackColor = System.Drawing.Color.Transparent;
+            this.cb_HocKy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.cb_HocKy.BorderRadius = 16;
+            this.cb_HocKy.BorderThickness = 2;
+            this.cb_HocKy.CustomizableEdges.BottomLeft = false;
+            this.cb_HocKy.CustomizableEdges.BottomRight = false;
+            this.cb_HocKy.CustomizableEdges.TopLeft = false;
+            this.cb_HocKy.CustomizableEdges.TopRight = false;
+            this.cb_HocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_HocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_HocKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.cb_HocKy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_HocKy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_HocKy.FocusedState.Parent = this.cb_HocKy;
+            this.cb_HocKy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_HocKy.ForeColor = System.Drawing.Color.White;
+            this.cb_HocKy.HoverState.Parent = this.cb_HocKy;
+            this.cb_HocKy.IntegralHeight = false;
+            this.cb_HocKy.ItemHeight = 40;
+            this.cb_HocKy.Items.AddRange(new object[] {
             "HK1",
             "HK2"});
-            this.UC_Study_cb_HocKy.ItemsAppearance.Parent = this.UC_Study_cb_HocKy;
-            this.UC_Study_cb_HocKy.Location = new System.Drawing.Point(201, 21);
-            this.UC_Study_cb_HocKy.Name = "UC_Study_cb_HocKy";
-            this.UC_Study_cb_HocKy.ShadowDecoration.Parent = this.UC_Study_cb_HocKy;
-            this.UC_Study_cb_HocKy.Size = new System.Drawing.Size(153, 46);
-            this.UC_Study_cb_HocKy.TabIndex = 6;
+            this.cb_HocKy.ItemsAppearance.Parent = this.cb_HocKy;
+            this.cb_HocKy.Location = new System.Drawing.Point(188, 21);
+            this.cb_HocKy.Name = "cb_HocKy";
+            this.cb_HocKy.ShadowDecoration.Parent = this.cb_HocKy;
+            this.cb_HocKy.Size = new System.Drawing.Size(89, 46);
+            this.cb_HocKy.TabIndex = 6;
+            this.cb_HocKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // UC_Study_cb_Khoa
+            // cb_Khoa
             // 
-            this.UC_Study_cb_Khoa.BackColor = System.Drawing.Color.Transparent;
-            this.UC_Study_cb_Khoa.BorderRadius = 16;
-            this.UC_Study_cb_Khoa.BorderThickness = 2;
-            this.UC_Study_cb_Khoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.UC_Study_cb_Khoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.UC_Study_cb_Khoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.UC_Study_cb_Khoa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_Khoa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_cb_Khoa.FocusedState.Parent = this.UC_Study_cb_Khoa;
-            this.UC_Study_cb_Khoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.UC_Study_cb_Khoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.UC_Study_cb_Khoa.HoverState.Parent = this.UC_Study_cb_Khoa;
-            this.UC_Study_cb_Khoa.IntegralHeight = false;
-            this.UC_Study_cb_Khoa.ItemHeight = 40;
-            this.UC_Study_cb_Khoa.Items.AddRange(new object[] {
+            this.cb_Khoa.BackColor = System.Drawing.Color.Transparent;
+            this.cb_Khoa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.cb_Khoa.BorderRadius = 16;
+            this.cb_Khoa.BorderThickness = 2;
+            this.cb_Khoa.CustomizableEdges.BottomLeft = false;
+            this.cb_Khoa.CustomizableEdges.TopLeft = false;
+            this.cb_Khoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Khoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Khoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.cb_Khoa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Khoa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_Khoa.FocusedState.Parent = this.cb_Khoa;
+            this.cb_Khoa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_Khoa.ForeColor = System.Drawing.Color.White;
+            this.cb_Khoa.HoverState.Parent = this.cb_Khoa;
+            this.cb_Khoa.IntegralHeight = false;
+            this.cb_Khoa.ItemHeight = 40;
+            this.cb_Khoa.Items.AddRange(new object[] {
             "Công Nghệ Phần Mềm",
             "Hệ Thống Thông Tin",
             "Kỹ Thuật Máy Tính",
             "Khoa Học Máy Tính",
             "Khoa Học Và Kỹ Thuật Thông Tin",
             "Mạng Máy Tính Và Truyền Thông"});
-            this.UC_Study_cb_Khoa.ItemsAppearance.Parent = this.UC_Study_cb_Khoa;
-            this.UC_Study_cb_Khoa.Location = new System.Drawing.Point(372, 21);
-            this.UC_Study_cb_Khoa.Name = "UC_Study_cb_Khoa";
-            this.UC_Study_cb_Khoa.ShadowDecoration.Parent = this.UC_Study_cb_Khoa;
-            this.UC_Study_cb_Khoa.Size = new System.Drawing.Size(330, 46);
-            this.UC_Study_cb_Khoa.TabIndex = 7;
+            this.cb_Khoa.ItemsAppearance.Parent = this.cb_Khoa;
+            this.cb_Khoa.Location = new System.Drawing.Point(279, 21);
+            this.cb_Khoa.Name = "cb_Khoa";
+            this.cb_Khoa.ShadowDecoration.Parent = this.cb_Khoa;
+            this.cb_Khoa.Size = new System.Drawing.Size(330, 46);
+            this.cb_Khoa.TabIndex = 7;
             // 
-            // UC_Study_txb_MSSV
+            // txb_MSSV
             // 
-            this.UC_Study_txb_MSSV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UC_Study_txb_MSSV.DefaultText = "";
-            this.UC_Study_txb_MSSV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UC_Study_txb_MSSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UC_Study_txb_MSSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UC_Study_txb_MSSV.DisabledState.Parent = this.UC_Study_txb_MSSV;
-            this.UC_Study_txb_MSSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UC_Study_txb_MSSV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.UC_Study_txb_MSSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_txb_MSSV.FocusedState.Parent = this.UC_Study_txb_MSSV;
-            this.UC_Study_txb_MSSV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_txb_MSSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UC_Study_txb_MSSV.HoverState.Parent = this.UC_Study_txb_MSSV;
-            this.UC_Study_txb_MSSV.Location = new System.Drawing.Point(802, 21);
-            this.UC_Study_txb_MSSV.Name = "UC_Study_txb_MSSV";
-            this.UC_Study_txb_MSSV.PasswordChar = '\0';
-            this.UC_Study_txb_MSSV.PlaceholderText = "";
-            this.UC_Study_txb_MSSV.SelectedText = "";
-            this.UC_Study_txb_MSSV.ShadowDecoration.Parent = this.UC_Study_txb_MSSV;
-            this.UC_Study_txb_MSSV.Size = new System.Drawing.Size(314, 46);
-            this.UC_Study_txb_MSSV.TabIndex = 8;
-            // 
-            // UC_Study_btn_Search
-            // 
-            this.UC_Study_btn_Search.BorderRadius = 16;
-            this.UC_Study_btn_Search.CheckedState.Parent = this.UC_Study_btn_Search;
-            this.UC_Study_btn_Search.CustomImages.Parent = this.UC_Study_btn_Search;
-            this.UC_Study_btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Search.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UC_Study_btn_Search.DisabledState.Parent = this.UC_Study_btn_Search;
-            this.UC_Study_btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_btn_Search.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_btn_Search.HoverState.Parent = this.UC_Study_btn_Search;
-            this.UC_Study_btn_Search.Location = new System.Drawing.Point(974, 73);
-            this.UC_Study_btn_Search.Name = "UC_Study_btn_Search";
-            this.UC_Study_btn_Search.ShadowDecoration.Parent = this.UC_Study_btn_Search;
-            this.UC_Study_btn_Search.Size = new System.Drawing.Size(142, 45);
-            this.UC_Study_btn_Search.TabIndex = 9;
-            this.UC_Study_btn_Search.Text = "Search";
-            this.UC_Study_btn_Search.Click += new System.EventHandler(this.UC_Study_btn_Search_Click);
+            this.txb_MSSV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.txb_MSSV.BorderRadius = 16;
+            this.txb_MSSV.BorderThickness = 2;
+            this.txb_MSSV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_MSSV.DefaultText = "";
+            this.txb_MSSV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_MSSV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_MSSV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_MSSV.DisabledState.Parent = this.txb_MSSV;
+            this.txb_MSSV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_MSSV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txb_MSSV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_MSSV.FocusedState.Parent = this.txb_MSSV;
+            this.txb_MSSV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_MSSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.txb_MSSV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_MSSV.HoverState.Parent = this.txb_MSSV;
+            this.txb_MSSV.Location = new System.Drawing.Point(933, 24);
+            this.txb_MSSV.Name = "txb_MSSV";
+            this.txb_MSSV.PasswordChar = '\0';
+            this.txb_MSSV.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txb_MSSV.PlaceholderText = "Nhập MSSV";
+            this.txb_MSSV.SelectedText = "";
+            this.txb_MSSV.ShadowDecoration.Parent = this.txb_MSSV;
+            this.txb_MSSV.Size = new System.Drawing.Size(202, 46);
+            this.txb_MSSV.TabIndex = 8;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.UC_Study_btn_ListKhoa);
-            this.panel1.Controls.Add(this.UC_Study_btn_Edit);
+            this.panel1.Controls.Add(this.btn_ListKhoa);
+            this.panel1.Controls.Add(this.btn_Edit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 618);
+            this.panel1.Location = new System.Drawing.Point(0, 607);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 92);
+            this.panel1.Size = new System.Drawing.Size(1147, 74);
             this.panel1.TabIndex = 10;
             // 
-            // UC_Study_btn_ListKhoa
+            // btn_ListKhoa
             // 
-            this.UC_Study_btn_ListKhoa.BorderRadius = 16;
-            this.UC_Study_btn_ListKhoa.CheckedState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.CustomImages.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_ListKhoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_ListKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UC_Study_btn_ListKhoa.DisabledState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_btn_ListKhoa.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_btn_ListKhoa.HoverState.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Location = new System.Drawing.Point(961, 23);
-            this.UC_Study_btn_ListKhoa.Name = "UC_Study_btn_ListKhoa";
-            this.UC_Study_btn_ListKhoa.ShadowDecoration.Parent = this.UC_Study_btn_ListKhoa;
-            this.UC_Study_btn_ListKhoa.Size = new System.Drawing.Size(142, 45);
-            this.UC_Study_btn_ListKhoa.TabIndex = 11;
-            this.UC_Study_btn_ListKhoa.Text = "Danh sách";
+            this.btn_ListKhoa.BorderRadius = 16;
+            this.btn_ListKhoa.CheckedState.Parent = this.btn_ListKhoa;
+            this.btn_ListKhoa.CustomImages.Parent = this.btn_ListKhoa;
+            this.btn_ListKhoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ListKhoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ListKhoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ListKhoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ListKhoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ListKhoa.DisabledState.Parent = this.btn_ListKhoa;
+            this.btn_ListKhoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_ListKhoa.ForeColor = System.Drawing.Color.White;
+            this.btn_ListKhoa.HoverState.Parent = this.btn_ListKhoa;
+            this.btn_ListKhoa.Location = new System.Drawing.Point(962, 13);
+            this.btn_ListKhoa.Name = "btn_ListKhoa";
+            this.btn_ListKhoa.ShadowDecoration.Parent = this.btn_ListKhoa;
+            this.btn_ListKhoa.Size = new System.Drawing.Size(142, 45);
+            this.btn_ListKhoa.TabIndex = 11;
+            this.btn_ListKhoa.Text = "Danh sách";
             // 
-            // UC_Study_btn_Edit
+            // btn_Edit
             // 
-            this.UC_Study_btn_Edit.BorderRadius = 16;
-            this.UC_Study_btn_Edit.CheckedState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.CustomImages.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.UC_Study_btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.UC_Study_btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.UC_Study_btn_Edit.DisabledState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UC_Study_btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.UC_Study_btn_Edit.HoverState.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Location = new System.Drawing.Point(781, 23);
-            this.UC_Study_btn_Edit.Name = "UC_Study_btn_Edit";
-            this.UC_Study_btn_Edit.ShadowDecoration.Parent = this.UC_Study_btn_Edit;
-            this.UC_Study_btn_Edit.Size = new System.Drawing.Size(142, 45);
-            this.UC_Study_btn_Edit.TabIndex = 10;
-            this.UC_Study_btn_Edit.Text = "Edit";
-            this.UC_Study_btn_Edit.Click += new System.EventHandler(this.UC_Study_btn_Edit_Click);
+            this.btn_Edit.BorderRadius = 16;
+            this.btn_Edit.CheckedState.Parent = this.btn_Edit;
+            this.btn_Edit.CustomImages.Parent = this.btn_Edit;
+            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Edit.DisabledState.Parent = this.btn_Edit;
+            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.HoverState.Parent = this.btn_Edit;
+            this.btn_Edit.Location = new System.Drawing.Point(781, 13);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
+            this.btn_Edit.Size = new System.Drawing.Size(142, 45);
+            this.btn_Edit.TabIndex = 10;
+            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.Click += new System.EventHandler(this.UC_Study_btn_Edit_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.UC_Study_cb_Khoa);
+            this.panel2.Controls.Add(this.cb_Khoa);
             this.panel2.Controls.Add(this.UC_Study_lab_Name);
-            this.panel2.Controls.Add(this.UC_Study_btn_Search);
-            this.panel2.Controls.Add(this.UC_Study_cb_NamHoc);
-            this.panel2.Controls.Add(this.UC_Study_txb_MSSV);
-            this.panel2.Controls.Add(this.UC_Study_cb_HocKy);
+            this.panel2.Controls.Add(this.btn_Search);
+            this.panel2.Controls.Add(this.cb_NamHoc);
+            this.panel2.Controls.Add(this.txb_MSSV);
+            this.panel2.Controls.Add(this.cb_HocKy);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 191);
+            this.panel2.Size = new System.Drawing.Size(1147, 137);
             this.panel2.TabIndex = 11;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.dtgv);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 191);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 137);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1147, 427);
+            this.guna2Panel1.Size = new System.Drawing.Size(1147, 470);
             this.guna2Panel1.TabIndex = 12;
             // 
             // dtgv
@@ -344,7 +340,7 @@ namespace GUI.UC
             this.dtgv.RowTemplate.Height = 50;
             this.dtgv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv.Size = new System.Drawing.Size(1147, 427);
+            this.dtgv.Size = new System.Drawing.Size(1147, 470);
             this.dtgv.TabIndex = 11;
             this.dtgv.SelectionChanged += new System.EventHandler(this.dtgv_SelectionChanged);
             // 
@@ -426,6 +422,31 @@ namespace GUI.UC
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btn_Search
+            // 
+            this.btn_Search.BorderRadius = 8;
+            this.btn_Search.CheckedState.Parent = this.btn_Search;
+            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Search.CustomImages.Parent = this.btn_Search;
+            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search.DisabledState.Parent = this.btn_Search;
+            this.btn_Search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Search.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Search.ForeColor = System.Drawing.Color.White;
+            this.btn_Search.HoverState.Parent = this.btn_Search;
+            this.btn_Search.Image = global::GUI.Properties.Resources.search_interface_symbol;
+            this.btn_Search.Location = new System.Drawing.Point(873, 25);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.ShadowDecoration.Parent = this.btn_Search;
+            this.btn_Search.Size = new System.Drawing.Size(50, 45);
+            this.btn_Search.TabIndex = 9;
+            this.btn_Search.Click += new System.EventHandler(this.UC_Study_btn_Search_Click);
+            // 
             // UC_Study
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -435,7 +456,7 @@ namespace GUI.UC
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_Study";
-            this.Size = new System.Drawing.Size(1147, 710);
+            this.Size = new System.Drawing.Size(1147, 681);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -448,14 +469,14 @@ namespace GUI.UC
         #endregion
 
         private System.Windows.Forms.Label UC_Study_lab_Name;
-        private Guna.UI2.WinForms.Guna2ComboBox UC_Study_cb_NamHoc;
-        private Guna.UI2.WinForms.Guna2ComboBox UC_Study_cb_HocKy;
-        private Guna.UI2.WinForms.Guna2ComboBox UC_Study_cb_Khoa;
-        private Guna.UI2.WinForms.Guna2TextBox UC_Study_txb_MSSV;
-        private Guna.UI2.WinForms.Guna2GradientButton UC_Study_btn_Search;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_NamHoc;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_HocKy;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_Khoa;
+        private Guna.UI2.WinForms.Guna2TextBox txb_MSSV;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_Search;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2GradientButton UC_Study_btn_ListKhoa;
-        private Guna.UI2.WinForms.Guna2GradientButton UC_Study_btn_Edit;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_ListKhoa;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_Edit;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridView dtgv;
