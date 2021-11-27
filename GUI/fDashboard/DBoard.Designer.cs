@@ -31,31 +31,42 @@ namespace GUI.fDashboard
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fDashboard_DBoard_btn_AboutUs = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.fDashboard_DBoard_btn_Setting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lab_location = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.lab_breadcrumb = new System.Windows.Forms.Label();
+            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
+            this.fDashboard_DBoard_btn_AboutUs = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.fDashboard_DBoard_btn_Setting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Study = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Scholarship = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Dashboard = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.lab_time = new System.Windows.Forms.Label();
             this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
             this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
             this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
             this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel1.Controls.Add(this.lab_time);
+            this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_AboutUs);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Setting);
             this.panel1.Controls.Add(this.label3);
@@ -71,77 +82,6 @@ namespace GUI.fDashboard
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 810);
             this.panel1.TabIndex = 0;
-            // 
-            // fDashboard_DBoard_btn_AboutUs
-            // 
-            this.fDashboard_DBoard_btn_AboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_AboutUs.BorderRadius = 20;
-            this.fDashboard_DBoard_btn_AboutUs.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.fDashboard_DBoard_btn_AboutUs.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
-            this.fDashboard_DBoard_btn_AboutUs.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
-            this.fDashboard_DBoard_btn_AboutUs.CheckedState.Image = global::GUI.Properties.Resources.about_us__1_;
-            this.fDashboard_DBoard_btn_AboutUs.CheckedState.Parent = this.fDashboard_DBoard_btn_AboutUs;
-            this.fDashboard_DBoard_btn_AboutUs.CustomImages.Parent = this.fDashboard_DBoard_btn_AboutUs;
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.fDashboard_DBoard_btn_AboutUs.DisabledState.Parent = this.fDashboard_DBoard_btn_AboutUs;
-            this.fDashboard_DBoard_btn_AboutUs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_AboutUs.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fDashboard_DBoard_btn_AboutUs.ForeColor = System.Drawing.Color.White;
-            this.fDashboard_DBoard_btn_AboutUs.HoverState.Parent = this.fDashboard_DBoard_btn_AboutUs;
-            this.fDashboard_DBoard_btn_AboutUs.Image = global::GUI.Properties.Resources.about_us;
-            this.fDashboard_DBoard_btn_AboutUs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.fDashboard_DBoard_btn_AboutUs.ImageOffset = new System.Drawing.Point(16, 0);
-            this.fDashboard_DBoard_btn_AboutUs.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_AboutUs.Location = new System.Drawing.Point(16, 612);
-            this.fDashboard_DBoard_btn_AboutUs.Name = "fDashboard_DBoard_btn_AboutUs";
-            this.fDashboard_DBoard_btn_AboutUs.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_AboutUs;
-            this.fDashboard_DBoard_btn_AboutUs.Size = new System.Drawing.Size(259, 59);
-            this.fDashboard_DBoard_btn_AboutUs.TabIndex = 9;
-            this.fDashboard_DBoard_btn_AboutUs.Text = "About Us";
-            this.fDashboard_DBoard_btn_AboutUs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.fDashboard_DBoard_btn_AboutUs.TextOffset = new System.Drawing.Point(24, 0);
-            this.fDashboard_DBoard_btn_AboutUs.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_AboutUs_CheckedChanged);
-            this.fDashboard_DBoard_btn_AboutUs.Click += new System.EventHandler(this.guna2GradientButton7_Click);
-            // 
-            // fDashboard_DBoard_btn_Setting
-            // 
-            this.fDashboard_DBoard_btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_Setting.BorderRadius = 20;
-            this.fDashboard_DBoard_btn_Setting.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.fDashboard_DBoard_btn_Setting.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
-            this.fDashboard_DBoard_btn_Setting.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
-            this.fDashboard_DBoard_btn_Setting.CheckedState.Image = global::GUI.Properties.Resources.gear__1_;
-            this.fDashboard_DBoard_btn_Setting.CheckedState.Parent = this.fDashboard_DBoard_btn_Setting;
-            this.fDashboard_DBoard_btn_Setting.CustomImages.Parent = this.fDashboard_DBoard_btn_Setting;
-            this.fDashboard_DBoard_btn_Setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.fDashboard_DBoard_btn_Setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.fDashboard_DBoard_btn_Setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.fDashboard_DBoard_btn_Setting.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.fDashboard_DBoard_btn_Setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.fDashboard_DBoard_btn_Setting.DisabledState.Parent = this.fDashboard_DBoard_btn_Setting;
-            this.fDashboard_DBoard_btn_Setting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_Setting.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.fDashboard_DBoard_btn_Setting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fDashboard_DBoard_btn_Setting.ForeColor = System.Drawing.Color.White;
-            this.fDashboard_DBoard_btn_Setting.HoverState.Parent = this.fDashboard_DBoard_btn_Setting;
-            this.fDashboard_DBoard_btn_Setting.Image = global::GUI.Properties.Resources.gear;
-            this.fDashboard_DBoard_btn_Setting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.fDashboard_DBoard_btn_Setting.ImageOffset = new System.Drawing.Point(16, 0);
-            this.fDashboard_DBoard_btn_Setting.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_Setting.Location = new System.Drawing.Point(16, 547);
-            this.fDashboard_DBoard_btn_Setting.Name = "fDashboard_DBoard_btn_Setting";
-            this.fDashboard_DBoard_btn_Setting.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Setting;
-            this.fDashboard_DBoard_btn_Setting.Size = new System.Drawing.Size(259, 59);
-            this.fDashboard_DBoard_btn_Setting.TabIndex = 8;
-            this.fDashboard_DBoard_btn_Setting.Text = "Setting";
-            this.fDashboard_DBoard_btn_Setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.fDashboard_DBoard_btn_Setting.TextOffset = new System.Drawing.Point(24, 0);
-            this.fDashboard_DBoard_btn_Setting.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Setting_CheckedChanged);
             // 
             // label3
             // 
@@ -218,6 +158,209 @@ namespace GUI.fDashboard
             this.guna2GradientButton4.Size = new System.Drawing.Size(259, 59);
             this.guna2GradientButton4.TabIndex = 4;
             this.guna2GradientButton4.Text = "guna2GradientButton4";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(62, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HBoard";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel2.Controls.Add(this.lab_breadcrumb);
+            this.panel2.Controls.Add(this.txt_C);
+            this.panel2.Controls.Add(this.pic_location);
+            this.panel2.Controls.Add(this.lab_location);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(293, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1147, 74);
+            this.panel2.TabIndex = 1;
+            // 
+            // lab_location
+            // 
+            this.lab_location.AutoSize = true;
+            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.lab_location.Location = new System.Drawing.Point(819, 20);
+            this.lab_location.Name = "lab_location";
+            this.lab_location.Size = new System.Drawing.Size(103, 28);
+            this.lab_location.TabIndex = 7;
+            this.lab_location.Text = "Qui Nhon";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.uC_Dashboard1);
+            this.panel3.Controls.Add(this.uC_AboutUs1);
+            this.panel3.Controls.Add(this.uC_Setting1);
+            this.panel3.Controls.Add(this.uC_Scholarship1);
+            this.panel3.Controls.Add(this.uC_Study_Main1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(293, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1147, 736);
+            this.panel3.TabIndex = 2;
+            // 
+            // BorderlessF_DBoard
+            // 
+            this.BorderlessF_DBoard.BorderRadius = 16;
+            this.BorderlessF_DBoard.ContainerControl = this;
+            // 
+            // lab_breadcrumb
+            // 
+            this.lab_breadcrumb.AutoSize = true;
+            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.lab_breadcrumb.Location = new System.Drawing.Point(17, 20);
+            this.lab_breadcrumb.Name = "lab_breadcrumb";
+            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
+            this.lab_breadcrumb.TabIndex = 12;
+            this.lab_breadcrumb.Text = "App > Dashboard";
+            // 
+            // txt_C
+            // 
+            this.txt_C.AutoSize = true;
+            this.txt_C.BorderThickness = 0;
+            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_C.DefaultText = "30";
+            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.DisabledState.Parent = this.txt_C;
+            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.FocusedState.Parent = this.txt_C;
+            this.txt_C.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_C.ForeColor = System.Drawing.Color.White;
+            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.HoverState.Parent = this.txt_C;
+            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
+            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
+            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
+            this.txt_C.Location = new System.Drawing.Point(930, 5);
+            this.txt_C.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_C.Name = "txt_C";
+            this.txt_C.PasswordChar = '\0';
+            this.txt_C.PlaceholderText = "";
+            this.txt_C.ReadOnly = true;
+            this.txt_C.SelectedText = "";
+            this.txt_C.SelectionStart = 2;
+            this.txt_C.ShadowDecoration.Parent = this.txt_C;
+            this.txt_C.Size = new System.Drawing.Size(166, 55);
+            this.txt_C.TabIndex = 11;
+            // 
+            // pic_location
+            // 
+            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
+            this.pic_location.Location = new System.Drawing.Point(789, 24);
+            this.pic_location.Name = "pic_location";
+            this.pic_location.Size = new System.Drawing.Size(24, 24);
+            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_location.TabIndex = 8;
+            this.pic_location.TabStop = false;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BorderRadius = 4;
+            this.btn_logout.CheckedState.Parent = this.btn_logout;
+            this.btn_logout.CustomImages.Parent = this.btn_logout;
+            this.btn_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_logout.DisabledState.Parent = this.btn_logout;
+            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.HoverState.Parent = this.btn_logout;
+            this.btn_logout.Image = global::GUI.Properties.Resources.logout;
+            this.btn_logout.ImageOffset = new System.Drawing.Point(0, 2);
+            this.btn_logout.Location = new System.Drawing.Point(89, 718);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.ShadowDecoration.Parent = this.btn_logout;
+            this.btn_logout.Size = new System.Drawing.Size(121, 45);
+            this.btn_logout.TabIndex = 10;
+            this.btn_logout.Text = "Log out";
+            // 
+            // fDashboard_DBoard_btn_AboutUs
+            // 
+            this.fDashboard_DBoard_btn_AboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_AboutUs.BorderRadius = 20;
+            this.fDashboard_DBoard_btn_AboutUs.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.fDashboard_DBoard_btn_AboutUs.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
+            this.fDashboard_DBoard_btn_AboutUs.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
+            this.fDashboard_DBoard_btn_AboutUs.CheckedState.Image = global::GUI.Properties.Resources.about_us__1_;
+            this.fDashboard_DBoard_btn_AboutUs.CheckedState.Parent = this.fDashboard_DBoard_btn_AboutUs;
+            this.fDashboard_DBoard_btn_AboutUs.CustomImages.Parent = this.fDashboard_DBoard_btn_AboutUs;
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fDashboard_DBoard_btn_AboutUs.DisabledState.Parent = this.fDashboard_DBoard_btn_AboutUs;
+            this.fDashboard_DBoard_btn_AboutUs.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_AboutUs.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fDashboard_DBoard_btn_AboutUs.ForeColor = System.Drawing.Color.White;
+            this.fDashboard_DBoard_btn_AboutUs.HoverState.Parent = this.fDashboard_DBoard_btn_AboutUs;
+            this.fDashboard_DBoard_btn_AboutUs.Image = global::GUI.Properties.Resources.about_us;
+            this.fDashboard_DBoard_btn_AboutUs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_AboutUs.ImageOffset = new System.Drawing.Point(16, 0);
+            this.fDashboard_DBoard_btn_AboutUs.ImageSize = new System.Drawing.Size(24, 24);
+            this.fDashboard_DBoard_btn_AboutUs.Location = new System.Drawing.Point(16, 612);
+            this.fDashboard_DBoard_btn_AboutUs.Name = "fDashboard_DBoard_btn_AboutUs";
+            this.fDashboard_DBoard_btn_AboutUs.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_AboutUs;
+            this.fDashboard_DBoard_btn_AboutUs.Size = new System.Drawing.Size(259, 59);
+            this.fDashboard_DBoard_btn_AboutUs.TabIndex = 9;
+            this.fDashboard_DBoard_btn_AboutUs.Text = "About Us";
+            this.fDashboard_DBoard_btn_AboutUs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_AboutUs.TextOffset = new System.Drawing.Point(24, 0);
+            this.fDashboard_DBoard_btn_AboutUs.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_AboutUs_CheckedChanged);
+            this.fDashboard_DBoard_btn_AboutUs.Click += new System.EventHandler(this.guna2GradientButton7_Click);
+            // 
+            // fDashboard_DBoard_btn_Setting
+            // 
+            this.fDashboard_DBoard_btn_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Setting.BorderRadius = 20;
+            this.fDashboard_DBoard_btn_Setting.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.fDashboard_DBoard_btn_Setting.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
+            this.fDashboard_DBoard_btn_Setting.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
+            this.fDashboard_DBoard_btn_Setting.CheckedState.Image = global::GUI.Properties.Resources.gear__1_;
+            this.fDashboard_DBoard_btn_Setting.CheckedState.Parent = this.fDashboard_DBoard_btn_Setting;
+            this.fDashboard_DBoard_btn_Setting.CustomImages.Parent = this.fDashboard_DBoard_btn_Setting;
+            this.fDashboard_DBoard_btn_Setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_Setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_Setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_Setting.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_Setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fDashboard_DBoard_btn_Setting.DisabledState.Parent = this.fDashboard_DBoard_btn_Setting;
+            this.fDashboard_DBoard_btn_Setting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Setting.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Setting.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fDashboard_DBoard_btn_Setting.ForeColor = System.Drawing.Color.White;
+            this.fDashboard_DBoard_btn_Setting.HoverState.Parent = this.fDashboard_DBoard_btn_Setting;
+            this.fDashboard_DBoard_btn_Setting.Image = global::GUI.Properties.Resources.gear;
+            this.fDashboard_DBoard_btn_Setting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_Setting.ImageOffset = new System.Drawing.Point(16, 0);
+            this.fDashboard_DBoard_btn_Setting.ImageSize = new System.Drawing.Size(24, 24);
+            this.fDashboard_DBoard_btn_Setting.Location = new System.Drawing.Point(16, 547);
+            this.fDashboard_DBoard_btn_Setting.Name = "fDashboard_DBoard_btn_Setting";
+            this.fDashboard_DBoard_btn_Setting.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Setting;
+            this.fDashboard_DBoard_btn_Setting.Size = new System.Drawing.Size(259, 59);
+            this.fDashboard_DBoard_btn_Setting.TabIndex = 8;
+            this.fDashboard_DBoard_btn_Setting.Text = "Setting";
+            this.fDashboard_DBoard_btn_Setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_Setting.TextOffset = new System.Drawing.Point(24, 0);
+            this.fDashboard_DBoard_btn_Setting.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Setting_CheckedChanged);
             // 
             // fDashboard_DBoard_btn_Study
             // 
@@ -325,43 +468,16 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Dashboard.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Dashboard.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Dashboard_CheckedChanged);
             // 
-            // label1
+            // lab_time
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(62, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HBoard";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(293, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 74);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.uC_Dashboard1);
-            this.panel3.Controls.Add(this.uC_AboutUs1);
-            this.panel3.Controls.Add(this.uC_Setting1);
-            this.panel3.Controls.Add(this.uC_Scholarship1);
-            this.panel3.Controls.Add(this.uC_Study_Main1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(293, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1147, 736);
-            this.panel3.TabIndex = 2;
-            // 
-            // BorderlessF_DBoard
-            // 
-            this.BorderlessF_DBoard.BorderRadius = 16;
-            this.BorderlessF_DBoard.ContainerControl = this;
+            this.lab_time.AutoSize = true;
+            this.lab_time.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_time.ForeColor = System.Drawing.Color.White;
+            this.lab_time.Location = new System.Drawing.Point(54, 780);
+            this.lab_time.Name = "lab_time";
+            this.lab_time.Size = new System.Drawing.Size(176, 21);
+            this.lab_time.TabIndex = 11;
+            this.lab_time.Text = "11/27/2021 9:11:26 PM";
             // 
             // uC_Dashboard1
             // 
@@ -383,7 +499,6 @@ namespace GUI.fDashboard
             this.uC_AboutUs1.Name = "uC_AboutUs1";
             this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 736);
             this.uC_AboutUs1.TabIndex = 0;
-            this.uC_AboutUs1.Load += new System.EventHandler(this.uC_AboutUs1_Load);
             // 
             // uC_Setting1
             // 
@@ -410,6 +525,12 @@ namespace GUI.fDashboard
             this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Study_Main1.TabIndex = 4;
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // DBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -423,9 +544,13 @@ namespace GUI.fDashboard
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.DBoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,5 +576,12 @@ namespace GUI.fDashboard
         private UC.UC_Dashboard uC_Dashboard1;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessF_DBoard;
         private UC.UC_Study_Main uC_Study_Main1;
+        private System.Windows.Forms.PictureBox pic_location;
+        private System.Windows.Forms.Label lab_location;
+        private Guna.UI2.WinForms.Guna2TextBox txt_C;
+        private System.Windows.Forms.Label lab_breadcrumb;
+        private Guna.UI2.WinForms.Guna2Button btn_logout;
+        private System.Windows.Forms.Label lab_time;
+        private System.Windows.Forms.Timer timer;
     }
 }
