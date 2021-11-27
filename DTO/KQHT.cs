@@ -71,4 +71,32 @@ namespace DTO
         }
         #endregion
     }
+    public class DTK
+    {
+        
+        private string _MSSV;
+        private string _HOTEN;
+        private float _TBKH1;
+        private float _TBHK2;
+        private float _TBNAM;
+        
+        
+        
+        public string MSSV { get => _MSSV; set => _MSSV = value; }
+        public string HOTEN { get => _HOTEN; set => _HOTEN = value; }
+        public float TBKH1 { get => _TBKH1; set => _TBKH1 = value; }
+        public float TBHK2 { get => _TBHK2; set => _TBHK2 = value; }
+        public float TBNAM { get => _TBNAM; set => _TBNAM = value; }
+        
+        
+        
+        public DTK(DataRow row)
+        {
+            this.MSSV = (string)row["MSSV"];
+            this.HOTEN = (string)row["HOTEN"];
+            this.TBKH1 = float.Parse(row["TBHK1"].ToString());
+            this.TBHK2 = float.Parse(row["TBHK2"].ToString());
+            this.TBNAM = (TBKH1 + TBHK2) / 2;
+        }
+    }
 }

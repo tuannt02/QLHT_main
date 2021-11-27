@@ -33,6 +33,7 @@ namespace GUI.UC
             this.btn_DanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
             this.uC_Study1 = new GUI.UC.UC_Study();
+            this.uC_Study_ListKhoa1 = new GUI.UC.UC_Study_ListKhoa();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@ namespace GUI.UC
             this.btn_DanhSach.Size = new System.Drawing.Size(134, 46);
             this.btn_DanhSach.TabIndex = 1;
             this.btn_DanhSach.Text = "Danh sách";
+            this.btn_DanhSach.Click += new System.EventHandler(this.btn_DanhSach_Click);
             // 
             // btn_Edit
             // 
@@ -102,12 +104,21 @@ namespace GUI.UC
             this.uC_Study1.Size = new System.Drawing.Size(1147, 681);
             this.uC_Study1.TabIndex = 2;
             // 
+            // uC_Study_ListKhoa1
+            // 
+            this.uC_Study_ListKhoa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Study_ListKhoa1.Location = new System.Drawing.Point(0, 55);
+            this.uC_Study_ListKhoa1.Name = "uC_Study_ListKhoa1";
+            this.uC_Study_ListKhoa1.Size = new System.Drawing.Size(1147, 681);
+            this.uC_Study_ListKhoa1.TabIndex = 3;
+            // 
             // UC_Study_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.uC_Study1);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.uC_Study_ListKhoa1);
             this.Name = "UC_Study_Main";
             this.Size = new System.Drawing.Size(1147, 736);
             this.guna2Panel1.ResumeLayout(false);
@@ -120,5 +131,6 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2Button btn_Edit;
         private Guna.UI2.WinForms.Guna2Button btn_DanhSach;
         private UC_Study uC_Study1;
+        private UC_Study_ListKhoa uC_Study_ListKhoa1;
     }
 }

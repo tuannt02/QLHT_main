@@ -32,14 +32,7 @@ namespace BUS
                 return true;
             return false;
         }
-        //public bool KQHT_XemDS_Check(string NamHoc, string Khoa)
-        //{
-        // if (NamHoc == "" | Khoa == "")
-        // return true;
-        // return false;
-        //}
-
-
+        
 
         public List<KQHT> GetListKQHT(string NamHoc, string HocKy, string Khoa, string MSSV)
         {
@@ -47,15 +40,29 @@ namespace BUS
         }
 
 
-
-        //public DataTable Load_XemDS_dtgv(int NamHoc, string Khoa)
-        //{
-        // return DAO.KQHT_DAO.Instance.Load_XemDS_dtgv(NamHoc, Khoa);
-        //}
-
         public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
         {
             return KQHT_DAO.Instance.Edit_dtgv(QT, GK, TH, CK, mssv, namhoc, hocky, mamh);
+        }
+
+        public bool KQHT_XemDS_Check(string NamHoc, string Khoa)
+        {
+            if (NamHoc == "" | Khoa == "")
+                return true;
+            return false;
+        }
+        public List<DTK> Load_XemDS_dtgv(string NamHoc, string Khoa)
+        {
+            return KQHT_DAO.Instance.Load_XemDS_dtgv(NamHoc, Khoa);
+        }
+        public DTK Load_SV_master(string NamHoc, string Khoa)
+        {
+            List<DTK> listSV = KQHT_DAO.Instance.Load_XemDS_dtgv(NamHoc, Khoa);
+            DTK svMaster = listSV[0];
+            foreach (DTK iSV in listSV)
+                if (iSV.TBHK2 + iSV.TBKH1 > svMaster.TBKH1 + svMaster.TBHK2) svMaster = iSV;
+
+            return svMaster;
         }
     }
 }

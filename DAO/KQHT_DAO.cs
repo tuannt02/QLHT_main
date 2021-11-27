@@ -41,7 +41,22 @@ namespace DAO
             return result;
         }
 
+        public List<DTK> Load_XemDS_dtgv(string NamHoc, string Khoa)
+        {
+            string query = "USP_Load_XemDS_dtgv @NamHoc , @Khoa";
 
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { NamHoc, Khoa });
+
+            List<DTK> result = new List<DTK>();
+
+            foreach (DataRow row in data.Rows)
+            {
+                DTK kqht = new DTK(row);
+                result.Add(kqht);
+            }
+
+            return result;
+        }
 
         public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
         {

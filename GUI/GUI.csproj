@@ -126,6 +126,12 @@
     <Compile Include="UC\UC_Study.Designer.cs">
       <DependentUpon>UC_Study.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_Study_ListKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Study_ListKhoa.Designer.cs">
+      <DependentUpon>UC_Study_ListKhoa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fDashboard\DBoard.resx">
       <DependentUpon>DBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Study.resx">
       <DependentUpon>UC_Study.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Study_ListKhoa.resx">
+      <DependentUpon>UC_Study_ListKhoa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />

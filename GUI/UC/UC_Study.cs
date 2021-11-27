@@ -28,5 +28,10 @@ namespace GUI.UC
         {
             //uC_AboutUs1.BringToFront();
         }
+
+        private void btn_DanhSach_Click(object sender, EventArgs e)
+        {
+            uC_Study_ListKhoa1.BringToFront();
+        }
     }
 }
