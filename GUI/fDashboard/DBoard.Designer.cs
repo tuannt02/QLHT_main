@@ -31,35 +31,36 @@ namespace GUI.fDashboard
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lab_location = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.lab_breadcrumb = new System.Windows.Forms.Label();
-            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.lab_time = new System.Windows.Forms.Label();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.fDashboard_DBoard_btn_AboutUs = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Setting = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.fDashboard_DBoard_btn_Gmail = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Study = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Scholarship = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Dashboard = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.lab_time = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lab_breadcrumb = new System.Windows.Forms.Label();
+            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.lab_location = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
             this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
             this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
             this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
+            this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.uC_Gmail1 = new GUI.UC.UC_Gmail();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,7 +73,7 @@ namespace GUI.fDashboard
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.guna2GradientButton5);
-            this.panel1.Controls.Add(this.guna2GradientButton4);
+            this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Gmail);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Study);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Scholarship);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Dashboard);
@@ -83,191 +84,16 @@ namespace GUI.fDashboard
             this.panel1.Size = new System.Drawing.Size(293, 810);
             this.panel1.TabIndex = 0;
             // 
-            // label3
+            // lab_time
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.label3.Location = new System.Drawing.Point(33, 516);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Other";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.label2.Location = new System.Drawing.Point(33, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Tools";
-            // 
-            // guna2GradientButton5
-            // 
-            this.guna2GradientButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.BorderRadius = 20;
-            this.guna2GradientButton5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2GradientButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
-            this.guna2GradientButton5.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
-            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton5.DisabledState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Location = new System.Drawing.Point(16, 428);
-            this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Size = new System.Drawing.Size(259, 59);
-            this.guna2GradientButton5.TabIndex = 5;
-            this.guna2GradientButton5.Text = "guna2GradientButton5";
-            // 
-            // guna2GradientButton4
-            // 
-            this.guna2GradientButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton4.BorderRadius = 20;
-            this.guna2GradientButton4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2GradientButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
-            this.guna2GradientButton4.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
-            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton4.DisabledState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(16, 363);
-            this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Size = new System.Drawing.Size(259, 59);
-            this.guna2GradientButton4.TabIndex = 4;
-            this.guna2GradientButton4.Text = "guna2GradientButton4";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(62, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HBoard";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panel2.Controls.Add(this.lab_breadcrumb);
-            this.panel2.Controls.Add(this.txt_C);
-            this.panel2.Controls.Add(this.pic_location);
-            this.panel2.Controls.Add(this.lab_location);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(293, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 74);
-            this.panel2.TabIndex = 1;
-            // 
-            // lab_location
-            // 
-            this.lab_location.AutoSize = true;
-            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.lab_location.Location = new System.Drawing.Point(819, 20);
-            this.lab_location.Name = "lab_location";
-            this.lab_location.Size = new System.Drawing.Size(103, 28);
-            this.lab_location.TabIndex = 7;
-            this.lab_location.Text = "Qui Nhon";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.uC_Dashboard1);
-            this.panel3.Controls.Add(this.uC_AboutUs1);
-            this.panel3.Controls.Add(this.uC_Setting1);
-            this.panel3.Controls.Add(this.uC_Scholarship1);
-            this.panel3.Controls.Add(this.uC_Study_Main1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(293, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1147, 736);
-            this.panel3.TabIndex = 2;
-            // 
-            // BorderlessF_DBoard
-            // 
-            this.BorderlessF_DBoard.BorderRadius = 16;
-            this.BorderlessF_DBoard.ContainerControl = this;
-            // 
-            // lab_breadcrumb
-            // 
-            this.lab_breadcrumb.AutoSize = true;
-            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.lab_breadcrumb.Location = new System.Drawing.Point(17, 20);
-            this.lab_breadcrumb.Name = "lab_breadcrumb";
-            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
-            this.lab_breadcrumb.TabIndex = 12;
-            this.lab_breadcrumb.Text = "App > Dashboard";
-            // 
-            // txt_C
-            // 
-            this.txt_C.AutoSize = true;
-            this.txt_C.BorderThickness = 0;
-            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_C.DefaultText = "30";
-            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.DisabledState.Parent = this.txt_C;
-            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.FocusedState.Parent = this.txt_C;
-            this.txt_C.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_C.ForeColor = System.Drawing.Color.White;
-            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.HoverState.Parent = this.txt_C;
-            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
-            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
-            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
-            this.txt_C.Location = new System.Drawing.Point(930, 5);
-            this.txt_C.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_C.Name = "txt_C";
-            this.txt_C.PasswordChar = '\0';
-            this.txt_C.PlaceholderText = "";
-            this.txt_C.ReadOnly = true;
-            this.txt_C.SelectedText = "";
-            this.txt_C.SelectionStart = 2;
-            this.txt_C.ShadowDecoration.Parent = this.txt_C;
-            this.txt_C.Size = new System.Drawing.Size(166, 55);
-            this.txt_C.TabIndex = 11;
-            // 
-            // pic_location
-            // 
-            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
-            this.pic_location.Location = new System.Drawing.Point(789, 24);
-            this.pic_location.Name = "pic_location";
-            this.pic_location.Size = new System.Drawing.Size(24, 24);
-            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_location.TabIndex = 8;
-            this.pic_location.TabStop = false;
+            this.lab_time.AutoSize = true;
+            this.lab_time.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_time.ForeColor = System.Drawing.Color.White;
+            this.lab_time.Location = new System.Drawing.Point(54, 780);
+            this.lab_time.Name = "lab_time";
+            this.lab_time.Size = new System.Drawing.Size(176, 21);
+            this.lab_time.TabIndex = 11;
+            this.lab_time.Text = "11/27/2021 9:11:26 PM";
             // 
             // btn_logout
             // 
@@ -361,6 +187,90 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Setting.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Setting.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Setting_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.label3.Location = new System.Drawing.Point(33, 516);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Other";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.label2.Location = new System.Drawing.Point(33, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Tools";
+            // 
+            // guna2GradientButton5
+            // 
+            this.guna2GradientButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.guna2GradientButton5.BorderRadius = 20;
+            this.guna2GradientButton5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2GradientButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
+            this.guna2GradientButton5.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
+            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton5.DisabledState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.Location = new System.Drawing.Point(16, 428);
+            this.guna2GradientButton5.Name = "guna2GradientButton5";
+            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
+            this.guna2GradientButton5.Size = new System.Drawing.Size(259, 59);
+            this.guna2GradientButton5.TabIndex = 5;
+            this.guna2GradientButton5.Text = "guna2GradientButton5";
+            // 
+            // fDashboard_DBoard_btn_Gmail
+            // 
+            this.fDashboard_DBoard_btn_Gmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Gmail.BorderRadius = 20;
+            this.fDashboard_DBoard_btn_Gmail.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.fDashboard_DBoard_btn_Gmail.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
+            this.fDashboard_DBoard_btn_Gmail.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
+            this.fDashboard_DBoard_btn_Gmail.CheckedState.Image = global::GUI.Properties.Resources.gmail_logo__1_;
+            this.fDashboard_DBoard_btn_Gmail.CheckedState.Parent = this.fDashboard_DBoard_btn_Gmail;
+            this.fDashboard_DBoard_btn_Gmail.CustomImages.Parent = this.fDashboard_DBoard_btn_Gmail;
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fDashboard_DBoard_btn_Gmail.DisabledState.Parent = this.fDashboard_DBoard_btn_Gmail;
+            this.fDashboard_DBoard_btn_Gmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Gmail.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.fDashboard_DBoard_btn_Gmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fDashboard_DBoard_btn_Gmail.ForeColor = System.Drawing.Color.White;
+            this.fDashboard_DBoard_btn_Gmail.HoverState.Parent = this.fDashboard_DBoard_btn_Gmail;
+            this.fDashboard_DBoard_btn_Gmail.Image = global::GUI.Properties.Resources.gmail_logo;
+            this.fDashboard_DBoard_btn_Gmail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_Gmail.ImageOffset = new System.Drawing.Point(16, 0);
+            this.fDashboard_DBoard_btn_Gmail.ImageSize = new System.Drawing.Size(24, 24);
+            this.fDashboard_DBoard_btn_Gmail.Location = new System.Drawing.Point(16, 363);
+            this.fDashboard_DBoard_btn_Gmail.Name = "fDashboard_DBoard_btn_Gmail";
+            this.fDashboard_DBoard_btn_Gmail.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Gmail;
+            this.fDashboard_DBoard_btn_Gmail.Size = new System.Drawing.Size(259, 59);
+            this.fDashboard_DBoard_btn_Gmail.TabIndex = 4;
+            this.fDashboard_DBoard_btn_Gmail.Text = "Viết mail";
+            this.fDashboard_DBoard_btn_Gmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.fDashboard_DBoard_btn_Gmail.TextOffset = new System.Drawing.Point(24, 0);
+            this.fDashboard_DBoard_btn_Gmail.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Gmail_CheckedChanged);
             // 
             // fDashboard_DBoard_btn_Study
             // 
@@ -468,16 +378,111 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Dashboard.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Dashboard.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Dashboard_CheckedChanged);
             // 
-            // lab_time
+            // label1
             // 
-            this.lab_time.AutoSize = true;
-            this.lab_time.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_time.ForeColor = System.Drawing.Color.White;
-            this.lab_time.Location = new System.Drawing.Point(54, 780);
-            this.lab_time.Name = "lab_time";
-            this.lab_time.Size = new System.Drawing.Size(176, 21);
-            this.lab_time.TabIndex = 11;
-            this.lab_time.Text = "11/27/2021 9:11:26 PM";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(62, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HBoard";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel2.Controls.Add(this.lab_breadcrumb);
+            this.panel2.Controls.Add(this.txt_C);
+            this.panel2.Controls.Add(this.pic_location);
+            this.panel2.Controls.Add(this.lab_location);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(293, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1147, 74);
+            this.panel2.TabIndex = 1;
+            // 
+            // lab_breadcrumb
+            // 
+            this.lab_breadcrumb.AutoSize = true;
+            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.lab_breadcrumb.Location = new System.Drawing.Point(17, 20);
+            this.lab_breadcrumb.Name = "lab_breadcrumb";
+            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
+            this.lab_breadcrumb.TabIndex = 12;
+            this.lab_breadcrumb.Text = "App > Dashboard";
+            // 
+            // txt_C
+            // 
+            this.txt_C.AutoSize = true;
+            this.txt_C.BorderThickness = 0;
+            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_C.DefaultText = "30";
+            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.DisabledState.Parent = this.txt_C;
+            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.FocusedState.Parent = this.txt_C;
+            this.txt_C.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_C.ForeColor = System.Drawing.Color.White;
+            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.HoverState.Parent = this.txt_C;
+            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
+            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
+            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
+            this.txt_C.Location = new System.Drawing.Point(930, 5);
+            this.txt_C.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_C.Name = "txt_C";
+            this.txt_C.PasswordChar = '\0';
+            this.txt_C.PlaceholderText = "";
+            this.txt_C.ReadOnly = true;
+            this.txt_C.SelectedText = "";
+            this.txt_C.SelectionStart = 2;
+            this.txt_C.ShadowDecoration.Parent = this.txt_C;
+            this.txt_C.Size = new System.Drawing.Size(166, 55);
+            this.txt_C.TabIndex = 11;
+            // 
+            // pic_location
+            // 
+            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
+            this.pic_location.Location = new System.Drawing.Point(789, 24);
+            this.pic_location.Name = "pic_location";
+            this.pic_location.Size = new System.Drawing.Size(24, 24);
+            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_location.TabIndex = 8;
+            this.pic_location.TabStop = false;
+            // 
+            // lab_location
+            // 
+            this.lab_location.AutoSize = true;
+            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.lab_location.Location = new System.Drawing.Point(819, 20);
+            this.lab_location.Name = "lab_location";
+            this.lab_location.Size = new System.Drawing.Size(103, 28);
+            this.lab_location.TabIndex = 7;
+            this.lab_location.Text = "Qui Nhon";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.uC_Dashboard1);
+            this.panel3.Controls.Add(this.uC_AboutUs1);
+            this.panel3.Controls.Add(this.uC_Setting1);
+            this.panel3.Controls.Add(this.uC_Scholarship1);
+            this.panel3.Controls.Add(this.uC_Study_Main1);
+            this.panel3.Controls.Add(this.uC_Gmail1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(293, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1147, 736);
+            this.panel3.TabIndex = 2;
             // 
             // uC_Dashboard1
             // 
@@ -525,11 +530,24 @@ namespace GUI.fDashboard
             this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Study_Main1.TabIndex = 4;
             // 
+            // BorderlessF_DBoard
+            // 
+            this.BorderlessF_DBoard.BorderRadius = 16;
+            this.BorderlessF_DBoard.ContainerControl = this;
+            // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // uC_Gmail1
+            // 
+            this.uC_Gmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Gmail1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Gmail1.Name = "uC_Gmail1";
+            this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Gmail1.TabIndex = 5;
             // 
             // DBoard
             // 
@@ -549,8 +567,8 @@ namespace GUI.fDashboard
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -562,7 +580,7 @@ namespace GUI.fDashboard
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Dashboard;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Scholarship;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
+        private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Gmail;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Study;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -583,5 +601,6 @@ namespace GUI.fDashboard
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private System.Windows.Forms.Label lab_time;
         private System.Windows.Forms.Timer timer;
+        private UC.UC_Gmail uC_Gmail1;
     }
 }

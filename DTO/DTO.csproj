@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACCOUNT.cs" />
+    <Compile Include="GMAIL.cs" />
     <Compile Include="HOCBONG.cs" />
     <Compile Include="KQHT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

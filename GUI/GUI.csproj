@@ -102,6 +102,12 @@
     <Compile Include="UC\UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_Gmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Gmail.Designer.cs">
+      <DependentUpon>UC_Gmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_Scholarship.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Gmail.resx">
+      <DependentUpon>UC_Gmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Scholarship.resx">
       <DependentUpon>UC_Scholarship.cs</DependentUpon>
@@ -361,6 +370,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail-logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-box-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail-logo %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

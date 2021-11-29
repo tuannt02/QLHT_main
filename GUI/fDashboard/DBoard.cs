@@ -83,6 +83,14 @@ namespace GUI.fDashboard
                 lab_breadcrumb.Text = "App > About Us";
             }
         }
+        private void fDashboard_DBoard_btn_Gmail_CheckedChanged(object sender, EventArgs e)
+        {
+            if (fDashboard_DBoard_btn_Gmail.Checked)
+            {
+                uC_Gmail1.BringToFront();
+                lab_breadcrumb.Text = "App > Viết mail";
+            }
+        }
 
         private void Update_time()
         {
@@ -145,5 +153,6 @@ namespace GUI.fDashboard
         {
             lab_time.Text = DateTime.UtcNow.AddHours(7).ToString();
         }
+
     }
 }
