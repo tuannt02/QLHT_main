@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 
+// Author: Phúc
 
 namespace GUI.UC
 {
@@ -20,6 +21,10 @@ namespace GUI.UC
             InitializeComponent();
         }
 
+
+        #region Events
+
+        // Xử lí btn Search
         private void btn_Search_Click(object sender, EventArgs e)
         {
             dtgv.Rows.Clear();
@@ -61,6 +66,7 @@ namespace GUI.UC
             }
         }
 
+        // Xử lí btn Sv nhất khoa
         private void btn_Svmaster_Click(object sender, EventArgs e)
         {
             dtgv.Rows.Clear();
@@ -92,11 +98,9 @@ namespace GUI.UC
                 svMaster.TBNAM
                 });
 
-                
-
-                    //records++;
                 lab_Recs.Text = "Records: " + records.ToString() + " line";
             }
         }
+        #endregion
     }
 }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Author: Tuấn
+
 namespace GUI.UC
 {
     public partial class UC_AboutUs : UserControl
@@ -17,9 +19,6 @@ namespace GUI.UC
             InitializeComponent();
         }
 
-        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
+        
     }
 }

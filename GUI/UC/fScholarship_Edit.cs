@@ -11,11 +11,16 @@ using DTO;
 using BUS;
 using System.Globalization;
 
+// Author: Tuấn
+
 namespace GUI.UC
 {
     public partial class fScholarship_Edit : Form
     {
+        // Nếu form đang mở flag = true, tránh tràn lỗi từ form UC_Scho đổ qua.
         public static bool flag = false;
+
+        // Thuộc tính kiểm tra người dùng có thay đổi MAHB
         private string firstMAHB;
         public fScholarship_Edit()
         {
@@ -27,8 +32,6 @@ namespace GUI.UC
         // Lấy dữ liệu từ UC_Study cho chức năng Edit
         public void SetData(string MAHB, string TENHB, string TRIGIA, string TGDK, string TGKT, string DVTT)
         {
-            //10/31/2020 12:00:00 AM
-            //DateTime _TGDK = DateTime.Parse(TGDK,"dd/MM/yyyy HH:mm:ss,fff", System.Globalization.CultureInfo.InvariantCulture);
             CultureInfo culture = new CultureInfo("en-US");
             DateTime _TGDK = Convert.ToDateTime(TGDK, culture);
             DateTime _TGKT = Convert.ToDateTime(TGKT, culture);
@@ -40,109 +43,20 @@ namespace GUI.UC
             txt_DVTT.Text = DVTT;
             firstMAHB = MAHB;
         }
-        #endregion
 
-
-
-        #region Events
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            flag = false;
-            Close();
-        }
-        private void btn_Delete_Click(object sender, EventArgs e)
-        {
-            if(txt_MAHB.Text != "" && txt_TENHB.Text == "" &&
-                txt_TRIGIA.Text == "" && txt_DVTT.Text == "")
-            {
-                if (Hocbong_BUS.Instance.DeleteOneRow(txt_MAHB.Text))
-                {
-                    UC_Scholarship.flagUpdate = true;
-                    printInfo("Xóa thành công.", false);
-                    //txt_info.IconLeft = Properties.Resources.check;
-                    //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
-                    //txt_info.Text = "Xóa thành công.";
-                }
-                else
-                {
-                    printInfo("MAHB không tồn tại.", true);
-                    //txt_info.IconLeft = Properties.Resources.close;
-                    //txt_info.ForeColor = Color.Red;
-                    //txt_info.Text = "MAHB không tồn tại.";
-                }
-            }
-            else
-            {
-                printInfo("Nếu xóa vui lòng nhập duy nhất trường MAHB.", true);
-                //txt_info.IconLeft = Properties.Resources.close;
-                //txt_info.ForeColor = Color.Red;
-                //txt_info.Text = "Nếu xóa vui lòng nhập duy nhất trường MAHB.";
-            }
-        }
-        private void btn_Add_Click(object sender, EventArgs e)
-        {
-            if (!Hocbong_BUS.Instance.checkMAHBexits(txt_MAHB.Text) &&
-                txt_TENHB.Text != "" &&
-                txt_TRIGIA.Text!= "" &&
-                txt_DVTT.Text!= "")
-            {
-                UC_Scholarship.flagUpdate = true;
-
-                Hocbong_BUS.Instance.InsertOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, dtp_TGDK.Value,
-                    dtp_TGKT.Value, txt_DVTT.Text);
-                printInfo("Thêm thành công.", false);
-                //txt_info.IconLeft = Properties.Resources.check;
-                //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
-                //txt_info.Text = "Thêm thành công.";
-            }
-            else
-            {
-                printInfo("Thêm thất bại.", true);
-                //txt_info.IconLeft = Properties.Resources.close;
-                //txt_info.ForeColor = Color.Red;
-                //txt_info.Text = "Thêm thất bại.";
-            }
-        }
-        private void btn_Edit_Click(object sender, EventArgs e)
-        {
-            if(firstMAHB != txt_MAHB.Text)
-            {
-                printInfo("Không được sửa MAHB.", true);
-                //txt_info.IconLeft = Properties.Resources.close;
-                //txt_info.ForeColor = Color.Red;
-                //txt_info.Text = "Không được sửa MAHB.";
-            }
-            else if(txt_TENHB.Text == "" || txt_TRIGIA.Text == "" || txt_DVTT.Text == "")
-            {
-                printInfo("Vui lòng nhập đầy đủ thông tin các trường.", true);
-                //txt_info.IconLeft = Properties.Resources.close;
-                //txt_info.ForeColor = Color.Red;
-                //txt_info.Text = "Vui lòng nhập đầy đủ thông tin các trường.";
-            }
-            else
-            {
-                UC_Scholarship.flagUpdate = true;
-                Hocbong_BUS.Instance.UpdateOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, dtp_TGDK.Value,
-                    dtp_TGKT.Value, txt_DVTT.Text);
-                printInfo("Cập nhật thành công.", false);
-                //txt_info.IconLeft = Properties.Resources.check;
-                //txt_info.ForeColor = Color.FromArgb(59, 181, 74);
-                //txt_info.Text = "Cập nhật thành công.";
-            }
-        }
-        #endregion
+        // Hàm in thông báo
         private void printInfo(string mes, bool flag)
         {
             timer.Enabled = true;
 
-            if(flag)
+            if (flag)
             {
-                
+
                 txt_info.IconLeft = Properties.Resources.close;
                 txt_info.ForeColor = Color.Red;
                 txt_info.Text = mes;
                 txt_info.Show();
-                
+
             }
             else
             {
@@ -151,12 +65,96 @@ namespace GUI.UC
                 txt_info.Text = mes;
                 txt_info.Show();
             }
-            
+
         }
+
+        // Ẩn thông báo sau 2s
         private void HideInfo(object sender, EventArgs e)
         {
             txt_info.Hide();
             timer.Enabled = false;
         }
+        #endregion
+
+
+
+        #region Events
+        // Hủy sự kiện form Edit
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            flag = false;
+            Close();
+        }
+
+        //Xử lí btn xóa một dòng
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra điều kiện, chỉ được xóa nếu MAHB ko rỗng và các trường còn lại rỗng
+            if(txt_MAHB.Text != "" && txt_TENHB.Text == "" &&
+                txt_TRIGIA.Text == "" && txt_DVTT.Text == "")
+            {
+                // Xuống BUS kiểm tra nếu MAHB tồn tại thì xóa
+                if (Hocbong_BUS.Instance.DeleteOneRow(txt_MAHB.Text))
+                {
+                    // Sau khi xóa thì thông báo cho form UC_Scholarship cần update dtgv
+                    UC_Scholarship.flagUpdate = true;
+                    printInfo("Xóa thành công.", false);
+                }
+                else printInfo("MAHB không tồn tại.", true);
+            }
+            else printInfo("Nếu xóa vui lòng nhập duy nhất trường MAHB.", true);
+        }
+
+        //Xử lí btn thêm một dòng
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra đk, chỉ được thêm mới MAHB chưa tồn tại và các trường không rỗng
+            if (!Hocbong_BUS.Instance.checkMAHBexits(txt_MAHB.Text) &&
+                txt_TENHB.Text != "" &&
+                txt_TRIGIA.Text!= "" &&
+                txt_DVTT.Text!= "")
+            {
+                // Xuống BUS cập nhật CSDL
+                Hocbong_BUS.Instance.InsertOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, 
+                    dtp_TGDK.Value,
+                    dtp_TGKT.Value, 
+                    txt_DVTT.Text);
+
+                // Sau khi thêm thì thông báo cho form UC_Scholarship cần update dtgv
+                UC_Scholarship.flagUpdate = true;
+
+
+                printInfo("Thêm thành công.", false);
+            }
+            else
+            {
+                printInfo("Thêm thất bại.", true);
+            }
+        }
+
+        // Xử lí btn chỉnh sửa một dòng
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem người dùng có sửa MAHB hay không
+            if(firstMAHB != txt_MAHB.Text) 
+                printInfo("Không được sửa MAHB.", true);
+            else if(txt_TENHB.Text == "" || txt_TRIGIA.Text == "" || txt_DVTT.Text == "")
+            {
+                printInfo("Vui lòng nhập đầy đủ thông tin các trường.", true);
+                
+            }
+            else
+            {
+                // Xuống Bus cập nhật CSDL
+                Hocbong_BUS.Instance.UpdateOneRow(txt_MAHB.Text, txt_TENHB.Text, txt_TRIGIA.Text, dtp_TGDK.Value,
+                    dtp_TGKT.Value, txt_DVTT.Text);
+
+                // Sau khi chỉnh sửa thì thông báo cho form UC_Scholarship cần update dtgv
+                UC_Scholarship.flagUpdate = true;
+                printInfo("Cập nhật thành công.", false);
+                
+            }
+        }
+        #endregion
     }
 }

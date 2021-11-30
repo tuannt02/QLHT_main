@@ -46,6 +46,7 @@ namespace GUI.UC
             this.btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgv = new System.Windows.Forms.DataGridView();
+            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -275,6 +276,7 @@ namespace GUI.UC
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.UC_AboutUs_scrbar_main);
             this.guna2Panel1.Controls.Add(this.dtgv);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 137);
@@ -348,9 +350,30 @@ namespace GUI.UC
             this.dtgv.TabIndex = 11;
             this.dtgv.SelectionChanged += new System.EventHandler(this.dtgv_SelectionChanged);
             // 
+            // UC_AboutUs_scrbar_main
+            // 
+            this.UC_AboutUs_scrbar_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
+            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
+            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
+            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
+            this.UC_AboutUs_scrbar_main.InUpdate = false;
+            this.UC_AboutUs_scrbar_main.LargeChange = 10;
+            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(1137, 0);
+            this.UC_AboutUs_scrbar_main.Minimum = 1;
+            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
+            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
+            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
+            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 470);
+            this.UC_AboutUs_scrbar_main.TabIndex = 12;
+            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.UC_AboutUs_scrbar_main.Value = 1;
+            // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 27.60738F;
+            this.dataGridViewTextBoxColumn1.FillWeight = 29.16393F;
             this.dataGridViewTextBoxColumn1.HeaderText = "MAMH";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -358,7 +381,7 @@ namespace GUI.UC
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 49.23939F;
+            this.dataGridViewTextBoxColumn2.FillWeight = 52.01558F;
             this.dataGridViewTextBoxColumn2.HeaderText = "Tên môn học";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -366,7 +389,7 @@ namespace GUI.UC
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.FillWeight = 31.32404F;
+            this.dataGridViewTextBoxColumn3.FillWeight = 33.09014F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Số TC";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -376,7 +399,7 @@ namespace GUI.UC
             // 
             dataGridViewCellStyle2.NullValue = null;
             this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn4.FillWeight = 45.60638F;
+            this.dataGridViewTextBoxColumn4.FillWeight = 33.98244F;
             this.dataGridViewTextBoxColumn4.HeaderText = "Quá trình";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -386,7 +409,7 @@ namespace GUI.UC
             // 
             dataGridViewCellStyle3.NullValue = null;
             this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn5.FillWeight = 29.37265F;
+            this.dataGridViewTextBoxColumn5.FillWeight = 31.02872F;
             this.dataGridViewTextBoxColumn5.HeaderText = "Giữa kỳ";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -394,7 +417,7 @@ namespace GUI.UC
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.FillWeight = 41.36973F;
+            this.dataGridViewTextBoxColumn6.FillWeight = 43.70222F;
             this.dataGridViewTextBoxColumn6.HeaderText = "Thực hành";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -402,7 +425,7 @@ namespace GUI.UC
             // 
             // Column9
             // 
-            this.Column9.FillWeight = 29.73977F;
+            this.Column9.FillWeight = 31.41654F;
             this.Column9.HeaderText = "Cuối kỳ";
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
@@ -410,7 +433,7 @@ namespace GUI.UC
             // 
             // Column10
             // 
-            this.Column10.FillWeight = 27.79487F;
+            this.Column10.FillWeight = 26.69666F;
             this.Column10.HeaderText = "TB môn";
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
@@ -418,7 +441,7 @@ namespace GUI.UC
             // 
             // dataGridViewImageColumn1
             // 
-            this.dataGridViewImageColumn1.FillWeight = 16.99122F;
+            this.dataGridViewImageColumn1.FillWeight = 17.94921F;
             this.dataGridViewImageColumn1.HeaderText = "Pass";
             this.dataGridViewImageColumn1.MinimumWidth = 8;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
@@ -458,6 +481,7 @@ namespace GUI.UC
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridView dtgv;
+        private Guna.UI2.WinForms.Guna2VScrollBar UC_AboutUs_scrbar_main;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

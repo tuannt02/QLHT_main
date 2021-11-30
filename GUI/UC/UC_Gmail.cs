@@ -25,6 +25,7 @@ namespace GUI.UC
             InitializeComponent();
         }
 
+        // Author: Tuấn
 
         #region Method
 
@@ -58,17 +59,41 @@ namespace GUI.UC
                     client.Credentials = new NetworkCredential(txb_username.Text, txb_password.Text);
 
                     client.Send(mess);
-                    MessageBox.Show("Gửi thành công", "Thông báo");
+                    printInfo("Gửi thành công.", false);
                 }
                 catch
                 {
-                    MessageBox.Show("Gửi không thành công", "Thông báo");
+                    printInfo("Gửi không thành công.", true);
                 }
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ các thông tin", "Thông báo");
+                printInfo("Vui lòng nhập đầy đủ các thông tin.", true);
             }
             
+        }
+
+        // In thông báo
+        private void printInfo(string mes, bool flag)
+        {
+            //timer.Enabled = true;
+            // flag = true : Thông báo lỗi
+            if (flag)
+            {
+
+                txt_info.IconLeft = Properties.Resources.close;
+                txt_info.ForeColor = Color.Red;
+                txt_info.Text = mes;
+                txt_info.Show();
+
+            }
+            else
+            {
+                txt_info.IconLeft = Properties.Resources.check;
+                txt_info.ForeColor = Color.FromArgb(59, 181, 74);
+                txt_info.Text = mes;
+                txt_info.Show();
+            }
+
         }
         #endregion
 

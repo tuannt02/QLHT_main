@@ -14,12 +14,16 @@ using System.IO;
 using System.Globalization;
 using System.Resources;
 
+// Author: Tuấn, Phúc
+
 namespace GUI.UC
 {
     public partial class UC_Dashboard : UserControl
     {
+        // OpenWeatherAPI
         private const string API_KEY = "8608b783bcb7443f5ed759033233c79b";
 
+        // Lấy API thời tiết hiện tại của một địa phương
         private const string CurrentUrl =
             "http://api.openweathermap.org/data/2.5/weather?" +
             "q=Qui Nhon&mode=xml&units=metric&APPID=" + API_KEY;
@@ -29,27 +33,11 @@ namespace GUI.UC
             InitializeComponent();
         }
 
+        
 
+        #region Methods
 
-        private void UC_Dashboard_Load(object sender, EventArgs e)
-        {
-            using (WebClient client = new WebClient())
-            {
-                try
-                {
-                    DisplayForecast(client.DownloadString(CurrentUrl));
-                }
-                catch (WebException ex)
-                {
-                    DisplayError(ex);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unknown error\n" + ex.Message);
-                }
-            }
-        }
-
+        // Lấy dữ liệu từ API
         private void DisplayForecast(string xml)
         {
 
@@ -77,6 +65,7 @@ namespace GUI.UC
             txt_C.IconLeft = myImage;
         }
 
+        // Thông báo chi tiết lỗi
         private void DisplayError(WebException exception)
         {
             try
@@ -92,5 +81,28 @@ namespace GUI.UC
                 MessageBox.Show("Unknown error\n" + ex.Message);
             }
         }
+        #endregion
+
+        #region Events
+        // Load dữ liệu lên DB
+        private void UC_Dashboard_Load(object sender, EventArgs e)
+        {
+            using (WebClient client = new WebClient())
+            {
+                try
+                {
+                    DisplayForecast(client.DownloadString(CurrentUrl));
+                }
+                catch (WebException ex)
+                {
+                    DisplayError(ex);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unknown error\n" + ex.Message);
+                }
+            }
+        }
+        #endregion
     }
 }
