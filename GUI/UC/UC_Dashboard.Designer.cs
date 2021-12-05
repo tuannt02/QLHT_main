@@ -31,23 +31,40 @@ namespace GUI.UC
         {
             this.lab_today = new System.Windows.Forms.Label();
             this.panel_weather = new Guna.UI2.WinForms.Guna2Panel();
-            this.lab_location = new System.Windows.Forms.Label();
-            this.panel_press = new Guna.UI2.WinForms.Guna2Panel();
-            this.lab_pressure = new System.Windows.Forms.Label();
-            this.lab_resultPress = new System.Windows.Forms.Label();
-            this.panel_visi = new Guna.UI2.WinForms.Guna2Panel();
-            this.lab_resultVis = new System.Windows.Forms.Label();
-            this.lab_visibility = new System.Windows.Forms.Label();
             this.panel_huma = new Guna.UI2.WinForms.Guna2Panel();
             this.lab_resultHuma = new System.Windows.Forms.Label();
             this.lab_humadity = new System.Windows.Forms.Label();
+            this.panel_visi = new Guna.UI2.WinForms.Guna2Panel();
+            this.lab_resultVis = new System.Windows.Forms.Label();
+            this.lab_visibility = new System.Windows.Forms.Label();
+            this.panel_press = new Guna.UI2.WinForms.Guna2Panel();
+            this.lab_resultPress = new System.Windows.Forms.Label();
+            this.lab_pressure = new System.Windows.Forms.Label();
             this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
             this.pic_location = new System.Windows.Forms.PictureBox();
+            this.lab_location = new System.Windows.Forms.Label();
+            this.lab_MSSV = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpk_Calendar = new System.Windows.Forms.DateTimePicker();
+            this.lab_dtpk = new System.Windows.Forms.Label();
+            this.btn_PrevMonth = new System.Windows.Forms.Button();
+            this.btn_NextMonth = new System.Windows.Forms.Button();
+            this.panel_Calendar = new System.Windows.Forms.Panel();
             this.panel_weather.SuspendLayout();
-            this.panel_press.SuspendLayout();
-            this.panel_visi.SuspendLayout();
             this.panel_huma.SuspendLayout();
+            this.panel_visi.SuspendLayout();
+            this.panel_press.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lab_today
@@ -79,54 +96,42 @@ namespace GUI.UC
             this.panel_weather.Size = new System.Drawing.Size(391, 288);
             this.panel_weather.TabIndex = 5;
             // 
-            // lab_location
+            // panel_huma
             // 
-            this.lab_location.AutoSize = true;
-            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lab_location.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.lab_location.Location = new System.Drawing.Point(54, 63);
-            this.lab_location.Name = "lab_location";
-            this.lab_location.Size = new System.Drawing.Size(156, 21);
-            this.lab_location.TabIndex = 5;
-            this.lab_location.Text = "Qui Nhon, Binh Dinh";
+            this.panel_huma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_huma.BorderRadius = 16;
+            this.panel_huma.Controls.Add(this.lab_resultHuma);
+            this.panel_huma.Controls.Add(this.lab_humadity);
+            this.panel_huma.FillColor = System.Drawing.Color.White;
+            this.panel_huma.Location = new System.Drawing.Point(227, 85);
+            this.panel_huma.Name = "panel_huma";
+            this.panel_huma.ShadowDecoration.Parent = this.panel_huma;
+            this.panel_huma.Size = new System.Drawing.Size(138, 79);
+            this.panel_huma.TabIndex = 12;
             // 
-            // panel_press
+            // lab_resultHuma
             // 
-            this.panel_press.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel_press.BorderRadius = 16;
-            this.panel_press.Controls.Add(this.lab_resultPress);
-            this.panel_press.Controls.Add(this.lab_pressure);
-            this.panel_press.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
-            this.panel_press.Location = new System.Drawing.Point(33, 196);
-            this.panel_press.Name = "panel_press";
-            this.panel_press.ShadowDecoration.Parent = this.panel_press;
-            this.panel_press.Size = new System.Drawing.Size(138, 79);
-            this.panel_press.TabIndex = 11;
+            this.lab_resultHuma.BackColor = System.Drawing.Color.White;
+            this.lab_resultHuma.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_resultHuma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_resultHuma.Location = new System.Drawing.Point(3, 36);
+            this.lab_resultHuma.Name = "lab_resultHuma";
+            this.lab_resultHuma.Size = new System.Drawing.Size(132, 32);
+            this.lab_resultHuma.TabIndex = 13;
+            this.lab_resultHuma.Text = "87%";
+            this.lab_resultHuma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lab_pressure
+            // lab_humadity
             // 
-            this.lab_pressure.AutoSize = true;
-            this.lab_pressure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
-            this.lab_pressure.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_pressure.ForeColor = System.Drawing.Color.White;
-            this.lab_pressure.Location = new System.Drawing.Point(35, 11);
-            this.lab_pressure.Name = "lab_pressure";
-            this.lab_pressure.Size = new System.Drawing.Size(68, 21);
-            this.lab_pressure.TabIndex = 12;
-            this.lab_pressure.Text = "Áp thấp";
-            // 
-            // lab_resultPress
-            // 
-            this.lab_resultPress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
-            this.lab_resultPress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_resultPress.ForeColor = System.Drawing.Color.White;
-            this.lab_resultPress.Location = new System.Drawing.Point(3, 36);
-            this.lab_resultPress.Name = "lab_resultPress";
-            this.lab_resultPress.Size = new System.Drawing.Size(132, 32);
-            this.lab_resultPress.TabIndex = 13;
-            this.lab_resultPress.Text = "800mb";
-            this.lab_resultPress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_humadity.AutoSize = true;
+            this.lab_humadity.BackColor = System.Drawing.Color.White;
+            this.lab_humadity.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_humadity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_humadity.Location = new System.Drawing.Point(39, 9);
+            this.lab_humadity.Name = "lab_humadity";
+            this.lab_humadity.Size = new System.Drawing.Size(57, 21);
+            this.lab_humadity.TabIndex = 12;
+            this.lab_humadity.Text = "Độ ẩm";
             // 
             // panel_visi
             // 
@@ -165,42 +170,42 @@ namespace GUI.UC
             this.lab_visibility.TabIndex = 12;
             this.lab_visibility.Text = "Tầm nhìn";
             // 
-            // panel_huma
+            // panel_press
             // 
-            this.panel_huma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel_huma.BorderRadius = 16;
-            this.panel_huma.Controls.Add(this.lab_resultHuma);
-            this.panel_huma.Controls.Add(this.lab_humadity);
-            this.panel_huma.FillColor = System.Drawing.Color.White;
-            this.panel_huma.Location = new System.Drawing.Point(227, 85);
-            this.panel_huma.Name = "panel_huma";
-            this.panel_huma.ShadowDecoration.Parent = this.panel_huma;
-            this.panel_huma.Size = new System.Drawing.Size(138, 79);
-            this.panel_huma.TabIndex = 12;
+            this.panel_press.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_press.BorderRadius = 16;
+            this.panel_press.Controls.Add(this.lab_resultPress);
+            this.panel_press.Controls.Add(this.lab_pressure);
+            this.panel_press.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
+            this.panel_press.Location = new System.Drawing.Point(33, 196);
+            this.panel_press.Name = "panel_press";
+            this.panel_press.ShadowDecoration.Parent = this.panel_press;
+            this.panel_press.Size = new System.Drawing.Size(138, 79);
+            this.panel_press.TabIndex = 11;
             // 
-            // lab_resultHuma
+            // lab_resultPress
             // 
-            this.lab_resultHuma.BackColor = System.Drawing.Color.White;
-            this.lab_resultHuma.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_resultHuma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lab_resultHuma.Location = new System.Drawing.Point(3, 36);
-            this.lab_resultHuma.Name = "lab_resultHuma";
-            this.lab_resultHuma.Size = new System.Drawing.Size(132, 32);
-            this.lab_resultHuma.TabIndex = 13;
-            this.lab_resultHuma.Text = "87%";
-            this.lab_resultHuma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_resultPress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
+            this.lab_resultPress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_resultPress.ForeColor = System.Drawing.Color.White;
+            this.lab_resultPress.Location = new System.Drawing.Point(3, 36);
+            this.lab_resultPress.Name = "lab_resultPress";
+            this.lab_resultPress.Size = new System.Drawing.Size(132, 32);
+            this.lab_resultPress.TabIndex = 13;
+            this.lab_resultPress.Text = "800mb";
+            this.lab_resultPress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lab_humadity
+            // lab_pressure
             // 
-            this.lab_humadity.AutoSize = true;
-            this.lab_humadity.BackColor = System.Drawing.Color.White;
-            this.lab_humadity.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_humadity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lab_humadity.Location = new System.Drawing.Point(39, 9);
-            this.lab_humadity.Name = "lab_humadity";
-            this.lab_humadity.Size = new System.Drawing.Size(57, 21);
-            this.lab_humadity.TabIndex = 12;
-            this.lab_humadity.Text = "Độ ẩm";
+            this.lab_pressure.AutoSize = true;
+            this.lab_pressure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
+            this.lab_pressure.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_pressure.ForeColor = System.Drawing.Color.White;
+            this.lab_pressure.Location = new System.Drawing.Point(35, 11);
+            this.lab_pressure.Name = "lab_pressure";
+            this.lab_pressure.Size = new System.Drawing.Size(68, 21);
+            this.lab_pressure.TabIndex = 12;
+            this.lab_pressure.Text = "Áp thấp";
             // 
             // txt_C
             // 
@@ -248,25 +253,195 @@ namespace GUI.UC
             this.pic_location.TabIndex = 6;
             this.pic_location.TabStop = false;
             // 
+            // lab_location
+            // 
+            this.lab_location.AutoSize = true;
+            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lab_location.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.lab_location.Location = new System.Drawing.Point(54, 63);
+            this.lab_location.Name = "lab_location";
+            this.lab_location.Size = new System.Drawing.Size(156, 21);
+            this.lab_location.TabIndex = 5;
+            this.lab_location.Text = "Qui Nhon, Binh Dinh";
+            // 
+            // lab_MSSV
+            // 
+            this.lab_MSSV.AutoSize = true;
+            this.lab_MSSV.ForeColor = System.Drawing.Color.White;
+            this.lab_MSSV.Location = new System.Drawing.Point(223, 113);
+            this.lab_MSSV.Name = "lab_MSSV";
+            this.lab_MSSV.Size = new System.Drawing.Size(81, 20);
+            this.lab_MSSV.TabIndex = 6;
+            this.lab_MSSV.Text = "20521711";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel_Calendar);
+            this.panel1.Controls.Add(this.btn_NextMonth);
+            this.panel1.Controls.Add(this.btn_PrevMonth);
+            this.panel1.Controls.Add(this.lab_dtpk);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(3, 323);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(714, 387);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(69, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(573, 42);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 39);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "T2";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(81, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 39);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "T2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(166, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 39);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "T2";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(244, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 39);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "T2";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(322, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 39);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "T2";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(400, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 39);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "T2";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(465, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 39);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "T2";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpk_Calendar
+            // 
+            this.dtpk_Calendar.Location = new System.Drawing.Point(824, 392);
+            this.dtpk_Calendar.Name = "dtpk_Calendar";
+            this.dtpk_Calendar.Size = new System.Drawing.Size(198, 26);
+            this.dtpk_Calendar.TabIndex = 8;
+            this.dtpk_Calendar.ValueChanged += new System.EventHandler(this.dtpk_Calendar_ValueChanged);
+            // 
+            // lab_dtpk
+            // 
+            this.lab_dtpk.AutoSize = true;
+            this.lab_dtpk.ForeColor = System.Drawing.Color.White;
+            this.lab_dtpk.Location = new System.Drawing.Point(273, 25);
+            this.lab_dtpk.Name = "lab_dtpk";
+            this.lab_dtpk.Size = new System.Drawing.Size(81, 20);
+            this.lab_dtpk.TabIndex = 9;
+            this.lab_dtpk.Text = "20521711";
+            // 
+            // btn_PrevMonth
+            // 
+            this.btn_PrevMonth.Location = new System.Drawing.Point(90, 16);
+            this.btn_PrevMonth.Name = "btn_PrevMonth";
+            this.btn_PrevMonth.Size = new System.Drawing.Size(52, 39);
+            this.btn_PrevMonth.TabIndex = 10;
+            this.btn_PrevMonth.Text = "Lùi";
+            this.btn_PrevMonth.UseVisualStyleBackColor = true;
+            this.btn_PrevMonth.Click += new System.EventHandler(this.btn_PrevMonth_Click);
+            // 
+            // btn_NextMonth
+            // 
+            this.btn_NextMonth.Location = new System.Drawing.Point(557, 16);
+            this.btn_NextMonth.Name = "btn_NextMonth";
+            this.btn_NextMonth.Size = new System.Drawing.Size(52, 39);
+            this.btn_NextMonth.TabIndex = 11;
+            this.btn_NextMonth.Text = "Tiến";
+            this.btn_NextMonth.UseVisualStyleBackColor = true;
+            this.btn_NextMonth.Click += new System.EventHandler(this.btn_NextMonth_Click);
+            // 
+            // panel_Calendar
+            // 
+            this.panel_Calendar.Location = new System.Drawing.Point(70, 110);
+            this.panel_Calendar.Name = "panel_Calendar";
+            this.panel_Calendar.Size = new System.Drawing.Size(573, 274);
+            this.panel_Calendar.TabIndex = 12;
+            // 
             // UC_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Controls.Add(this.dtpk_Calendar);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lab_MSSV);
             this.Controls.Add(this.panel_weather);
             this.Name = "UC_Dashboard";
             this.Size = new System.Drawing.Size(1147, 710);
             this.Load += new System.EventHandler(this.UC_Dashboard_Load);
             this.panel_weather.ResumeLayout(false);
             this.panel_weather.PerformLayout();
-            this.panel_press.ResumeLayout(false);
-            this.panel_press.PerformLayout();
-            this.panel_visi.ResumeLayout(false);
-            this.panel_visi.PerformLayout();
             this.panel_huma.ResumeLayout(false);
             this.panel_huma.PerformLayout();
+            this.panel_visi.ResumeLayout(false);
+            this.panel_visi.PerformLayout();
+            this.panel_press.ResumeLayout(false);
+            this.panel_press.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -286,5 +461,20 @@ namespace GUI.UC
         private System.Windows.Forms.Label lab_resultVis;
         private System.Windows.Forms.Label lab_visibility;
         private System.Windows.Forms.Label lab_resultPress;
+        private System.Windows.Forms.Label lab_MSSV;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Calendar;
+        private System.Windows.Forms.Button btn_NextMonth;
+        private System.Windows.Forms.Button btn_PrevMonth;
+        private System.Windows.Forms.Label lab_dtpk;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpk_Calendar;
     }
 }

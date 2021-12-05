@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACCOUNT_DAO.cs" />
+    <Compile Include="DASHBOARD_DAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="GMAIL_DAO.cs" />
     <Compile Include="HOCBONG_DAO.cs" />
