@@ -44,27 +44,27 @@ namespace GUI.UC
             this.pic_location = new System.Windows.Forms.PictureBox();
             this.lab_location = new System.Windows.Forms.Label();
             this.lab_MSSV = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpk_Calendar = new System.Windows.Forms.DateTimePicker();
             this.lab_dtpk = new System.Windows.Forms.Label();
-            this.btn_PrevMonth = new System.Windows.Forms.Button();
-            this.btn_NextMonth = new System.Windows.Forms.Button();
-            this.panel_Calendar = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpk_Calendar = new System.Windows.Forms.DateTimePicker();
+            this.panel_Calendar = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_PrevMonth = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_NextMonth = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel_weather.SuspendLayout();
             this.panel_huma.SuspendLayout();
             this.panel_visi.SuspendLayout();
             this.panel_press.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lab_today
@@ -269,26 +269,27 @@ namespace GUI.UC
             // 
             this.lab_MSSV.AutoSize = true;
             this.lab_MSSV.ForeColor = System.Drawing.Color.White;
-            this.lab_MSSV.Location = new System.Drawing.Point(223, 113);
+            this.lab_MSSV.Location = new System.Drawing.Point(27, 19);
             this.lab_MSSV.Name = "lab_MSSV";
             this.lab_MSSV.Size = new System.Drawing.Size(81, 20);
             this.lab_MSSV.TabIndex = 6;
             this.lab_MSSV.Text = "20521711";
             // 
-            // panel1
+            // lab_dtpk
             // 
-            this.panel1.Controls.Add(this.panel_Calendar);
-            this.panel1.Controls.Add(this.btn_NextMonth);
-            this.panel1.Controls.Add(this.btn_PrevMonth);
-            this.panel1.Controls.Add(this.lab_dtpk);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(3, 323);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(714, 387);
-            this.panel1.TabIndex = 7;
+            this.lab_dtpk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lab_dtpk.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_dtpk.ForeColor = System.Drawing.Color.Cyan;
+            this.lab_dtpk.Location = new System.Drawing.Point(93, 26);
+            this.lab_dtpk.Name = "lab_dtpk";
+            this.lab_dtpk.Size = new System.Drawing.Size(269, 39);
+            this.lab_dtpk.TabIndex = 9;
+            this.lab_dtpk.Text = "Tháng 12 năm 2021";
+            this.lab_dtpk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -296,137 +297,191 @@ namespace GUI.UC
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(69, 64);
+            this.panel2.Location = new System.Drawing.Point(35, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 42);
+            this.panel2.Size = new System.Drawing.Size(385, 50);
             this.panel2.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(334, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 40);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "CN";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(277, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 40);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "T7";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(222, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 40);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "T6";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(167, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 40);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "T5";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(112, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 40);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "T4";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(57, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 40);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "T3";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Location = new System.Drawing.Point(2, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 39);
+            this.label1.Size = new System.Drawing.Size(50, 40);
             this.label1.TabIndex = 7;
             this.label1.Text = "T2";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(81, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 39);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "T2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(166, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 39);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "T2";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(244, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 39);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "T2";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(322, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 39);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "T2";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(400, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 39);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "T2";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(465, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 39);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "T2";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // dtpk_Calendar
             // 
-            this.dtpk_Calendar.Location = new System.Drawing.Point(824, 392);
+            this.dtpk_Calendar.Location = new System.Drawing.Point(130, 19);
             this.dtpk_Calendar.Name = "dtpk_Calendar";
             this.dtpk_Calendar.Size = new System.Drawing.Size(198, 26);
             this.dtpk_Calendar.TabIndex = 8;
             this.dtpk_Calendar.ValueChanged += new System.EventHandler(this.dtpk_Calendar_ValueChanged);
             // 
-            // lab_dtpk
+            // panel_Calendar
             // 
-            this.lab_dtpk.AutoSize = true;
-            this.lab_dtpk.ForeColor = System.Drawing.Color.White;
-            this.lab_dtpk.Location = new System.Drawing.Point(273, 25);
-            this.lab_dtpk.Name = "lab_dtpk";
-            this.lab_dtpk.Size = new System.Drawing.Size(81, 20);
-            this.lab_dtpk.TabIndex = 9;
-            this.lab_dtpk.Text = "20521711";
+            this.panel_Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel_Calendar.BorderColor = System.Drawing.Color.White;
+            this.panel_Calendar.Location = new System.Drawing.Point(35, 130);
+            this.panel_Calendar.Name = "panel_Calendar";
+            this.panel_Calendar.ShadowDecoration.Parent = this.panel_Calendar;
+            this.panel_Calendar.Size = new System.Drawing.Size(385, 202);
+            this.panel_Calendar.TabIndex = 12;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BorderRadius = 16;
+            this.panel1.Controls.Add(this.btn_PrevMonth);
+            this.panel1.Controls.Add(this.btn_NextMonth);
+            this.panel1.Controls.Add(this.panel_Calendar);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.lab_dtpk);
+            this.panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Location = new System.Drawing.Point(21, 382);
+            this.panel1.Name = "panel1";
+            this.panel1.ShadowDecoration.Parent = this.panel1;
+            this.panel1.Size = new System.Drawing.Size(478, 339);
+            this.panel1.TabIndex = 11;
             // 
             // btn_PrevMonth
             // 
-            this.btn_PrevMonth.Location = new System.Drawing.Point(90, 16);
+            this.btn_PrevMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.BorderRadius = 4;
+            this.btn_PrevMonth.CheckedState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.CustomImages.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_PrevMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_PrevMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_PrevMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_PrevMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_PrevMonth.DisabledState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_PrevMonth.ForeColor = System.Drawing.Color.White;
+            this.btn_PrevMonth.HoverState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.Image = global::GUI.Properties.Resources.left_arrow;
+            this.btn_PrevMonth.Location = new System.Drawing.Point(35, 26);
             this.btn_PrevMonth.Name = "btn_PrevMonth";
-            this.btn_PrevMonth.Size = new System.Drawing.Size(52, 39);
-            this.btn_PrevMonth.TabIndex = 10;
-            this.btn_PrevMonth.Text = "Lùi";
-            this.btn_PrevMonth.UseVisualStyleBackColor = true;
+            this.btn_PrevMonth.ShadowDecoration.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.Size = new System.Drawing.Size(45, 45);
+            this.btn_PrevMonth.TabIndex = 14;
             this.btn_PrevMonth.Click += new System.EventHandler(this.btn_PrevMonth_Click);
             // 
             // btn_NextMonth
             // 
-            this.btn_NextMonth.Location = new System.Drawing.Point(557, 16);
+            this.btn_NextMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.BorderRadius = 4;
+            this.btn_NextMonth.CheckedState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.CustomImages.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NextMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NextMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NextMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NextMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_NextMonth.DisabledState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_NextMonth.ForeColor = System.Drawing.Color.White;
+            this.btn_NextMonth.HoverState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.Image = global::GUI.Properties.Resources.right_arrow;
+            this.btn_NextMonth.Location = new System.Drawing.Point(375, 26);
             this.btn_NextMonth.Name = "btn_NextMonth";
-            this.btn_NextMonth.Size = new System.Drawing.Size(52, 39);
-            this.btn_NextMonth.TabIndex = 11;
-            this.btn_NextMonth.Text = "Tiến";
-            this.btn_NextMonth.UseVisualStyleBackColor = true;
+            this.btn_NextMonth.ShadowDecoration.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.Size = new System.Drawing.Size(45, 45);
+            this.btn_NextMonth.TabIndex = 13;
             this.btn_NextMonth.Click += new System.EventHandler(this.btn_NextMonth_Click);
-            // 
-            // panel_Calendar
-            // 
-            this.panel_Calendar.Location = new System.Drawing.Point(70, 110);
-            this.panel_Calendar.Name = "panel_Calendar";
-            this.panel_Calendar.Size = new System.Drawing.Size(573, 274);
-            this.panel_Calendar.TabIndex = 12;
             // 
             // UC_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.Controls.Add(this.dtpk_Calendar);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lab_MSSV);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtpk_Calendar);
             this.Controls.Add(this.panel_weather);
             this.Name = "UC_Dashboard";
-            this.Size = new System.Drawing.Size(1147, 710);
+            this.Size = new System.Drawing.Size(1147, 736);
             this.Load += new System.EventHandler(this.UC_Dashboard_Load);
             this.panel_weather.ResumeLayout(false);
             this.panel_weather.PerformLayout();
@@ -437,9 +492,8 @@ namespace GUI.UC
             this.panel_press.ResumeLayout(false);
             this.panel_press.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,19 +516,19 @@ namespace GUI.UC
         private System.Windows.Forms.Label lab_visibility;
         private System.Windows.Forms.Label lab_resultPress;
         private System.Windows.Forms.Label lab_MSSV;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel_Calendar;
-        private System.Windows.Forms.Button btn_NextMonth;
-        private System.Windows.Forms.Button btn_PrevMonth;
         private System.Windows.Forms.Label lab_dtpk;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpk_Calendar;
+        private Guna.UI2.WinForms.Guna2Panel panel_Calendar;
+        private Guna.UI2.WinForms.Guna2Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpk_Calendar;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_PrevMonth;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_NextMonth;
     }
 }

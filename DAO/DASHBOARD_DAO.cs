@@ -70,43 +70,35 @@ namespace DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { mssv, date });
 
-
-
-
             for (int i = 0; i < days + 1; i++)
             {
-
-
-
                 listjob.Add(new object[3]);
-
-
-
             }
-
-
-
-
 
             foreach (DataRow item in data.Rows)
             {
                 DateTime a = (DateTime)item["NGKT"];
-                // string b = (string)item["MAMH"];
-                // string c = (string)item["NOIDUNG"];
-                //
-                // Job x = new Job(c, b, a);
-
-
 
                 listjob[a.Date.Day] = new object[] { (DateTime)item["NGKT"], (string)item["MAMH"], (string)item["NOIDUNG"] };
 
-
-
             }
 
-
-
             return listjob;
+        }
+
+        public List<DLNOW>GetlistDLnowDB(string MSSV, DateTime now)
+        {
+            List<DLNOW> dsDLnow = new List<DLNOW>();
+            string query = "select MAMH, NOIDUNG from DEADLINE where MSSV = '20521711' and NGKT = '2021-12-03'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow item in data.Rows)
+            {
+                DLNOW resen = new DLNOW(item);
+                dsDLnow.Add(resen);
+            }
+
+            return dsDLnow;
         }
     }
 }

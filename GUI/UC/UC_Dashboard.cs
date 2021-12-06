@@ -13,6 +13,8 @@ using System.Xml;
 using System.IO;
 using System.Globalization;
 using System.Resources;
+using DTO;
+using BUS;
 
 // Author: Tuấn, Phúc
 
@@ -89,6 +91,9 @@ namespace GUI.UC
         // Load dữ liệu lên DB
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
+            Controls.Add(tLO1);
+            setUpTLO();
+
             using (WebClient client = new WebClient())
             {
                 try
@@ -117,8 +122,8 @@ namespace GUI.UC
 
 
 
-        private static int DateBtnWidth = 72;
-        private static int DateBtnHeight = 39;
+        private static int DateBtnWidth = 50;
+        private static int DateBtnHeight = 40;
         private static int margin = 6;
 
 
@@ -142,37 +147,28 @@ namespace GUI.UC
                         "Sunday" };
 
 
-
         #endregion
 
         private void Load_Matrix()
         {
             Button btnOld = new Button() { Width = 0, Height = 0, Location = new Point(-margin, 0) };
 
-
+            //btnOld.FlatAppearance.BorderSize = 0;
 
             Matrix = new List<List<Button>>();
-
-
-
             for (int i = 0; i < DateOfRow; i++)
             {
                 Matrix.Add(new List<Button>());
-
-
-
                 for (int j = 0; j < DateOfColumn; j++)
                 {
                     Button btn = new Button() { Width = DateBtnWidth, Height = DateBtnHeight };
                     btn.Location = new Point(btnOld.Location.X + btnOld.Width + margin, btnOld.Location.Y);
 
-
+                    btn.FlatAppearance.BorderSize = 0;
+                    btn.FlatStyle = FlatStyle.Flat;
 
                     panel_Calendar.Controls.Add(btn); // thêm các button vào panel
                     Matrix[i].Add(btn); // thêm các button vào matrix
-
-
-
                     btnOld = btn;
                 }
                 btnOld = new Button() { Width = 0, Height = 0, Location = new Point(-margin, btnOld.Location.Y + DateBtnHeight) };
@@ -188,21 +184,12 @@ namespace GUI.UC
         public void Add_Date_into_Matrix_Btn(DateTime date) // Function thêm các text Ngày vào các button
         {
             Clear_Matrix();
-
-
-
+            //setUpTLO();
             DateTime useDate = new DateTime(date.Year, date.Month, 1); // userDate được gán cho ngày đầu tiên trong tháng
-
-
 
             int row = 0;
 
-
-
-
-            List<object[]> A = BUS.DBoard_BUS.Instance.list_GetJobs(lab_MSSV.Text, date, DateTime.DaysInMonth(date.Year, date.Month));
-
-
+            List<object[]> A = DBoard_BUS.Instance.list_GetJobs(lab_MSSV.Text, date, DateTime.DaysInMonth(date.Year, date.Month));
 
 
             for (int i = 1; i <= DateTime.DaysInMonth(date.Year, date.Month); i++) // Function DayofMonth lấy ra số ngày trong tháng
@@ -211,10 +198,10 @@ namespace GUI.UC
                                                                                // function IndexOf xác định index của ngày dựa trên list dateOfWeek ở properties
                 Button btn = Matrix[row][column];
                 btn.Text = i.ToString(); // gán số ngày cho btn
-                btn.BackColor = Color.FromArgb(31, 31, 31);
+                btn.BackColor = Color.FromArgb(38, 38, 38);
                 btn.ForeColor = Color.White;
-
-
+                //btn.Font = new Font("Segoe UI", 9, FontStyle.Bold) ;
+                
 
                 btn.Tag = A[i];
                 
@@ -233,69 +220,102 @@ namespace GUI.UC
                     btn.BackColor = Color.Aqua;
                     btn.ForeColor = Color.Black;
                 }
-                //if (IsEqualDate(useDate, date))
-                // btn.BackColor = Color.OrangeRed;
-
-
 
                 useDate = useDate.AddDays(1);
-
-
 
                 if (column >= 6)
                     row++;
             }
         }
 
-        Label a = new Label();
+        TableLayoutPanel tLO1 = new TableLayoutPanel();
 
         private void btn_mouseHover(object sender, EventArgs e)
         {
             Button b = sender as Button;
-            a.Text = "Con ga Phuc";
-            a.ForeColor = Color.Red;
-            //object[] a = (object)b.Tag;
             object[] c = (object[])b.Tag;
-            a.Text = c[0].ToString(); 
-            a.BringToFront();
-            a.Show();
-            panel1.Controls.Add(a);
+
+            DateTime x = DateTime.Parse(c[0].ToString());
+            List<DLNOW> listDLNow = DBoard_BUS.Instance.GetlistDLnow("20521711", x);
+
+            foreach(DLNOW item in listDLNow)
+            {
+                Label ac = CusLab(true, item.MAMH+":");
+                Label ab = CusLab(false, item.NOIDUNG+":");
+                
+                tLO1.Controls.Add(ac);
+                tLO1.Controls.Add(ab);
+            }
+
+            tLO1.BackColor = Color.White;
+            tLO1.BringToFront();
+            tLO1.Show();
+
         }
 
 
+        void setUpTLO()
+        {
+            tLO1.Controls.Clear();
+            tLO1.Size = new Size(320, 50);
+            tLO1.Hide();
+            tLO1.AutoSize = true;
+            tLO1.Location = new Point(30, 360);
+            tLO1.ColumnCount = 2;
+        }
+
+        Label CusLab(bool type, string text)
+        {
+            // True là lab MAMH
+            Label a = new Label();
+            a.BackColor = Color.White;
+            a.Text = text;
+            a.AutoSize = true;
+            if(type)
+            {
+                a.ForeColor = Color.FromArgb(232, 162, 85);
+                a.Font = new Font("Segoe UI",12,FontStyle.Bold);
+            }
+            else
+            {
+                a.ForeColor = Color.Black;
+                a.Font = new Font("Segoe UI", 12, FontStyle.Italic);
+            }
+
+
+            return a;
+        }
+
         private void btn_mouseLeave(object sender, EventArgs e)
         {
-            a.Hide();
+            tLO1.Controls.Clear();
+            tLO1.Hide();
         }
 
         void Set_Default_Date()
         {
             dtpk_Calendar.Value = DateTime.Now;
 
-
-
             lab_dtpk.Text = "Tháng " + dtpk_Calendar.Value.Month.ToString()
             + " Năm " + dtpk_Calendar.Value.Year.ToString();
         }
 
 
-
-
-
         void Clear_Matrix()
         {
             for (int i = 0; i < Matrix.Count; i++)
-            {
                 for (int j = 0; j < Matrix[i].Count; j++)
                 {
                     Button btn = Matrix[i][j];
                     btn.Text = "";
+                    btn.BackColor = Color.FromArgb(38, 38, 38);
+                    if (btn.Tag!=null)
+                    {
+                        btn.MouseHover -= new EventHandler(btn_mouseHover);
+                        btn.MouseLeave -= new EventHandler(btn_mouseLeave);
+                    }
                 }
-            }
         }
-
-
-
 
 
         bool IsEqual_Date(DateTime a, DateTime b)
@@ -304,23 +324,17 @@ namespace GUI.UC
         }
 
 
-
-
         #region Event
 
 
 
         public static int index = 0;
 
-
-
         #endregion
 
         private void dtpk_Calendar_ValueChanged(object sender, EventArgs e)
         {
             Add_Date_into_Matrix_Btn((sender as DateTimePicker).Value);
-            
-            
             
                 lab_dtpk.Text = "Tháng " + dtpk_Calendar.Value.Month.ToString()
                 + " Năm " + dtpk_Calendar.Value.Year.ToString();
@@ -335,5 +349,7 @@ namespace GUI.UC
         {
             dtpk_Calendar.Value = dtpk_Calendar.Value.AddMonths(-1);
         }
+
+        
     }
 }

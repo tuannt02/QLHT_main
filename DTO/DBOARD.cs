@@ -18,8 +18,6 @@ namespace DTO
         private DateTime _NGKT;
 
 
-
-
         public string NOIDUNG { get => _NOIDUNG; set => _NOIDUNG = value; }
         public string MAMH { get => _MAMH; set => _MAMH = value; }
         public DateTime NGKT { get => _NGKT; set => _NGKT = value; }
@@ -37,6 +35,26 @@ namespace DTO
             this.NOIDUNG = (string)row["NOIDUNG"];
             this.MAMH = (string)row["MAMH"];
             this.NGKT = (DateTime)row["NGKT"];
+        }
+    }
+
+    public class DLNOW
+    {
+        private string _NOIDUNG;
+        private string _MAMH;
+
+        public string NOIDUNG { get => _NOIDUNG; set => _NOIDUNG = value; }
+        public string MAMH { get => _MAMH; set => _MAMH = value; }
+
+        public DLNOW(string NOIDUNG, string MAMH, DateTime NGKT)
+        {
+            this.NOIDUNG = NOIDUNG;
+            this.MAMH = MAMH;
+        }
+        public DLNOW(DataRow row)
+        {
+            NOIDUNG = (string)row["NOIDUNG"];
+            MAMH = (string)row["MAMH"];
         }
     }
 }
