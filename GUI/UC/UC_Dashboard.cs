@@ -34,7 +34,7 @@ namespace GUI.UC
         public UC_Dashboard()
         {
             InitializeComponent();
-            Load_Matrix();
+            //Load_Matrix();
         }
 
         

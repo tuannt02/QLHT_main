@@ -37,6 +37,17 @@ namespace DAO
 
             return result.Rows.Count > 0;
         }
+
+        public bool CheckUsername(string username)
+        {
+            string query = "select * from ACCOUNT where USERNAME = '" + username + "'";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+
+            return result.Rows.Count > 0;
+        }
+
+
         public void InsertAcc(string MSSV, string username, string password)
         {
             string query = "USP_InsertAcc @USERNAME , @PASSWORD , @MSSV ";

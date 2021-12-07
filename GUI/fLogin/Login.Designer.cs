@@ -29,6 +29,7 @@ namespace GUI.fLogin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.fLogin_Login_btn_close = new Guna.UI2.WinForms.Guna2CircleButton();
             this.fLogin_Login_btn_signup = new Guna.UI2.WinForms.Guna2Button();
@@ -40,6 +41,7 @@ namespace GUI.fLogin
             this.fLogin_Login_txb_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.fLogin_Login_lab_password = new System.Windows.Forms.Label();
             this.fLogin_Login_lab_username = new System.Windows.Forms.Label();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fLogin_Login_picBox_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,6 +226,11 @@ namespace GUI.fLogin
             this.fLogin_Login_lab_username.TabIndex = 11;
             this.fLogin_Login_lab_username.Text = "Username";
             // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.BorderRadius = 8;
+            this.BorderlessForm.ContainerControl = this;
+            // 
             // Login
             // 
             this.AcceptButton = this.fLogin_Login_btn_login;
@@ -265,5 +272,6 @@ namespace GUI.fLogin
         private Guna.UI2.WinForms.Guna2TextBox fLogin_Login_txb_password;
         private System.Windows.Forms.Label fLogin_Login_lab_password;
         private System.Windows.Forms.Label fLogin_Login_lab_username;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

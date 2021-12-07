@@ -55,13 +55,14 @@ namespace GUI.fLogin
                 {
                     fDashboard.DBoard DBoard = new fDashboard.DBoard();
                     Instance.Hide();
-                    DBoard.ShowDialog();
+                    DBoard.Show();
                 }
                 else
                 {
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
 
         private void Login_Load(object sender, EventArgs e)

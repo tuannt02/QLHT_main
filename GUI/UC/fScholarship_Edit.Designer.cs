@@ -32,6 +32,8 @@ namespace GUI.UC
             this.components = new System.ComponentModel.Container();
             this.BorderlessF_Edit = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_info = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_back = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -49,8 +51,6 @@ namespace GUI.UC
             this.txt_TENHB = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MAHB = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtp_TGDK = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.txt_info = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_back = new Guna.UI2.WinForms.Guna2GradientButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +61,7 @@ namespace GUI.UC
             // 
             this.BorderlessF_Edit.BorderRadius = 16;
             this.BorderlessF_Edit.ContainerControl = this;
+            this.BorderlessF_Edit.DragMode = Guna.UI2.WinForms.Enums.DragMode.Control;
             this.BorderlessF_Edit.ResizeForm = false;
             // 
             // panel1
@@ -75,6 +76,66 @@ namespace GUI.UC
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 133);
             this.panel1.TabIndex = 0;
+            // 
+            // txt_info
+            // 
+            this.txt_info.BorderThickness = 0;
+            this.txt_info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_info.DefaultText = "";
+            this.txt_info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.DisabledState.Parent = this.txt_info;
+            this.txt_info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txt_info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.FocusedState.Parent = this.txt_info;
+            this.txt_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(181)))), ((int)(((byte)(74)))));
+            this.txt_info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_info.HoverState.Parent = this.txt_info;
+            this.txt_info.IconLeftOffset = new System.Drawing.Point(0, -12);
+            this.txt_info.IconLeftSize = new System.Drawing.Size(24, 24);
+            this.txt_info.Location = new System.Drawing.Point(122, 51);
+            this.txt_info.Multiline = true;
+            this.txt_info.Name = "txt_info";
+            this.txt_info.PasswordChar = '\0';
+            this.txt_info.PlaceholderText = "";
+            this.txt_info.SelectedText = "";
+            this.txt_info.ShadowDecoration.Parent = this.txt_info;
+            this.txt_info.Size = new System.Drawing.Size(306, 70);
+            this.txt_info.TabIndex = 11;
+            // 
+            // btn_back
+            // 
+            this.btn_back.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
+            this.btn_back.BorderRadius = 4;
+            this.btn_back.CheckedState.Parent = this.btn_back;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.CustomImages.Parent = this.btn_back;
+            this.btn_back.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_back.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_back.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_back.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_back.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_back.DisabledState.Parent = this.btn_back;
+            this.btn_back.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btn_back.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btn_back.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(187)))));
+            this.btn_back.HoverState.Parent = this.btn_back;
+            this.btn_back.Image = global::GUI.Properties.Resources.arrowc;
+            this.btn_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_back.ImageSize = new System.Drawing.Size(16, 16);
+            this.btn_back.Location = new System.Drawing.Point(17, 76);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.ShadowDecoration.Parent = this.btn_back;
+            this.btn_back.Size = new System.Drawing.Size(99, 45);
+            this.btn_back.TabIndex = 10;
+            this.btn_back.Text = "Back";
+            this.btn_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_back.TextOffset = new System.Drawing.Point(-3, 0);
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_Add
             // 
@@ -168,7 +229,7 @@ namespace GUI.UC
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(137, 577);
+            this.panel2.Size = new System.Drawing.Size(125, 577);
             this.panel2.TabIndex = 1;
             // 
             // lab_DVTT
@@ -176,7 +237,7 @@ namespace GUI.UC
             this.lab_DVTT.AutoSize = true;
             this.lab_DVTT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_DVTT.ForeColor = System.Drawing.Color.White;
-            this.lab_DVTT.Location = new System.Drawing.Point(55, 513);
+            this.lab_DVTT.Location = new System.Drawing.Point(48, 513);
             this.lab_DVTT.Name = "lab_DVTT";
             this.lab_DVTT.Size = new System.Drawing.Size(69, 28);
             this.lab_DVTT.TabIndex = 5;
@@ -187,7 +248,7 @@ namespace GUI.UC
             this.lab_TGKT.AutoSize = true;
             this.lab_TGKT.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_TGKT.ForeColor = System.Drawing.Color.White;
-            this.lab_TGKT.Location = new System.Drawing.Point(58, 420);
+            this.lab_TGKT.Location = new System.Drawing.Point(51, 420);
             this.lab_TGKT.Name = "lab_TGKT";
             this.lab_TGKT.Size = new System.Drawing.Size(67, 28);
             this.lab_TGKT.TabIndex = 4;
@@ -198,7 +259,7 @@ namespace GUI.UC
             this.lab_TGDK.AutoSize = true;
             this.lab_TGDK.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_TGDK.ForeColor = System.Drawing.Color.White;
-            this.lab_TGDK.Location = new System.Drawing.Point(54, 331);
+            this.lab_TGDK.Location = new System.Drawing.Point(47, 331);
             this.lab_TGDK.Name = "lab_TGDK";
             this.lab_TGDK.Size = new System.Drawing.Size(70, 28);
             this.lab_TGDK.TabIndex = 3;
@@ -209,7 +270,7 @@ namespace GUI.UC
             this.lab_TRIGIA.AutoSize = true;
             this.lab_TRIGIA.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_TRIGIA.ForeColor = System.Drawing.Color.White;
-            this.lab_TRIGIA.Location = new System.Drawing.Point(43, 239);
+            this.lab_TRIGIA.Location = new System.Drawing.Point(36, 239);
             this.lab_TRIGIA.Name = "lab_TRIGIA";
             this.lab_TRIGIA.Size = new System.Drawing.Size(82, 28);
             this.lab_TRIGIA.TabIndex = 2;
@@ -220,7 +281,7 @@ namespace GUI.UC
             this.lab_TENHB.AutoSize = true;
             this.lab_TENHB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_TENHB.ForeColor = System.Drawing.Color.White;
-            this.lab_TENHB.Location = new System.Drawing.Point(43, 143);
+            this.lab_TENHB.Location = new System.Drawing.Point(36, 143);
             this.lab_TENHB.Name = "lab_TENHB";
             this.lab_TENHB.Size = new System.Drawing.Size(84, 28);
             this.lab_TENHB.TabIndex = 1;
@@ -231,7 +292,7 @@ namespace GUI.UC
             this.lab_MAHB.AutoSize = true;
             this.lab_MAHB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_MAHB.ForeColor = System.Drawing.Color.White;
-            this.lab_MAHB.Location = new System.Drawing.Point(49, 55);
+            this.lab_MAHB.Location = new System.Drawing.Point(42, 55);
             this.lab_MAHB.Name = "lab_MAHB";
             this.lab_MAHB.Size = new System.Drawing.Size(78, 28);
             this.lab_MAHB.TabIndex = 0;
@@ -401,66 +462,6 @@ namespace GUI.UC
             this.dtp_TGDK.TabIndex = 0;
             this.dtp_TGDK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtp_TGDK.Value = new System.DateTime(2021, 11, 21, 7, 37, 1, 952);
-            // 
-            // txt_info
-            // 
-            this.txt_info.BorderThickness = 0;
-            this.txt_info.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_info.DefaultText = "";
-            this.txt_info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_info.DisabledState.Parent = this.txt_info;
-            this.txt_info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_info.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.txt_info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_info.FocusedState.Parent = this.txt_info;
-            this.txt_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(181)))), ((int)(((byte)(74)))));
-            this.txt_info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_info.HoverState.Parent = this.txt_info;
-            this.txt_info.IconLeftOffset = new System.Drawing.Point(0, -12);
-            this.txt_info.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txt_info.Location = new System.Drawing.Point(122, 51);
-            this.txt_info.Multiline = true;
-            this.txt_info.Name = "txt_info";
-            this.txt_info.PasswordChar = '\0';
-            this.txt_info.PlaceholderText = "";
-            this.txt_info.SelectedText = "";
-            this.txt_info.ShadowDecoration.Parent = this.txt_info;
-            this.txt_info.Size = new System.Drawing.Size(306, 70);
-            this.txt_info.TabIndex = 11;
-            // 
-            // btn_back
-            // 
-            this.btn_back.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(204)))), ((int)(((byte)(216)))));
-            this.btn_back.BorderRadius = 4;
-            this.btn_back.CheckedState.Parent = this.btn_back;
-            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back.CustomImages.Parent = this.btn_back;
-            this.btn_back.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_back.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_back.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_back.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_back.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_back.DisabledState.Parent = this.btn_back;
-            this.btn_back.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.btn_back.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.btn_back.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(169)))), ((int)(((byte)(187)))));
-            this.btn_back.HoverState.Parent = this.btn_back;
-            this.btn_back.Image = global::GUI.Properties.Resources.arrowc;
-            this.btn_back.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_back.ImageSize = new System.Drawing.Size(16, 16);
-            this.btn_back.Location = new System.Drawing.Point(17, 76);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.ShadowDecoration.Parent = this.btn_back;
-            this.btn_back.Size = new System.Drawing.Size(99, 45);
-            this.btn_back.TabIndex = 10;
-            this.btn_back.Text = "Back";
-            this.btn_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_back.TextOffset = new System.Drawing.Point(-3, 0);
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // timer
             // 

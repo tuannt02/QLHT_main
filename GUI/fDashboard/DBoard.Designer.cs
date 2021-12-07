@@ -43,24 +43,23 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Scholarship = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Dashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lab_breadcrumb = new System.Windows.Forms.Label();
-            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pic_location = new System.Windows.Forms.PictureBox();
-            this.lab_location = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
             this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
             this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
             this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Gmail1 = new GUI.UC.UC_Gmail();
             this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.uC_Gmail1 = new GUI.UC.UC_Gmail();
+            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.lab_location = new System.Windows.Forms.Label();
+            this.lab_breadcrumb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,7 +88,7 @@ namespace GUI.fDashboard
             this.lab_time.AutoSize = true;
             this.lab_time.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_time.ForeColor = System.Drawing.Color.White;
-            this.lab_time.Location = new System.Drawing.Point(54, 780);
+            this.lab_time.Location = new System.Drawing.Point(61, 778);
             this.lab_time.Name = "lab_time";
             this.lab_time.Size = new System.Drawing.Size(176, 21);
             this.lab_time.TabIndex = 11;
@@ -110,12 +109,13 @@ namespace GUI.fDashboard
             this.btn_logout.HoverState.Parent = this.btn_logout;
             this.btn_logout.Image = global::GUI.Properties.Resources.logout;
             this.btn_logout.ImageOffset = new System.Drawing.Point(0, 2);
-            this.btn_logout.Location = new System.Drawing.Point(89, 718);
+            this.btn_logout.Location = new System.Drawing.Point(89, 716);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.ShadowDecoration.Parent = this.btn_logout;
             this.btn_logout.Size = new System.Drawing.Size(121, 45);
             this.btn_logout.TabIndex = 10;
             this.btn_logout.Text = "Log out";
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // fDashboard_DBoard_btn_AboutUs
             // 
@@ -389,87 +389,6 @@ namespace GUI.fDashboard
             this.label1.TabIndex = 0;
             this.label1.Text = "HBoard";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panel2.Controls.Add(this.lab_breadcrumb);
-            this.panel2.Controls.Add(this.txt_C);
-            this.panel2.Controls.Add(this.pic_location);
-            this.panel2.Controls.Add(this.lab_location);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(293, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1147, 74);
-            this.panel2.TabIndex = 1;
-            // 
-            // lab_breadcrumb
-            // 
-            this.lab_breadcrumb.AutoSize = true;
-            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.lab_breadcrumb.Location = new System.Drawing.Point(17, 20);
-            this.lab_breadcrumb.Name = "lab_breadcrumb";
-            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
-            this.lab_breadcrumb.TabIndex = 12;
-            this.lab_breadcrumb.Text = "App > Dashboard";
-            // 
-            // txt_C
-            // 
-            this.txt_C.AutoSize = true;
-            this.txt_C.BorderThickness = 0;
-            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_C.DefaultText = "30";
-            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.DisabledState.Parent = this.txt_C;
-            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.FocusedState.Parent = this.txt_C;
-            this.txt_C.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_C.ForeColor = System.Drawing.Color.White;
-            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.HoverState.Parent = this.txt_C;
-            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
-            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
-            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
-            this.txt_C.Location = new System.Drawing.Point(930, 5);
-            this.txt_C.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_C.Name = "txt_C";
-            this.txt_C.PasswordChar = '\0';
-            this.txt_C.PlaceholderText = "";
-            this.txt_C.ReadOnly = true;
-            this.txt_C.SelectedText = "";
-            this.txt_C.SelectionStart = 2;
-            this.txt_C.ShadowDecoration.Parent = this.txt_C;
-            this.txt_C.Size = new System.Drawing.Size(166, 55);
-            this.txt_C.TabIndex = 11;
-            // 
-            // pic_location
-            // 
-            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
-            this.pic_location.Location = new System.Drawing.Point(789, 24);
-            this.pic_location.Name = "pic_location";
-            this.pic_location.Size = new System.Drawing.Size(24, 24);
-            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_location.TabIndex = 8;
-            this.pic_location.TabStop = false;
-            // 
-            // lab_location
-            // 
-            this.lab_location.AutoSize = true;
-            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.lab_location.Location = new System.Drawing.Point(819, 20);
-            this.lab_location.Name = "lab_location";
-            this.lab_location.Size = new System.Drawing.Size(103, 28);
-            this.lab_location.TabIndex = 7;
-            this.lab_location.Text = "Qui Nhon";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.uC_Dashboard1);
@@ -477,8 +396,8 @@ namespace GUI.fDashboard
             this.panel3.Controls.Add(this.uC_Setting1);
             this.panel3.Controls.Add(this.uC_Scholarship1);
             this.panel3.Controls.Add(this.uC_Study_Main1);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.uC_Gmail1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(293, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 736);
@@ -489,6 +408,7 @@ namespace GUI.fDashboard
             this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Dashboard1.Matrix = null;
             this.uC_Dashboard1.Name = "uC_Dashboard1";
             this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Dashboard1.TabIndex = 1;
@@ -530,6 +450,22 @@ namespace GUI.fDashboard
             this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Study_Main1.TabIndex = 4;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel2.Location = new System.Drawing.Point(272, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(352, 74);
+            this.panel2.TabIndex = 1;
+            // 
+            // uC_Gmail1
+            // 
+            this.uC_Gmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Gmail1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Gmail1.Name = "uC_Gmail1";
+            this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Gmail1.TabIndex = 5;
+            // 
             // BorderlessF_DBoard
             // 
             this.BorderlessF_DBoard.BorderRadius = 16;
@@ -541,21 +477,85 @@ namespace GUI.fDashboard
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // uC_Gmail1
+            // txt_C
             // 
-            this.uC_Gmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Gmail1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Gmail1.Name = "uC_Gmail1";
-            this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Gmail1.TabIndex = 5;
+            this.txt_C.AutoSize = true;
+            this.txt_C.BorderThickness = 0;
+            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_C.DefaultText = "30";
+            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.DisabledState.Parent = this.txt_C;
+            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.FocusedState.Parent = this.txt_C;
+            this.txt_C.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_C.ForeColor = System.Drawing.Color.White;
+            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.HoverState.Parent = this.txt_C;
+            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
+            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
+            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
+            this.txt_C.Location = new System.Drawing.Point(1227, 11);
+            this.txt_C.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_C.Name = "txt_C";
+            this.txt_C.PasswordChar = '\0';
+            this.txt_C.PlaceholderText = "";
+            this.txt_C.ReadOnly = true;
+            this.txt_C.SelectedText = "";
+            this.txt_C.SelectionStart = 2;
+            this.txt_C.ShadowDecoration.Parent = this.txt_C;
+            this.txt_C.Size = new System.Drawing.Size(166, 55);
+            this.txt_C.TabIndex = 11;
+            // 
+            // pic_location
+            // 
+            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
+            this.pic_location.Location = new System.Drawing.Point(1086, 30);
+            this.pic_location.Name = "pic_location";
+            this.pic_location.Size = new System.Drawing.Size(24, 24);
+            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_location.TabIndex = 8;
+            this.pic_location.TabStop = false;
+            // 
+            // lab_location
+            // 
+            this.lab_location.AutoSize = true;
+            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.lab_location.Location = new System.Drawing.Point(1116, 26);
+            this.lab_location.Name = "lab_location";
+            this.lab_location.Size = new System.Drawing.Size(103, 28);
+            this.lab_location.TabIndex = 7;
+            this.lab_location.Text = "Qui Nhon";
+            // 
+            // lab_breadcrumb
+            // 
+            this.lab_breadcrumb.AutoSize = true;
+            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.lab_breadcrumb.Location = new System.Drawing.Point(308, 23);
+            this.lab_breadcrumb.Name = "lab_breadcrumb";
+            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
+            this.lab_breadcrumb.TabIndex = 12;
+            this.lab_breadcrumb.Text = "App > Dashboard";
             // 
             // DBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(1440, 810);
+            this.Controls.Add(this.txt_C);
+            this.Controls.Add(this.pic_location);
+            this.Controls.Add(this.lab_breadcrumb);
+            this.Controls.Add(this.lab_location);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DBoard";
@@ -565,11 +565,10 @@ namespace GUI.fDashboard
             this.Load += new System.EventHandler(this.DBoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -586,7 +585,6 @@ namespace GUI.fDashboard
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_AboutUs;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Setting;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private UC.UC_AboutUs uC_AboutUs1;
         private UC.UC_Setting uC_Setting1;
@@ -594,13 +592,14 @@ namespace GUI.fDashboard
         private UC.UC_Dashboard uC_Dashboard1;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessF_DBoard;
         private UC.UC_Study_Main uC_Study_Main1;
-        private System.Windows.Forms.PictureBox pic_location;
-        private System.Windows.Forms.Label lab_location;
-        private Guna.UI2.WinForms.Guna2TextBox txt_C;
-        private System.Windows.Forms.Label lab_breadcrumb;
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private System.Windows.Forms.Label lab_time;
         private System.Windows.Forms.Timer timer;
         private UC.UC_Gmail uC_Gmail1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_C;
+        private System.Windows.Forms.PictureBox pic_location;
+        private System.Windows.Forms.Label lab_breadcrumb;
+        private System.Windows.Forms.Label lab_location;
     }
 }

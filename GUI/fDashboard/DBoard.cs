@@ -154,5 +154,10 @@ namespace GUI.fDashboard
             lab_time.Text = DateTime.UtcNow.AddHours(7).ToString();
         }
 
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            Close();
+            fLogin.Login.Instance.Show();
+        }
     }
 }
