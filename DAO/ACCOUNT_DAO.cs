@@ -53,5 +53,11 @@ namespace DAO
             string query = "USP_InsertAcc @USERNAME , @PASSWORD , @MSSV ";
             DataProvider.Instance.ExecuteNonQuery(query, new object[] {MSSV, username, password });
         }
+
+        public void Insert_Table_Temp(string username)
+        {
+            string query = "USP_insert_Temp_Table @USERNAME ";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[] { username });
+        }
     }
 }

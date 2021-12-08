@@ -14,6 +14,9 @@ using System.IO;
 using System.Globalization;
 using System.Resources;
 
+using BUS;
+using DTO;
+
 namespace GUI.fDashboard
 {
     public partial class DBoard : Form
@@ -156,6 +159,8 @@ namespace GUI.fDashboard
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
+            DBoard_BUS.Instance.Delete_TempTable();
+
             Close();
             fLogin.Login.Instance.Show();
         }

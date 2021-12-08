@@ -50,5 +50,11 @@ namespace BUS
         {
             return DAO.DASHBOARD_DAO.Instance.GetlistDLnowDB(MSSV, now);
         }
+
+        public void Delete_TempTable()
+        {
+            DASHBOARD_DAO.Instance.Delete_TempTable();
+        }
+
     }
 }

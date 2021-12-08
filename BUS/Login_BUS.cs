@@ -81,5 +81,11 @@ namespace BUS
         {
             ACCOUNT_DAO.Instance.InsertAcc(MSSV, username, password);
         }
+
+        public void Insert_Table_Temp(string username)
+        {
+            ACCOUNT_DAO.Instance.Insert_Table_Temp(username);
+        }
+
     }
 }

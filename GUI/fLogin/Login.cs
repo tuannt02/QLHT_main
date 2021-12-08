@@ -53,6 +53,7 @@ namespace GUI.fLogin
             {
                 if (Login_BUS.Instance.Login(username, password))
                 {
+                    Login_BUS.Instance.Insert_Table_Temp(username);
                     fDashboard.DBoard DBoard = new fDashboard.DBoard();
                     Instance.Hide();
                     DBoard.Show();
@@ -64,6 +65,9 @@ namespace GUI.fLogin
             }
 
         }
+
+
+
 
         private void Login_Load(object sender, EventArgs e)
         {

@@ -100,5 +100,10 @@ namespace DAO
 
             return dsDLnow;
         }
+
+        public void Delete_TempTable()
+        {
+            DataProvider.Instance.ExecuteNonQuery("delete from temp_table");
+        }
     }
 }
