@@ -408,7 +408,7 @@ namespace GUI.fDashboard
             this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Dashboard1.Matrix = null;
+            //this.uC_Dashboard1.Matrix = null;
             this.uC_Dashboard1.Name = "uC_Dashboard1";
             this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Dashboard1.TabIndex = 1;

@@ -56,5 +56,34 @@ namespace BUS
             DASHBOARD_DAO.Instance.Delete_TempTable();
         }
 
+        public string GetMSSV()
+        {
+            return DASHBOARD_DAO.Instance.GetMSSV();
+        }
+
+        public int GetSLHB()
+        {
+            return DASHBOARD_DAO.Instance.GetSLHB();
+        }
+
+        public int GetDLHT(int month)
+        {
+            return DASHBOARD_DAO.Instance.GetDLHT(month);
+        }
+
+        public int GetSUMDL(int month)
+        {
+            return DASHBOARD_DAO.Instance.GetSUMDL(month);
+        }
+
+        public string Load_GHICHU(string MSSV)
+        {
+            return DASHBOARD_DAO.Instance.Load_GHICHU(MSSV);
+        }
+
+        public bool AddDL(string MSSV, string MAMH, DateTime time, string mes, int ch)
+        {
+            return DASHBOARD_DAO.Instance.AddDL(MSSV, MAMH, time, mes, ch);
+        }
     }
 }

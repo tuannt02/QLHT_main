@@ -34,7 +34,9 @@ namespace GUI.UC
         public UC_Dashboard()
         {
             InitializeComponent();
-            //Load_Matrix();
+            Load_Matrix();
+            Load_picbox();
+            Load_Info();
         }
 
         
@@ -183,13 +185,16 @@ namespace GUI.UC
 
         public void Add_Date_into_Matrix_Btn(DateTime date) // Function thêm các text Ngày vào các button
         {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+
             Clear_Matrix();
             //setUpTLO();
             DateTime useDate = new DateTime(date.Year, date.Month, 1); // userDate được gán cho ngày đầu tiên trong tháng
 
             int row = 0;
 
-            List<object[]> A = DBoard_BUS.Instance.list_GetJobs(lab_MSSV.Text, date, DateTime.DaysInMonth(date.Year, date.Month));
+            List<object[]> A = DBoard_BUS.Instance.list_GetJobs(MSSV, date, DateTime.DaysInMonth(date.Year, date.Month));
 
 
             for (int i = 1; i <= DateTime.DaysInMonth(date.Year, date.Month); i++) // Function DayofMonth lấy ra số ngày trong tháng
@@ -232,11 +237,13 @@ namespace GUI.UC
 
         private void btn_mouseHover(object sender, EventArgs e)
         {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
             Button b = sender as Button;
             object[] c = (object[])b.Tag;
 
             DateTime x = DateTime.Parse(c[0].ToString());
-            List<DLNOW> listDLNow = DBoard_BUS.Instance.GetlistDLnow("20521711", x);
+            List<DLNOW> listDLNow = DBoard_BUS.Instance.GetlistDLnow(MSSV, x);
 
             foreach(DLNOW item in listDLNow)
             {
@@ -350,6 +357,58 @@ namespace GUI.UC
             dtpk_Calendar.Value = dtpk_Calendar.Value.AddMonths(-1);
         }
 
-        
+
+
+        private void Load_picbox()
+        {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            byte[] img = Setting_BUS.Instance.Get_Image(MSSV);
+
+            if (img != null)
+            {
+                MemoryStream ms = new MemoryStream(img);
+                ptb_Anhthe.Image = Image.FromStream(ms);
+            }
+            else
+                ptb_Anhthe.Image = Properties.Resources.userdefault;
+        }
+
+        private void Load_Info()
+        {
+            // Load SLHB
+            int SLHB = DBoard_BUS.Instance.GetSLHB();
+            lab_countHB.Text = "Có " + SLHB.ToString() + " học bổng có thể bạn quan tâm";
+
+            // Load Deadline
+            int DLHT = DBoard_BUS.Instance.GetDLHT(dtpk_Calendar.Value.Month);
+            int SUMDL = DBoard_BUS.Instance.GetSUMDL(dtpk_Calendar.Value.Month);
+
+            lab_DLHT.Text = "Số deadline hoàn thành: " + DLHT.ToString();
+            lab_DLCL.Text = "Số deadline còn lại: " + (SUMDL - DLHT).ToString();
+
+            int percent = (int)(((float)DLHT / SUMDL) * 100);
+            ProgBar.Value = percent;
+
+            //Load performance
+            int DLPreMonthHT = DBoard_BUS.Instance.GetDLHT(dtpk_Calendar.Value.Month - 1);
+            int SUMDLPreMonth = DBoard_BUS.Instance.GetSUMDL(dtpk_Calendar.Value.Month - 1);
+
+            int percent2 = (int)(((float)DLPreMonthHT / SUMDLPreMonth) * 100);
+            CircleProgrBar.Value = percent;
+
+            if (percent2 < percent)
+                lab_header_Performance.Text = "Tăng " + (percent - percent2).ToString() + "% so với tháng trước";
+            else
+                lab_header_Performance.Text = "Giảm " + (percent2 - percent).ToString() + "% so với tháng trước";
+
+
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            fDashboard_Edit a = new fDashboard_Edit();
+            a.ShowDialog();
+        }
     }
 }

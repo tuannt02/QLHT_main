@@ -89,7 +89,7 @@ namespace DAO
         public List<DLNOW>GetlistDLnowDB(string MSSV, DateTime now)
         {
             List<DLNOW> dsDLnow = new List<DLNOW>();
-            string query = "select MAMH, NOIDUNG from DEADLINE where MSSV = '20521711' and NGKT = '2021-12-03'";
+            string query = "select MAMH, NOIDUNG from DEADLINE where MSSV = '" + MSSV+ "' and NGKT = '" + now.ToString() + "'";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach(DataRow item in data.Rows)
@@ -104,6 +104,66 @@ namespace DAO
         public void Delete_TempTable()
         {
             DataProvider.Instance.ExecuteNonQuery("delete from temp_table");
+        }
+
+        public string GetMSSV()
+        {
+            string query = "select top 1 MSSV from TEMP_TABLE";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            string MSSV = (string)(data.Rows[0]["MSSV"]);
+
+            return MSSV;
+        }
+
+        public int GetSLHB()
+        {
+            string query = "select * from HOCBONG where TGKT >= GETDATE()";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            return data.Rows.Count;
+        }
+
+        public int GetDLHT(int month)
+        {
+            string query = "select * from DEADLINE where HOANTHANH = 1 and MONTH(NGKT) = " + month.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data.Rows.Count;
+        }
+
+        public int GetSUMDL(int month)
+        {
+            string query = "select * from DEADLINE where MONTH(NGKT) = " + month.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data.Rows.Count;
+        }
+
+        public string Load_GHICHU(string MSSV)
+        {
+            string query = "select GHICHU from SINHVIEN where MSSV = " + MSSV;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            string GHICHU = (string)(data.Rows[0]["GHICHU"]);
+
+            return GHICHU;
+        }
+
+        public bool AddDL(string MSSV, string MAMH, DateTime time, string mes, int ch)
+        {
+            string query = "INSERT_DL  @MSSV , @MAMH , @NGKT , @NOIDUNG , @HOANTHANH ";
+            DataProvider.Instance.ExecuteNonQuery(query, new object[]
+            {
+                MSSV,
+                MAMH,
+                time,
+                mes,
+                ch
+            });
+
+            return true;
+
         }
     }
 }
