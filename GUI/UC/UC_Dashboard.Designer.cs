@@ -29,6 +29,7 @@ namespace GUI.UC
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lab_today = new System.Windows.Forms.Label();
             this.panel_weather = new Guna.UI2.WinForms.Guna2Panel();
             this.panel_huma = new Guna.UI2.WinForms.Guna2Panel();
@@ -40,6 +41,8 @@ namespace GUI.UC
             this.panel_press = new Guna.UI2.WinForms.Guna2Panel();
             this.lab_resultPress = new System.Windows.Forms.Label();
             this.lab_pressure = new System.Windows.Forms.Label();
+            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pic_location = new System.Windows.Forms.PictureBox();
             this.lab_location = new System.Windows.Forms.Label();
             this.lab_dtpk = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,56 +56,55 @@ namespace GUI.UC
             this.dtpk_Calendar = new System.Windows.Forms.DateTimePicker();
             this.panel_Calendar = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_PrevMonth = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_NextMonth = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lab_header_Performance = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.CircleProgrBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lab_DLHT = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lab_DLCL = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ProgBar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.lab_headerDL = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lab_countHB = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txb_ghichu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lab_DLCL = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lab_DLHT = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ptb_Anhthe = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_PrevMonth = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_NextMonth = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel_weather.SuspendLayout();
             this.panel_huma.SuspendLayout();
             this.panel_visi.SuspendLayout();
             this.panel_press.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2CustomGradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2CustomGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Anhthe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
             this.SuspendLayout();
             // 
             // lab_today
@@ -244,6 +246,52 @@ namespace GUI.UC
             this.lab_pressure.Size = new System.Drawing.Size(68, 21);
             this.lab_pressure.TabIndex = 12;
             this.lab_pressure.Text = "Áp thấp";
+            // 
+            // txt_C
+            // 
+            this.txt_C.AutoSize = true;
+            this.txt_C.BorderThickness = 0;
+            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_C.DefaultText = "30";
+            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.DisabledState.Parent = this.txt_C;
+            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.FocusedState.Parent = this.txt_C;
+            this.txt_C.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_C.ForeColor = System.Drawing.Color.White;
+            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_C.HoverState.Parent = this.txt_C;
+            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
+            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
+            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
+            this.txt_C.IconRightOffset = new System.Drawing.Point(0, -5);
+            this.txt_C.Location = new System.Drawing.Point(24, 103);
+            this.txt_C.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_C.Name = "txt_C";
+            this.txt_C.PasswordChar = '\0';
+            this.txt_C.PlaceholderText = "";
+            this.txt_C.ReadOnly = true;
+            this.txt_C.SelectedText = "";
+            this.txt_C.SelectionStart = 2;
+            this.txt_C.ShadowDecoration.Parent = this.txt_C;
+            this.txt_C.Size = new System.Drawing.Size(169, 59);
+            this.txt_C.TabIndex = 10;
+            // 
+            // pic_location
+            // 
+            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
+            this.pic_location.Location = new System.Drawing.Point(24, 60);
+            this.pic_location.Name = "pic_location";
+            this.pic_location.Size = new System.Drawing.Size(24, 24);
+            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_location.TabIndex = 6;
+            this.pic_location.TabStop = false;
             // 
             // lab_location
             // 
@@ -403,6 +451,56 @@ namespace GUI.UC
             this.panel1.Size = new System.Drawing.Size(478, 339);
             this.panel1.TabIndex = 11;
             // 
+            // btn_PrevMonth
+            // 
+            this.btn_PrevMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.BorderRadius = 4;
+            this.btn_PrevMonth.CheckedState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.CustomImages.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_PrevMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_PrevMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_PrevMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_PrevMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_PrevMonth.DisabledState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_PrevMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_PrevMonth.ForeColor = System.Drawing.Color.White;
+            this.btn_PrevMonth.HoverState.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.Image = global::GUI.Properties.Resources.left_arrow;
+            this.btn_PrevMonth.Location = new System.Drawing.Point(35, 26);
+            this.btn_PrevMonth.Name = "btn_PrevMonth";
+            this.btn_PrevMonth.ShadowDecoration.Parent = this.btn_PrevMonth;
+            this.btn_PrevMonth.Size = new System.Drawing.Size(45, 45);
+            this.btn_PrevMonth.TabIndex = 14;
+            this.btn_PrevMonth.Click += new System.EventHandler(this.btn_PrevMonth_Click);
+            // 
+            // btn_NextMonth
+            // 
+            this.btn_NextMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.BorderRadius = 4;
+            this.btn_NextMonth.CheckedState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.CustomImages.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NextMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NextMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NextMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NextMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_NextMonth.DisabledState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btn_NextMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_NextMonth.ForeColor = System.Drawing.Color.White;
+            this.btn_NextMonth.HoverState.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.Image = global::GUI.Properties.Resources.right_arrow;
+            this.btn_NextMonth.Location = new System.Drawing.Point(375, 26);
+            this.btn_NextMonth.Name = "btn_NextMonth";
+            this.btn_NextMonth.ShadowDecoration.Parent = this.btn_NextMonth;
+            this.btn_NextMonth.Size = new System.Drawing.Size(45, 45);
+            this.btn_NextMonth.TabIndex = 13;
+            this.btn_NextMonth.Click += new System.EventHandler(this.btn_NextMonth_Click);
+            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 8;
@@ -443,6 +541,19 @@ namespace GUI.UC
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(93, 30);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Hiệu suất";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.performance;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(21, 22);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // CircleProgrBar
             // 
@@ -488,6 +599,30 @@ namespace GUI.UC
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(307, 184);
             this.guna2CustomGradientPanel2.TabIndex = 13;
             // 
+            // lab_DLHT
+            // 
+            this.lab_DLHT.AutoSize = false;
+            this.lab_DLHT.BackColor = System.Drawing.Color.Transparent;
+            this.lab_DLHT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_DLHT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
+            this.lab_DLHT.Location = new System.Drawing.Point(21, 146);
+            this.lab_DLHT.Name = "lab_DLHT";
+            this.lab_DLHT.Size = new System.Drawing.Size(277, 29);
+            this.lab_DLHT.TabIndex = 6;
+            this.lab_DLHT.Text = "+) Số deadline hoàn thành: 5";
+            // 
+            // lab_DLCL
+            // 
+            this.lab_DLCL.AutoSize = false;
+            this.lab_DLCL.BackColor = System.Drawing.Color.Transparent;
+            this.lab_DLCL.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_DLCL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
+            this.lab_DLCL.Location = new System.Drawing.Point(21, 115);
+            this.lab_DLCL.Name = "lab_DLCL";
+            this.lab_DLCL.Size = new System.Drawing.Size(277, 29);
+            this.lab_DLCL.TabIndex = 5;
+            this.lab_DLCL.Text = "+) Số deadline còn lại: 5";
+            // 
             // ProgBar
             // 
             this.ProgBar.BackColor = System.Drawing.Color.Transparent;
@@ -525,6 +660,19 @@ namespace GUI.UC
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(87, 30);
             this.guna2HtmlLabel4.TabIndex = 2;
             this.guna2HtmlLabel4.Text = "Deadline";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.pending;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(21, 24);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // label8
             // 
@@ -588,6 +736,19 @@ namespace GUI.UC
             this.guna2HtmlLabel6.TabIndex = 2;
             this.guna2HtmlLabel6.Text = "Học bổng";
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::GUI.Properties.Resources.scholarship__1_;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(21, 22);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 1;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 8;
@@ -628,11 +789,24 @@ namespace GUI.UC
             this.guna2HtmlLabel8.TabIndex = 2;
             this.guna2HtmlLabel8.Text = "Học tập";
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = global::GUI.Properties.Resources.scores__1_;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(21, 22);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 1;
+            this.guna2PictureBox4.TabStop = false;
+            // 
             // guna2CustomGradientPanel5
             // 
             this.guna2CustomGradientPanel5.BorderRadius = 8;
             this.guna2CustomGradientPanel5.Controls.Add(this.btn_Edit);
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2CustomGradientPanel5.Controls.Add(this.txb_ghichu);
             this.guna2CustomGradientPanel5.Controls.Add(this.guna2HtmlLabel10);
             this.guna2CustomGradientPanel5.Controls.Add(this.guna2PictureBox5);
             this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -670,17 +844,17 @@ namespace GUI.UC
             this.btn_Edit.Text = "EDIT";
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
-            // guna2HtmlLabel9
+            // txb_ghichu
             // 
-            this.guna2HtmlLabel9.AutoSize = false;
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(18, 58);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(152, 122);
-            this.guna2HtmlLabel9.TabIndex = 3;
-            this.guna2HtmlLabel9.Text = "Có 2 học bổng bạn có thể quan tâm";
+            this.txb_ghichu.AutoSize = false;
+            this.txb_ghichu.BackColor = System.Drawing.Color.Transparent;
+            this.txb_ghichu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ghichu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
+            this.txb_ghichu.Location = new System.Drawing.Point(18, 58);
+            this.txb_ghichu.Name = "txb_ghichu";
+            this.txb_ghichu.Size = new System.Drawing.Size(152, 122);
+            this.txb_ghichu.TabIndex = 3;
+            this.txb_ghichu.Text = "Có 2 học bổng bạn có thể quan tâm";
             // 
             // guna2HtmlLabel10
             // 
@@ -692,30 +866,6 @@ namespace GUI.UC
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(75, 30);
             this.guna2HtmlLabel10.TabIndex = 2;
             this.guna2HtmlLabel10.Text = "Ghi chú";
-            // 
-            // lab_DLCL
-            // 
-            this.lab_DLCL.AutoSize = false;
-            this.lab_DLCL.BackColor = System.Drawing.Color.Transparent;
-            this.lab_DLCL.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_DLCL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
-            this.lab_DLCL.Location = new System.Drawing.Point(21, 115);
-            this.lab_DLCL.Name = "lab_DLCL";
-            this.lab_DLCL.Size = new System.Drawing.Size(277, 29);
-            this.lab_DLCL.TabIndex = 5;
-            this.lab_DLCL.Text = "+) Số deadline còn lại: 5";
-            // 
-            // lab_DLHT
-            // 
-            this.lab_DLHT.AutoSize = false;
-            this.lab_DLHT.BackColor = System.Drawing.Color.Transparent;
-            this.lab_DLHT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_DLHT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
-            this.lab_DLHT.Location = new System.Drawing.Point(21, 146);
-            this.lab_DLHT.Name = "lab_DLHT";
-            this.lab_DLHT.Size = new System.Drawing.Size(277, 29);
-            this.lab_DLHT.TabIndex = 6;
-            this.lab_DLHT.Text = "+) Số deadline hoàn thành: 5";
             // 
             // guna2PictureBox5
             // 
@@ -730,32 +880,6 @@ namespace GUI.UC
             this.guna2PictureBox5.TabIndex = 1;
             this.guna2PictureBox5.TabStop = false;
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = global::GUI.Properties.Resources.scores__1_;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(21, 22);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 1;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::GUI.Properties.Resources.scholarship__1_;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(21, 22);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 1;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // ptb_Anhthe
             // 
             this.ptb_Anhthe.Image = global::GUI.Properties.Resources.userdefault;
@@ -769,127 +893,11 @@ namespace GUI.UC
             this.ptb_Anhthe.TabIndex = 16;
             this.ptb_Anhthe.TabStop = false;
             // 
-            // guna2PictureBox2
+            // timer2
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.pending;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(21, 24);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.performance;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(21, 22);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // btn_PrevMonth
-            // 
-            this.btn_PrevMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_PrevMonth.BorderRadius = 4;
-            this.btn_PrevMonth.CheckedState.Parent = this.btn_PrevMonth;
-            this.btn_PrevMonth.CustomImages.Parent = this.btn_PrevMonth;
-            this.btn_PrevMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_PrevMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_PrevMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_PrevMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_PrevMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_PrevMonth.DisabledState.Parent = this.btn_PrevMonth;
-            this.btn_PrevMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_PrevMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_PrevMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_PrevMonth.ForeColor = System.Drawing.Color.White;
-            this.btn_PrevMonth.HoverState.Parent = this.btn_PrevMonth;
-            this.btn_PrevMonth.Image = global::GUI.Properties.Resources.left_arrow;
-            this.btn_PrevMonth.Location = new System.Drawing.Point(35, 26);
-            this.btn_PrevMonth.Name = "btn_PrevMonth";
-            this.btn_PrevMonth.ShadowDecoration.Parent = this.btn_PrevMonth;
-            this.btn_PrevMonth.Size = new System.Drawing.Size(45, 45);
-            this.btn_PrevMonth.TabIndex = 14;
-            this.btn_PrevMonth.Click += new System.EventHandler(this.btn_PrevMonth_Click);
-            // 
-            // btn_NextMonth
-            // 
-            this.btn_NextMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_NextMonth.BorderRadius = 4;
-            this.btn_NextMonth.CheckedState.Parent = this.btn_NextMonth;
-            this.btn_NextMonth.CustomImages.Parent = this.btn_NextMonth;
-            this.btn_NextMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NextMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NextMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_NextMonth.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_NextMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_NextMonth.DisabledState.Parent = this.btn_NextMonth;
-            this.btn_NextMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_NextMonth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btn_NextMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_NextMonth.ForeColor = System.Drawing.Color.White;
-            this.btn_NextMonth.HoverState.Parent = this.btn_NextMonth;
-            this.btn_NextMonth.Image = global::GUI.Properties.Resources.right_arrow;
-            this.btn_NextMonth.Location = new System.Drawing.Point(375, 26);
-            this.btn_NextMonth.Name = "btn_NextMonth";
-            this.btn_NextMonth.ShadowDecoration.Parent = this.btn_NextMonth;
-            this.btn_NextMonth.Size = new System.Drawing.Size(45, 45);
-            this.btn_NextMonth.TabIndex = 13;
-            this.btn_NextMonth.Click += new System.EventHandler(this.btn_NextMonth_Click);
-            // 
-            // txt_C
-            // 
-            this.txt_C.AutoSize = true;
-            this.txt_C.BorderThickness = 0;
-            this.txt_C.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_C.DefaultText = "30";
-            this.txt_C.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_C.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_C.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.DisabledState.Parent = this.txt_C;
-            this.txt_C.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_C.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.txt_C.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.FocusedState.Parent = this.txt_C;
-            this.txt_C.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_C.ForeColor = System.Drawing.Color.White;
-            this.txt_C.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_C.HoverState.Parent = this.txt_C;
-            this.txt_C.IconLeft = global::GUI.Properties.Resources._10d;
-            this.txt_C.IconLeftOffset = new System.Drawing.Point(0, 5);
-            this.txt_C.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txt_C.IconRight = global::GUI.Properties.Resources.celsius_degrees_symbol_of_temperature;
-            this.txt_C.IconRightOffset = new System.Drawing.Point(0, -5);
-            this.txt_C.Location = new System.Drawing.Point(24, 103);
-            this.txt_C.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txt_C.Name = "txt_C";
-            this.txt_C.PasswordChar = '\0';
-            this.txt_C.PlaceholderText = "";
-            this.txt_C.ReadOnly = true;
-            this.txt_C.SelectedText = "";
-            this.txt_C.SelectionStart = 2;
-            this.txt_C.ShadowDecoration.Parent = this.txt_C;
-            this.txt_C.Size = new System.Drawing.Size(169, 59);
-            this.txt_C.TabIndex = 10;
-            // 
-            // pic_location
-            // 
-            this.pic_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.pic_location.Image = global::GUI.Properties.Resources.location_pin;
-            this.pic_location.Location = new System.Drawing.Point(24, 60);
-            this.pic_location.Name = "pic_location";
-            this.pic_location.Size = new System.Drawing.Size(24, 24);
-            this.pic_location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_location.TabIndex = 6;
-            this.pic_location.TabStop = false;
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // UC_Dashboard
             // 
@@ -918,25 +926,25 @@ namespace GUI.UC
             this.panel_visi.PerformLayout();
             this.panel_press.ResumeLayout(false);
             this.panel_press.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Anhthe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -994,11 +1002,12 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel txb_ghichu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button btn_Edit;
         private Guna.UI2.WinForms.Guna2HtmlLabel lab_DLHT;
         private Guna.UI2.WinForms.Guna2HtmlLabel lab_DLCL;
+        private System.Windows.Forms.Timer timer2;
     }
 }

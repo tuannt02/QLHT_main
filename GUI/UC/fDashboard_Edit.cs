@@ -44,8 +44,10 @@ namespace GUI.UC
                 MessageBox.Show("Vui lòng nhập nội dung", "Thông báo");
             else
             {
+                UC_Dashboard.flagUpdate = true;
                 DBoard_BUS.Instance.AddDL(MSSV, cb_MAMH.SelectedItem.ToString(), dtpk_NGKT.Value,
                     txb_NoiDung.Text, chHT.Checked ? 1 : 0);
+                DBoard_BUS.Instance.UpdateGhiChu(MSSV,txb_Ghichu.Text);
                 MessageBox.Show("Thêm thành công", "Thông báo");
             }
         }

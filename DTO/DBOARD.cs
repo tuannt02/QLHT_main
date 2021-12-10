@@ -57,4 +57,28 @@ namespace DTO
             MAMH = (string)row["MAMH"];
         }
     }
+
+    public class DLinfo
+    {
+        private string _NOIDUNG;
+        private string _MAMH;
+        private int _NGCL;
+
+        public string NOIDUNG { get => _NOIDUNG; set => _NOIDUNG = value; }
+        public string MAMH { get => _MAMH; set => _MAMH = value; }
+        public int NGCL { get => _NGCL; set => _NGCL = value; }
+
+        public DLinfo(string NOIDUNG, string MAMH, int NGCL)
+        {
+            this.NOIDUNG = NOIDUNG;
+            this.MAMH = MAMH;
+            this.NGCL = NGCL;
+        }
+        public DLinfo(DataRow row)
+        {
+            NOIDUNG = (string)row["NOIDUNG"];
+            MAMH = (string)row["MAMH"];
+            NGCL = (int)row["NGCL"];
+        }
+    }
 }

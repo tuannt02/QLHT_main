@@ -60,8 +60,9 @@ namespace GUI.UC
             {
                 ckb_gt0.Checked = true;
             }
-            CultureInfo cultureInfo = new CultureInfo("vi-VN");
-            dtpk_NGSINH.Value = Convert.ToDateTime(info.NGAYSINH.ToString(), cultureInfo);
+            //CultureInfo cultureInfo = new CultureInfo("vi-VN");
+            //dtpk_NGSINH.Value = Convert.ToDateTime(info.NGAYSINH.ToString(), cultureInfo);
+            dtpk_NGSINH.Value = DateTime.Parse(info.NGAYSINH.ToString());
         }
 
         //In thông tin
@@ -165,34 +166,32 @@ namespace GUI.UC
         private void btn_ChangeImage_Click(object sender, EventArgs e)
         {
             //Load ảnh lên picturebox
-            //openFileDialog_setting.Filter = "files JPG (.jpg)|.jpg";
-            //openFileDialog_setting.Title = "Chọn ảnh đại diện";
+            openFileDialog_setting.Filter = "files JPG (*.jpg)|*.jpg|files PNG (*.png)|*.png|All files(*.*)|*.*";
+            openFileDialog_setting.Title = "Chọn ảnh đại diện";
 
-            //openFileDialog_setting.Filter = "files JPG (.jpg)|.jpg|files PNG (.png)|.png|All files(.)|*.*";
-            //openFileDialog_setting.Title = "Chọn ảnh đại diện";
+            if(openFileDialog_setting.ShowDialog() == DialogResult.OK)
+            {
+                string file_img = openFileDialog_setting.FileName;
 
+                if (string.IsNullOrEmpty(file_img))
+                    return;
 
-            openFileDialog_setting.ShowDialog();
+                Image image = Image.FromFile(file_img);
 
-            string file_img = openFileDialog_setting.FileName;
+                ptb_Anhthe.Image = image;
 
-            if (string.IsNullOrEmpty(file_img))
-                return;
+                //Save picture to database
 
-            Image image = Image.FromFile(file_img);
+                byte[] img = null;
+                FileStream fs = new FileStream(file_img, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
 
-            ptb_Anhthe.Image = image;
+                Setting_BUS.Instance.Update_Image(txb_MSSV.Text, img);
 
-            //Save picture to database
+                MessageBox.Show("Thay đổi ảnh thành công");
+            }
 
-            byte[] img = null;
-            FileStream fs = new FileStream(file_img, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            img = br.ReadBytes((int)fs.Length);
-
-            Setting_BUS.Instance.Update_Image(txb_MSSV.Text, img);
-
-            MessageBox.Show("Thay đổi ảnh thành công");
         }
         private void txb_New_Password_TextChanged(object sender, EventArgs e)
         {

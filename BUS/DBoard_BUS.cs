@@ -85,5 +85,15 @@ namespace BUS
         {
             return DASHBOARD_DAO.Instance.AddDL(MSSV, MAMH, time, mes, ch);
         }
+
+        public List<DLinfo> GetlistDLinfo(string MSSV)
+        {
+            return DAO.DASHBOARD_DAO.Instance.GetlistDLinfo(MSSV);
+        }
+
+        public bool UpdateGhiChu(string MSSV,string mes)
+        {
+            return DASHBOARD_DAO.Instance.UpdateGhiChu(MSSV,mes);
+        }
     }
 }

@@ -37,6 +37,8 @@ namespace GUI.UC
             Load_Matrix();
             Load_picbox();
             Load_Info();
+            Load_DL();
+            //fAlert.Alert("IT007: Nộp bài tập", "Còn 1 ngày", AlertType.success);
         }
 
         
@@ -248,7 +250,7 @@ namespace GUI.UC
             foreach(DLNOW item in listDLNow)
             {
                 Label ac = CusLab(true, item.MAMH+":");
-                Label ab = CusLab(false, item.NOIDUNG+":");
+                Label ab = CusLab(false, item.NOIDUNG);
                 
                 tLO1.Controls.Add(ac);
                 tLO1.Controls.Add(ab);
@@ -376,6 +378,7 @@ namespace GUI.UC
 
         private void Load_Info()
         {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
             // Load SLHB
             int SLHB = DBoard_BUS.Instance.GetSLHB();
             lab_countHB.Text = "Có " + SLHB.ToString() + " học bổng có thể bạn quan tâm";
@@ -402,13 +405,73 @@ namespace GUI.UC
             else
                 lab_header_Performance.Text = "Giảm " + (percent2 - percent).ToString() + "% so với tháng trước";
 
+            // Load ghi chú
+            string GhiChu = DBoard_BUS.Instance.Load_GHICHU(MSSV);
+
+            txb_ghichu.Text = GhiChu;
+
 
         }
+
+
+        List<string[]> infoDL = new List<string[]>();
+        int u = 0;
+        Timer timer = new Timer();
+        private void Load_DL()
+        {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+
+            List<DLinfo> listDLNow = DBoard_BUS.Instance.GetlistDLinfo(MSSV);
+            //List < string[] > infoDL = new List<string[]>();
+
+            foreach (DLinfo item in listDLNow)
+            {
+                string[] row = new string[2];
+                row[0] = item.MAMH + ": " + item.NOIDUNG;
+                row[1] = item.NGCL.ToString();
+                infoDL.Add(row);
+
+            }
+
+            //Timer timer = new Timer();
+            timer.Interval = 12000;
+            timer.Tick += new EventHandler(myTick);
+            timer.Start();
+
+        }
+
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             fDashboard_Edit a = new fDashboard_Edit();
             a.ShowDialog();
+        }
+
+
+        private void myTick(object sender, EventArgs e)
+        {
+            if(u<infoDL.Count)
+            {
+                string[] a = infoDL[u];
+                u++;
+                fAlert.Alert(a[0], "Còn lại " + a[1].ToString() + " ngày.",AlertType.warning);
+            }
+            else
+            {
+                timer.Enabled = false;
+            }
+        }
+
+
+        public static bool flagUpdate = false;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(flagUpdate)
+            {
+                Load_Info();
+                flagUpdate = false;
+            }
         }
     }
 }

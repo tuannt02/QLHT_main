@@ -145,7 +145,14 @@ namespace DAO
             string query = "select GHICHU from SINHVIEN where MSSV = " + MSSV;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
-            string GHICHU = (string)(data.Rows[0]["GHICHU"]);
+            string GHICHU;
+
+            if((data.Rows[0]["GHICHU"]) != DBNull.Value)
+                GHICHU = (string)(data.Rows[0]["GHICHU"]);
+            else
+            {
+                GHICHU = "";
+            }
 
             return GHICHU;
         }
@@ -165,5 +172,31 @@ namespace DAO
             return true;
 
         }
+
+        public List<DLinfo> GetlistDLinfo(string MSSV)
+        {
+            List<DLinfo> dsDLinfo = new List<DLinfo>();
+            string query = "select	MAMH, NOIDUNG, (Day(NGKT) - Day(GETDATE())) as NGCL from DEADLINE where MSSV = '" + MSSV + "' and NGKT >= GETDATE() ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                DLinfo resen = new DLinfo(item);
+                dsDLinfo.Add(resen);
+            }
+
+            return dsDLinfo;
+        }
+
+        public bool UpdateGhiChu(string MSSV ,string mes)
+        {
+            string query = "update SINHVIEN set GHICHU = N'" + mes + "' where MSSV = '"+ MSSV + "'";
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+
+            return true;
+        }
+
     }
 }
