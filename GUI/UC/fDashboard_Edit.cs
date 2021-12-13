@@ -47,9 +47,16 @@ namespace GUI.UC
                 UC_Dashboard.flagUpdate = true;
                 DBoard_BUS.Instance.AddDL(MSSV, cb_MAMH.SelectedItem.ToString(), dtpk_NGKT.Value,
                     txb_NoiDung.Text, chHT.Checked ? 1 : 0);
-                DBoard_BUS.Instance.UpdateGhiChu(MSSV,txb_Ghichu.Text);
                 MessageBox.Show("Thêm thành công", "Thông báo");
             }
+        }
+
+        private void btn_UpdateNote_Click(object sender, EventArgs e)
+        {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+            DBoard_BUS.Instance.UpdateGhiChu(MSSV,txb_Ghichu.Text);
+            UC_Dashboard.flagUpdate = true;
+            MessageBox.Show("Cập nhật ghi chú thành công", "Thông báo");
         }
     }
 }

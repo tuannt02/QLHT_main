@@ -30,31 +30,21 @@ namespace GUI.UC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAlert));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.lab_mes = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.btn_close = new Guna.UI2.WinForms.Guna2Button();
             this.picbox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lab_submes = new System.Windows.Forms.Label();
             this.effect = new System.Windows.Forms.Timer(this.components);
             this.transtart = new System.Windows.Forms.Timer(this.components);
+            this.lab_mes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picbox)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessForm
             // 
             this.BorderlessForm.ContainerControl = this;
-            // 
-            // lab_mes
-            // 
-            this.lab_mes.AutoSize = true;
-            this.lab_mes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_mes.ForeColor = System.Drawing.Color.White;
-            this.lab_mes.Location = new System.Drawing.Point(85, 41);
-            this.lab_mes.Name = "lab_mes";
-            this.lab_mes.Size = new System.Drawing.Size(286, 32);
-            this.lab_mes.TabIndex = 3;
-            this.lab_mes.Text = "IT001: Nộp bài tập tuần 6";
             // 
             // timer
             // 
@@ -116,17 +106,31 @@ namespace GUI.UC
             this.transtart.Interval = 9000;
             this.transtart.Tick += new System.EventHandler(this.transtart_Tick);
             // 
+            // lab_mes
+            // 
+            this.lab_mes.BackColor = System.Drawing.Color.SeaGreen;
+            this.lab_mes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lab_mes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lab_mes.ForeColor = System.Drawing.Color.White;
+            this.lab_mes.Location = new System.Drawing.Point(87, 29);
+            this.lab_mes.Multiline = true;
+            this.lab_mes.Name = "lab_mes";
+            this.lab_mes.Size = new System.Drawing.Size(345, 63);
+            this.lab_mes.TabIndex = 5;
+            this.lab_mes.Text = "IT001: Nộp bài tập tuần 6";
+            // 
             // fAlert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(474, 127);
-            this.Controls.Add(this.lab_submes);
             this.Controls.Add(this.lab_mes);
+            this.Controls.Add(this.lab_submes);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.picbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fAlert";
             this.Opacity = 0.9D;
             this.Text = "fAlert";
@@ -141,11 +145,11 @@ namespace GUI.UC
 
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
         private Guna.UI2.WinForms.Guna2PictureBox picbox;
-        private System.Windows.Forms.Label lab_mes;
         private Guna.UI2.WinForms.Guna2Button btn_close;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lab_submes;
         private System.Windows.Forms.Timer effect;
         private System.Windows.Forms.Timer transtart;
+        private System.Windows.Forms.TextBox lab_mes;
     }
 }

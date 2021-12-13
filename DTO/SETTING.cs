@@ -45,11 +45,25 @@ namespace DTO
         public SETTING(DataRow row)
         {
             _MSSV = (string)row["MSSV"];
-            _HOTEN = (string)row["HOTEN"];
-            _QUEQUAN = (string)row["QUEQUAN"];
-            _GIOITINH = (bool)row["GIOITINH"];
-            _NGAYSINH = (DateTime)row["NGAYSINH"];
-            _MAKHOA = (string)row["MAKHOA"];
+            if (row["HOTEN"] != DBNull.Value)
+                _HOTEN = (string)row["HOTEN"];
+            else _HOTEN = "";
+
+            if (row["QUEQUAN"] != DBNull.Value)
+                _QUEQUAN = (string)row["QUEQUAN"];
+            else _HOTEN = "";
+
+            if (row["GIOITINH"] != DBNull.Value)
+                _GIOITINH = (bool)row["GIOITINH"];
+            else _GIOITINH = true;
+
+            if (row["NGAYSINH"] != DBNull.Value)
+                _NGAYSINH = (DateTime)row["NGAYSINH"];
+            else _NGAYSINH = DateTime.Now;
+
+            if (row["MAKHOA"] != DBNull.Value)
+                _MAKHOA = (string)row["MAKHOA"];
+            else _MAKHOA = "";
         }
     }
 }

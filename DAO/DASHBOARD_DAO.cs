@@ -128,16 +128,74 @@ namespace DAO
 
         public int GetDLHT(int month)
         {
-            string query = "select * from DEADLINE where HOANTHANH = 1 and MONTH(NGKT) = " + month.ToString();
+            string MSSV = GetMSSV();
+
+            string query = "select * from DEADLINE where HOANTHANH = 1 and MONTH(NGKT) = " + month.ToString()
+                + "and MSSV = " + MSSV;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data.Rows.Count;
         }
 
         public int GetSUMDL(int month)
         {
-            string query = "select * from DEADLINE where MONTH(NGKT) = " + month.ToString();
+            string MSSV = GetMSSV();
+
+            string query = "select * from DEADLINE where MONTH(NGKT) = " + month.ToString()
+                + "and MSSV = " + MSSV;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data.Rows.Count;
+        }
+
+        public string Load_Name(string MSSV)
+        {
+            string query = "select DISPLAYNAME from ACCOUNT where MSSV = " +  MSSV;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            string DISPLAYNAME;
+
+            if ((data.Rows[0]["DISPLAYNAME"]) != DBNull.Value)
+                DISPLAYNAME = (string)(data.Rows[0]["DISPLAYNAME"]);
+            else
+            {
+                DISPLAYNAME = "";
+            }
+
+            return DISPLAYNAME;
+        }
+
+        public bool UpdateName(string MSSV, string DISPLAYNAME)
+        {
+            string query = "update ACCOUNT set DISPLAYNAME = N'" + DISPLAYNAME + "' where MSSV = " + MSSV;
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+            return true;
+        }
+
+        public bool Update_BREADCRUMB(string MSSV, string BREADCRUMB)
+        {
+            string query = "update TEMP_TABLE set BREADCRUM = N'" + BREADCRUMB + "' where MSSV = " + MSSV;
+
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+            return true;
+        }
+
+        public string GetBREADCRUMB(string MSSV)
+        {
+            string query = "select BREADCRUM from TEMP_TABLE where MSSV = " + MSSV;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            string BREADCRUMB;
+            if ((data.Rows[0]["BREADCRUM"]) != DBNull.Value)
+                BREADCRUMB = (string)(data.Rows[0]["BREADCRUM"]);
+            else
+            {
+                BREADCRUMB = "";
+            }
+
+            return BREADCRUMB;
         }
 
         public string Load_GHICHU(string MSSV)
@@ -198,5 +256,40 @@ namespace DAO
             return true;
         }
 
+        public float Diem(int muctieu, string namhoc, string hocky)
+        {
+            string query = "USP_DU_BAO_DIEM @NAMHOC , @HOCKY ";
+            DataTable Data = DataProvider.Instance.ExecuteQuery(query, new object[] { namhoc, hocky });
+            DataRow row = Data.Rows[0];
+            float dtbhk;
+            try
+            {
+                dtbhk = float.Parse(row["DTBHK"].ToString());
+
+            }
+            catch (Exception)
+            {
+                dtbhk = 0;
+            }
+
+
+            switch (muctieu)
+            {
+                case 1:
+                    if (7 - dtbhk > 0)
+                        return (float)Math.Round(7 - dtbhk,2);
+                    return 0;
+                case 2:
+                    if (8 - dtbhk > 0)
+                        return (float)Math.Round(8 - dtbhk,2);
+                    return 0;
+                case 3:
+                    if (9 - dtbhk > 0)
+                        return (float)Math.Round(9 - dtbhk);
+                    return 0;
+                default:
+                    return 0;
+            }
+        }
     }
 }

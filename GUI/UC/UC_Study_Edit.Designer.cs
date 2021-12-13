@@ -29,12 +29,14 @@ namespace GUI.UC
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Study));
             this.UC_Study_lab_Name = new System.Windows.Forms.Label();
             this.cb_NamHoc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cb_HocKy = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,8 +47,8 @@ namespace GUI.UC
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dtgv = new System.Windows.Forms.DataGridView();
             this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.dtgv = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +58,7 @@ namespace GUI.UC
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -285,6 +288,27 @@ namespace GUI.UC
             this.guna2Panel1.Size = new System.Drawing.Size(1147, 470);
             this.guna2Panel1.TabIndex = 12;
             // 
+            // UC_AboutUs_scrbar_main
+            // 
+            this.UC_AboutUs_scrbar_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
+            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
+            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
+            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
+            this.UC_AboutUs_scrbar_main.InUpdate = false;
+            this.UC_AboutUs_scrbar_main.LargeChange = 10;
+            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(1137, 0);
+            this.UC_AboutUs_scrbar_main.Minimum = 1;
+            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
+            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
+            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
+            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 470);
+            this.UC_AboutUs_scrbar_main.TabIndex = 12;
+            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.UC_AboutUs_scrbar_main.Value = 1;
+            // 
             // dtgv
             // 
             this.dtgv.AllowUserToAddRows = false;
@@ -349,27 +373,6 @@ namespace GUI.UC
             this.dtgv.Size = new System.Drawing.Size(1147, 470);
             this.dtgv.TabIndex = 11;
             this.dtgv.SelectionChanged += new System.EventHandler(this.dtgv_SelectionChanged);
-            // 
-            // UC_AboutUs_scrbar_main
-            // 
-            this.UC_AboutUs_scrbar_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
-            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
-            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
-            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
-            this.UC_AboutUs_scrbar_main.InUpdate = false;
-            this.UC_AboutUs_scrbar_main.LargeChange = 10;
-            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(1137, 0);
-            this.UC_AboutUs_scrbar_main.Minimum = 1;
-            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
-            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
-            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
-            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 470);
-            this.UC_AboutUs_scrbar_main.TabIndex = 12;
-            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.UC_AboutUs_scrbar_main.Value = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -449,6 +452,14 @@ namespace GUI.UC
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "checkLG.png");
+            this.imageList.Images.SetKeyName(1, "delete.png");
+            this.imageList.Images.SetKeyName(2, "question-mark.png");
+            // 
             // UC_Study
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -491,5 +502,6 @@ namespace GUI.UC
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.ImageList imageList;
     }
 }

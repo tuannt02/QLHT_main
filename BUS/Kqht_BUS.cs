@@ -40,7 +40,12 @@ namespace BUS
         }
 
 
-        public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
+        //public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
+        //{
+        //    return KQHT_DAO.Instance.Edit_dtgv(QT, GK, TH, CK, mssv, namhoc, hocky, mamh);
+        //}
+
+        public int Edit_dtgv(string QT, string GK, string TH, string CK, string mssv, string namhoc, string hocky, string mamh)
         {
             return KQHT_DAO.Instance.Edit_dtgv(QT, GK, TH, CK, mssv, namhoc, hocky, mamh);
         }

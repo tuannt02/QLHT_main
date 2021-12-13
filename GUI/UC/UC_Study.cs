@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BUS;
+using DTO;
+
 // Author: Tuấn
 
 namespace GUI.UC
@@ -26,12 +29,23 @@ namespace GUI.UC
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             uC_Study1.BringToFront();
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Edit");
+            fDashboard.DBoard.flagUpdate = true;
         }
 
         // SubMenu btn DanhSach
         private void btn_DanhSach_Click(object sender, EventArgs e)
         {
             uC_Study_ListKhoa1.BringToFront();
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Danh sách");
+
+
+            fDashboard.DBoard.flagUpdate = true;
+
         }
 
         #endregion

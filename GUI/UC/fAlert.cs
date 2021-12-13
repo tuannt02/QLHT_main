@@ -32,6 +32,7 @@ namespace GUI.UC
                     BackColor = Color.Crimson;
                     picbox.Image = Properties.Resources.warning;
                     lab_submes.ForeColor = Color.White;
+                    lab_mes.BackColor = Color.Crimson;
                     break;
                 case AlertType.error:
                     BackColor = Color.FromArgb(255, 128, 0);

@@ -38,7 +38,6 @@ namespace GUI.UC
             Load_picbox();
             Load_Info();
             Load_DL();
-            //fAlert.Alert("IT007: Nộp bài tập", "Còn 1 ngày", AlertType.success);
         }
 
         
@@ -379,6 +378,10 @@ namespace GUI.UC
         private void Load_Info()
         {
             string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            // Load name
+            txb_name.Text = DBoard_BUS.Instance.Load_Name(MSSV);
+
             // Load SLHB
             int SLHB = DBoard_BUS.Instance.GetSLHB();
             lab_countHB.Text = "Có " + SLHB.ToString() + " học bổng có thể bạn quan tâm";
@@ -390,14 +393,20 @@ namespace GUI.UC
             lab_DLHT.Text = "Số deadline hoàn thành: " + DLHT.ToString();
             lab_DLCL.Text = "Số deadline còn lại: " + (SUMDL - DLHT).ToString();
 
-            int percent = (int)(((float)DLHT / SUMDL) * 100);
+            int percent;
+            if (SUMDL != 0)
+                percent = (int)(((float)DLHT / SUMDL) * 100);
+            else percent = 0;
             ProgBar.Value = percent;
 
             //Load performance
             int DLPreMonthHT = DBoard_BUS.Instance.GetDLHT(dtpk_Calendar.Value.Month - 1);
             int SUMDLPreMonth = DBoard_BUS.Instance.GetSUMDL(dtpk_Calendar.Value.Month - 1);
 
-            int percent2 = (int)(((float)DLPreMonthHT / SUMDLPreMonth) * 100);
+            int percent2;
+            if (SUMDLPreMonth != 0)
+                percent2 = (int)(((float)DLPreMonthHT / SUMDLPreMonth) * 100);
+            else percent2 = 0;
             CircleProgrBar.Value = percent;
 
             if (percent2 < percent)
@@ -410,8 +419,13 @@ namespace GUI.UC
 
             txb_ghichu.Text = GhiChu;
 
+            //Load HocTap
+
+            Load_HocTap();
+            //lab_HocTap.Text = DBoard_BUS.Instance.Diem(1, "2019 - 2020", "HK2");
 
         }
+
 
 
         List<string[]> infoDL = new List<string[]>();
@@ -471,6 +485,53 @@ namespace GUI.UC
             {
                 Load_Info();
                 flagUpdate = false;
+            }
+        }
+
+        private void txb_name_TextChanged(object sender, EventArgs e)
+        {
+
+            //flagUpdate = true;
+        }
+
+        private void txb_name_Enter(object sender, EventArgs e)
+        {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            string temp = txb_name.Text;
+
+            DBoard_BUS.Instance.UpdateName(MSSV, temp);
+            //txb_name.Text = DBoard_BUS.Instance.Load_Name(MSSV);
+        }
+
+        private void ckb1_CheckedChanged(object sender, EventArgs e)
+        {
+            Load_HocTap();
+        }
+
+        private void ckb2_CheckedChanged(object sender, EventArgs e)
+        {
+            Load_HocTap();
+        }
+
+        private void ckb3_CheckedChanged(object sender, EventArgs e)
+        {
+            Load_HocTap();
+        }
+
+        private void Load_HocTap()
+        {
+            if(ckb1.Checked)
+            {
+                lab_HocTap.Text = DBoard_BUS.Instance.Diem(1, "2019 - 2020", "HK2");
+            }
+            if (ckb2.Checked)
+            {
+                lab_HocTap.Text = DBoard_BUS.Instance.Diem(2, "2019 - 2020", "HK2");
+            }
+            if (ckb3.Checked)
+            {
+                lab_HocTap.Text = DBoard_BUS.Instance.Diem(3, "2019 - 2020", "HK2");
             }
         }
     }

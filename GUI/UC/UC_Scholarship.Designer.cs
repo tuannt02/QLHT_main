@@ -267,7 +267,7 @@ namespace GUI.UC
             this.dtgv_ShowHB.RowTemplate.Height = 50;
             this.dtgv_ShowHB.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dtgv_ShowHB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ShowHB.Size = new System.Drawing.Size(1088, 473);
+            this.dtgv_ShowHB.Size = new System.Drawing.Size(1088, 532);
             this.dtgv_ShowHB.TabIndex = 10;
             this.dtgv_ShowHB.SelectionChanged += new System.EventHandler(this.UC_AboutUs_dtgv_Show_SelectionChanged);
             // 
@@ -351,7 +351,7 @@ namespace GUI.UC
             this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
             this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
             this.UC_AboutUs_scrbar_main.ScrollbarSize = 26;
-            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(26, 473);
+            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(26, 532);
             this.UC_AboutUs_scrbar_main.TabIndex = 11;
             this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
             this.UC_AboutUs_scrbar_main.Value = 1;
@@ -401,7 +401,7 @@ namespace GUI.UC
             this.UC_AboutUs_btn_CheckAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UC_AboutUs_btn_CheckAdmin.ForeColor = System.Drawing.Color.White;
             this.UC_AboutUs_btn_CheckAdmin.HoverState.Parent = this.UC_AboutUs_btn_CheckAdmin;
-            this.UC_AboutUs_btn_CheckAdmin.Location = new System.Drawing.Point(838, 629);
+            this.UC_AboutUs_btn_CheckAdmin.Location = new System.Drawing.Point(838, 673);
             this.UC_AboutUs_btn_CheckAdmin.Name = "UC_AboutUs_btn_CheckAdmin";
             this.UC_AboutUs_btn_CheckAdmin.ShadowDecoration.Parent = this.UC_AboutUs_btn_CheckAdmin;
             this.UC_AboutUs_btn_CheckAdmin.Size = new System.Drawing.Size(208, 45);
@@ -420,10 +420,10 @@ namespace GUI.UC
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Controls.Add(this.UC_AboutUs_scrbar_main);
             this.Controls.Add(this.UC_AboutUs_btn_CheckAdmin);
             this.Controls.Add(this.UC_AboutUs_lab_Fil);
             this.Controls.Add(this.UC_AboutUs_lab_Rec);
-            this.Controls.Add(this.UC_AboutUs_scrbar_main);
             this.Controls.Add(this.dtgv_ShowHB);
             this.Controls.Add(this.UC_AboutUs_btn_OnLeave);
             this.Controls.Add(this.UC_AboutUs_btn_Active);
@@ -431,7 +431,7 @@ namespace GUI.UC
             this.Controls.Add(this.UC_AboutUs_btn_Search);
             this.Controls.Add(this.UC_AboutUs_txb_Search);
             this.Name = "UC_Scholarship";
-            this.Size = new System.Drawing.Size(1147, 710);
+            this.Size = new System.Drawing.Size(1147, 736);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ShowHB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

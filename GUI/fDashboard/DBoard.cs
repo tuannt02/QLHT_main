@@ -65,7 +65,7 @@ namespace GUI.fDashboard
             if (fDashboard_DBoard_btn_Study.Checked) 
             {
                 uC_Study_Main1.BringToFront();
-                lab_breadcrumb.Text = "App > Học tập";
+                lab_breadcrumb.Text = "App > Học tập > Edit";
             }
         }
 
@@ -155,14 +155,35 @@ namespace GUI.fDashboard
         private void timer_Tick(object sender, EventArgs e)
         {
             lab_time.Text = DateTime.UtcNow.AddHours(7).ToString();
+            if(flagUpdate)
+            {
+                string MSSV = DBoard_BUS.Instance.GetMSSV();
+                flagUpdate = false;
+                lab_breadcrumb.Text = DBoard_BUS.Instance.GetBREADCRUMB(MSSV);
+            }
+
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            DBoard_BUS.Instance.Delete_TempTable();
-
             Close();
             fLogin.Login.Instance.Show();
+        }
+
+        private void DBoard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DBoard_BUS.Instance.Delete_TempTable();
+        }
+
+        public static bool flagUpdate = false;
+        private void fDashboard_DBoard_btn_Study_Click(object sender, EventArgs e)
+        {
+            string MSSV = DBoard_BUS.Instance.GetMSSV();
+
+            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Edit");
+
+            flagUpdate = true;
+
         }
     }
 }

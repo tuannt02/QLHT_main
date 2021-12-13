@@ -58,9 +58,31 @@ namespace DAO
             return result;
         }
 
-        public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
+        //public int Edit_dtgv(float QT, float GK, float TH, float CK, string mssv, string namhoc, string hocky, string mamh)
+        //{
+        //    string query = "USP_Edit_dtgv @QT , @GK , @TH , @CK , @MSSV , @NAMHOC , @HOCKY , @MAMH";
+        //
+        //    return DataProvider.Instance.ExecuteNonQuery(query, new object[] { QT, GK, TH, CK, mssv, namhoc, hocky, mamh });
+        //}
+
+        public int Edit_dtgv(string qt, string gk, string th, string ck, string mssv, string namhoc, string hocky, string mamh)
         {
             string query = "USP_Edit_dtgv @QT , @GK , @TH , @CK , @MSSV , @NAMHOC , @HOCKY , @MAMH";
+            float QT, GK, TH, CK;
+            QT = GK = TH = CK = -1;
+
+
+
+            if (!string.IsNullOrEmpty(qt))
+                QT = float.Parse(qt);
+            if (!string.IsNullOrEmpty(gk))
+                GK = float.Parse(gk);
+            if (!string.IsNullOrEmpty(th))
+                TH = float.Parse(th);
+            if (!string.IsNullOrEmpty(ck))
+                CK = float.Parse(ck);
+
+
 
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { QT, GK, TH, CK, mssv, namhoc, hocky, mamh });
         }

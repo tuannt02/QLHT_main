@@ -95,5 +95,34 @@ namespace BUS
         {
             return DASHBOARD_DAO.Instance.UpdateGhiChu(MSSV,mes);
         }
+
+        public string Load_Name(string MSSV)
+        {
+            return DASHBOARD_DAO.Instance.Load_Name(MSSV);
+        }
+
+        public bool UpdateName(string MSSV, string DISPLAYNAME)
+        {
+            return DASHBOARD_DAO.Instance.UpdateName(MSSV, DISPLAYNAME);
+        }
+
+        public bool Update_BREADCRUMB(string MSSV, string BREADCRUMB)
+        {
+            return DASHBOARD_DAO.Instance.Update_BREADCRUMB(MSSV, BREADCRUMB);
+        }
+
+        public string GetBREADCRUMB(string MSSV)
+        {
+            return DASHBOARD_DAO.Instance.GetBREADCRUMB(MSSV);
+        }
+
+
+        public string Diem(int muctieu, string namhoc, string hocky)
+        {
+            float x = DASHBOARD_DAO.Instance.Diem(muctieu, namhoc, hocky);
+            if (!(x == 0))
+                return "Bạn cần thêm " + x.ToString() + " điểm để đạt mục tiêu";
+            return "Bạn đã hoàn thành mục tiêu";
+        }
     }
 }

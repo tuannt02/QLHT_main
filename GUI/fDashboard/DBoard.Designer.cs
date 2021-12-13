@@ -30,6 +30,7 @@ namespace GUI.fDashboard
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBoard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lab_time = new System.Windows.Forms.Label();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
@@ -37,20 +38,19 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Setting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Gmail = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Study = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Scholarship = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fDashboard_DBoard_btn_Dashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
-            this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
-            this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
             this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
             this.panel2 = new System.Windows.Forms.Panel();
             this.uC_Gmail1 = new GUI.UC.UC_Gmail();
+            this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
+            this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
+            this.uC_Setting1 = new GUI.UC.UC_Setting();
             this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,7 +71,6 @@ namespace GUI.fDashboard
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Setting);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.guna2GradientButton5);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Gmail);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Study);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Scholarship);
@@ -210,33 +209,6 @@ namespace GUI.fDashboard
             this.label2.TabIndex = 6;
             this.label2.Text = "Tools";
             // 
-            // guna2GradientButton5
-            // 
-            this.guna2GradientButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.BorderRadius = 20;
-            this.guna2GradientButton5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2GradientButton5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
-            this.guna2GradientButton5.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
-            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton5.DisabledState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Location = new System.Drawing.Point(16, 428);
-            this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Size = new System.Drawing.Size(259, 59);
-            this.guna2GradientButton5.TabIndex = 5;
-            this.guna2GradientButton5.Text = "guna2GradientButton5";
-            // 
             // fDashboard_DBoard_btn_Gmail
             // 
             this.fDashboard_DBoard_btn_Gmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
@@ -306,6 +278,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Study.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Study.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Study.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Study_CheckedChanged);
+            this.fDashboard_DBoard_btn_Study.Click += new System.EventHandler(this.fDashboard_DBoard_btn_Study_Click);
             // 
             // fDashboard_DBoard_btn_Scholarship
             // 
@@ -396,43 +369,12 @@ namespace GUI.fDashboard
             this.panel3.Controls.Add(this.uC_Setting1);
             this.panel3.Controls.Add(this.uC_Scholarship1);
             this.panel3.Controls.Add(this.uC_Study_Main1);
-            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.uC_Gmail1);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Location = new System.Drawing.Point(293, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 736);
             this.panel3.TabIndex = 2;
-            // 
-            // uC_Dashboard1
-            // 
-            this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
-            //this.uC_Dashboard1.Matrix = null;
-            this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Dashboard1.TabIndex = 1;
-            // 
-            // uC_AboutUs1
-            // 
-            this.uC_AboutUs1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.uC_AboutUs1.AutoScroll = true;
-            this.uC_AboutUs1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.uC_AboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_AboutUs1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_AboutUs1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AboutUs1.Name = "uC_AboutUs1";
-            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_AboutUs1.TabIndex = 0;
-            // 
-            // uC_Setting1
-            // 
-            this.uC_Setting1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Setting1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Setting1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Setting1.Name = "uC_Setting1";
-            this.uC_Setting1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Setting1.TabIndex = 3;
             // 
             // uC_Scholarship1
             // 
@@ -465,6 +407,37 @@ namespace GUI.fDashboard
             this.uC_Gmail1.Name = "uC_Gmail1";
             this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Gmail1.TabIndex = 5;
+            // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
+            //this.uC_Dashboard1.Matrix = null;
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Dashboard1.TabIndex = 1;
+            // 
+            // uC_AboutUs1
+            // 
+            this.uC_AboutUs1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.uC_AboutUs1.AutoScroll = true;
+            this.uC_AboutUs1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.uC_AboutUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_AboutUs1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_AboutUs1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AboutUs1.Name = "uC_AboutUs1";
+            this.uC_AboutUs1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_AboutUs1.TabIndex = 0;
+            // 
+            // uC_Setting1
+            // 
+            this.uC_Setting1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Setting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Setting1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Setting1.Name = "uC_Setting1";
+            this.uC_Setting1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Setting1.TabIndex = 3;
             // 
             // BorderlessF_DBoard
             // 
@@ -558,10 +531,12 @@ namespace GUI.fDashboard
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DBoard_FormClosed);
             this.Load += new System.EventHandler(this.DBoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -578,7 +553,6 @@ namespace GUI.fDashboard
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Dashboard;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Scholarship;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Gmail;
         private Guna.UI2.WinForms.Guna2GradientButton fDashboard_DBoard_btn_Study;
         private System.Windows.Forms.Label label2;

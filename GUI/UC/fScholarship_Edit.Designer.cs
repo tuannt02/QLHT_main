@@ -30,6 +30,7 @@ namespace GUI.UC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fScholarship_Edit));
             this.BorderlessF_Edit = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_info = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,6 +53,7 @@ namespace GUI.UC
             this.txt_MAHB = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtp_TGDK = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -468,6 +470,10 @@ namespace GUI.UC
             this.timer.Interval = 2000;
             this.timer.Tick += new System.EventHandler(this.HideInfo);
             // 
+            // DragControl
+            // 
+            this.DragControl.TargetControl = this.panel2;
+            // 
             // fScholarship_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -478,6 +484,7 @@ namespace GUI.UC
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fScholarship_Edit";
             this.Text = "fScholarship_Edit";
             this.panel1.ResumeLayout(false);
@@ -512,5 +519,6 @@ namespace GUI.UC
         private Guna.UI2.WinForms.Guna2GradientButton btn_back;
         private Guna.UI2.WinForms.Guna2TextBox txt_info;
         private System.Windows.Forms.Timer timer;
+        private Guna.UI2.WinForms.Guna2DragControl DragControl;
     }
 }

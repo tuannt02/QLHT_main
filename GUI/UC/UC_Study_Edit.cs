@@ -42,7 +42,12 @@ namespace GUI.UC
             dtgv.SelectedRows[0].Cells[4].Value = GK;
             dtgv.SelectedRows[0].Cells[5].Value = TH;
             dtgv.SelectedRows[0].Cells[6].Value = CK;
-            dtgv.SelectedRows[0].Cells[7].Value = (int.Parse(QT) * 0.1 + int.Parse(GK) * 0.2 + int.Parse(TH) * 0.2 + int.Parse(CK) * 0.5).ToString();
+            //dtgv.SelectedRows[0].Cells[7].Value = (int.Parse(QT) * 0.1 + int.Parse(GK) * 0.2 + int.Parse(TH) * 0.2 + int.Parse(CK) * 0.5).ToString();
+
+            if (QT == "" || GK == "" || TH == "" || CK == "")
+                dtgv.SelectedRows[0].Cells[7].Value = "";
+            else
+                dtgv.SelectedRows[0].Cells[7].Value = (int.Parse(QT) * 0.1 + int.Parse(GK) * 0.2 + int.Parse(TH) * 0.2 + int.Parse(CK) * 0.5).ToString();
         }
         #endregion
 
@@ -84,7 +89,7 @@ namespace GUI.UC
                             item.TH,
                             item.CK,
                             item.TBMON,
-                            null
+                            item.TBMON == "" ? imageList.Images[2] : (float.Parse(item.TBMON) >= 5 ? imageList.Images[0] : imageList.Images[1])
                             });
                     }
                 }
@@ -96,7 +101,8 @@ namespace GUI.UC
             fStudy_Edit fEdit = new fStudy_Edit(ChangeInfo_dtgv);
 
             // fEdit đang mở nên flag = true
-            flag = true;
+            //flag = true;
+            fStudy_Edit.flag = true;
             
             // Truyền dữ liệu sang form Edit
             _GetDataUCtoForm = fEdit.SetValue;
@@ -116,7 +122,7 @@ namespace GUI.UC
         // Mỗi lần người dùng click vào từng row sau đó truyền dữ liệu qua form Edit
         private void dtgv_SelectionChanged(object sender, EventArgs e)
         {
-            if (flag && dtgv.SelectedRows.Count > 0)
+            if (fStudy_Edit.flag && dtgv.SelectedRows.Count > 0)
             {
                 _GetDataUCtoForm(
                     txb_MSSV.Text,

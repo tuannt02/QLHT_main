@@ -30,6 +30,7 @@ namespace GUI.UC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fScholarship_Authorize));
             this.BorderlessF_Auth = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.lab_header = new System.Windows.Forms.Label();
             this.txb_subheader = new System.Windows.Forms.TextBox();
@@ -187,6 +188,7 @@ namespace GUI.UC
             this.Controls.Add(this.txb_subheader);
             this.Controls.Add(this.lab_header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fScholarship_Authorize";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xác thực cấp 2";

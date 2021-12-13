@@ -14,11 +14,11 @@ namespace DTO
         private string _MAMH;
         private string _TENMH;
         private int _SOTC;
-        private float _QT;
-        private float _GK;
-        private float _TH;
-        private float _CK;
-        private float _TBMON;
+        private string _QT;
+        private string _GK;
+        private string _TH;
+        private string _CK;
+        private string _TBMON;
         private int _NAMHOC;
         private string _HOCKY;
         #endregion
@@ -28,18 +28,18 @@ namespace DTO
         public string MAMH { get => _MAMH; set => _MAMH = value; }
         public string TENMH { get => _TENMH; set => _TENMH = value; }
         public int SOTC { get => _SOTC; set => _SOTC = value; }
-        public float QT { get => _QT; set => _QT = value; }
-        public float GK { get => _GK; set => _GK = value; }
-        public float TH { get => _TH; set => _TH = value; }
-        public float CK { get => _CK; set => _CK = value; }
-        public float TBMON { get => _TBMON; set => _TBMON = value; }
+        public string QT { get => _QT; set => _QT = value; }
+        public string GK { get => _GK; set => _GK = value; }
+        public string TH { get => _TH; set => _TH = value; }
+        public string CK { get => _CK; set => _CK = value; }
+        public string TBMON { get => _TBMON; set => _TBMON = value; }
         public int NAMHOC { get => _NAMHOC; set => _NAMHOC = value; }
         public string HOCKY { get => _HOCKY; set => _HOCKY = value; }
         #endregion
 
 
         #region method
-        public KQHT(string hoten, string mamh, string tenmh, int sotc, float qt, float gk, float th, float ck, float tbmon, int namhoc, string hocky)
+        public KQHT(string hoten, string mamh, string tenmh, int sotc, string qt, string gk, string th, string ck, string tbmon, int namhoc, string hocky)
         {
             this.HOTEN = hoten;
             this.MAMH = mamh;
@@ -57,17 +57,40 @@ namespace DTO
 
         public KQHT(DataRow row)
         {
+            //this.HOTEN = (string)row["HOTEN"];
+            //this.MAMH = (string)row["MAMH"];
+            //this.TENMH = (string)row["TENMH"];
+            //this.SOTC = (int)row["SOTC"];
+            //this.QT =       float.Parse(row["QT"].ToString());
+            //this.GK =       float.Parse(row["GK"].ToString());
+            //this.TH =       float.Parse(row["TH"].ToString());
+            //this.CK =       float.Parse(row["CK"].ToString());
+            //this.TBMON =    float.Parse(row["TBMON"].ToString());
+
             this.HOTEN = (string)row["HOTEN"];
             this.MAMH = (string)row["MAMH"];
             this.TENMH = (string)row["TENMH"];
             this.SOTC = (int)row["SOTC"];
-            this.QT = float.Parse(row["QT"].ToString());
-            this.GK = float.Parse(row["GK"].ToString());
-            this.TH = float.Parse(row["TH"].ToString());
-            this.CK = float.Parse(row["CK"].ToString());
-            this.TBMON = float.Parse(row["TBMON"].ToString());
-            //this.NAMHOC = (int)row["NAMHOC"];
-            //this.HOCKY = (string)row["HOCKY"];
+            if (row["QT"] == DBNull.Value)
+                this.QT = "";
+            else
+                this.QT = row["QT"].ToString();
+            if (row["GK"] == DBNull.Value)
+                this.GK = "";
+            else
+                this.GK = row["GK"].ToString();
+            if (row["TH"] == DBNull.Value)
+                this.TH = "";
+            else
+                this.TH = row["TH"].ToString();
+            if (row["CK"] == DBNull.Value)
+                this.CK = "";
+            else
+                this.CK = row["CK"].ToString();
+            if (row["TBMON"] == DBNull.Value)
+                this.TBMON = "";
+            else
+                this.TBMON = row["TBMON"].ToString();
         }
         #endregion
     }
