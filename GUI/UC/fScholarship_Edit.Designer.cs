@@ -134,7 +134,7 @@ namespace GUI.UC
             this.btn_back.ShadowDecoration.Parent = this.btn_back;
             this.btn_back.Size = new System.Drawing.Size(99, 45);
             this.btn_back.TabIndex = 10;
-            this.btn_back.Text = "Back";
+            this.btn_back.Text = "Trở về";
             this.btn_back.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_back.TextOffset = new System.Drawing.Point(-3, 0);
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);

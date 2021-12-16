@@ -79,7 +79,7 @@ namespace GUI.UC
             this.UC_AboutUs_txb_Search.Location = new System.Drawing.Point(21, 20);
             this.UC_AboutUs_txb_Search.Name = "UC_AboutUs_txb_Search";
             this.UC_AboutUs_txb_Search.PasswordChar = '\0';
-            this.UC_AboutUs_txb_Search.PlaceholderText = "Search";
+            this.UC_AboutUs_txb_Search.PlaceholderText = "Tìm kiếm";
             this.UC_AboutUs_txb_Search.SelectedText = "";
             this.UC_AboutUs_txb_Search.ShadowDecoration.Parent = this.UC_AboutUs_txb_Search;
             this.UC_AboutUs_txb_Search.Size = new System.Drawing.Size(215, 50);
@@ -135,12 +135,12 @@ namespace GUI.UC
             this.UC_AboutUs_btn_All.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
             this.UC_AboutUs_btn_All.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
             this.UC_AboutUs_btn_All.HoverState.Parent = this.UC_AboutUs_btn_All;
-            this.UC_AboutUs_btn_All.Location = new System.Drawing.Point(838, 20);
+            this.UC_AboutUs_btn_All.Location = new System.Drawing.Point(817, 20);
             this.UC_AboutUs_btn_All.Name = "UC_AboutUs_btn_All";
             this.UC_AboutUs_btn_All.ShadowDecoration.Parent = this.UC_AboutUs_btn_All;
             this.UC_AboutUs_btn_All.Size = new System.Drawing.Size(85, 50);
             this.UC_AboutUs_btn_All.TabIndex = 7;
-            this.UC_AboutUs_btn_All.Text = "All";
+            this.UC_AboutUs_btn_All.Text = "Tất cả";
             this.UC_AboutUs_btn_All.Click += new System.EventHandler(this.UC_AboutUs_btn_All_Click);
             // 
             // UC_AboutUs_btn_Active
@@ -169,12 +169,12 @@ namespace GUI.UC
             this.UC_AboutUs_btn_Active.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
             this.UC_AboutUs_btn_Active.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
             this.UC_AboutUs_btn_Active.HoverState.Parent = this.UC_AboutUs_btn_Active;
-            this.UC_AboutUs_btn_Active.Location = new System.Drawing.Point(923, 20);
+            this.UC_AboutUs_btn_Active.Location = new System.Drawing.Point(901, 20);
             this.UC_AboutUs_btn_Active.Name = "UC_AboutUs_btn_Active";
             this.UC_AboutUs_btn_Active.ShadowDecoration.Parent = this.UC_AboutUs_btn_Active;
-            this.UC_AboutUs_btn_Active.Size = new System.Drawing.Size(82, 50);
+            this.UC_AboutUs_btn_Active.Size = new System.Drawing.Size(104, 50);
             this.UC_AboutUs_btn_Active.TabIndex = 8;
-            this.UC_AboutUs_btn_Active.Text = "Active";
+            this.UC_AboutUs_btn_Active.Text = "Còn hạn";
             this.UC_AboutUs_btn_Active.Click += new System.EventHandler(this.UC_AboutUs_btn_Active_Click);
             // 
             // UC_AboutUs_btn_OnLeave
@@ -206,7 +206,7 @@ namespace GUI.UC
             this.UC_AboutUs_btn_OnLeave.ShadowDecoration.Parent = this.UC_AboutUs_btn_OnLeave;
             this.UC_AboutUs_btn_OnLeave.Size = new System.Drawing.Size(105, 50);
             this.UC_AboutUs_btn_OnLeave.TabIndex = 9;
-            this.UC_AboutUs_btn_OnLeave.Text = "On leave";
+            this.UC_AboutUs_btn_OnLeave.Text = "Hết hạn";
             this.UC_AboutUs_btn_OnLeave.Click += new System.EventHandler(this.UC_AboutUs_btn_OnLeave_Click);
             // 
             // dtgv_ShowHB
@@ -370,9 +370,9 @@ namespace GUI.UC
             this.UC_AboutUs_lab_Rec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UC_AboutUs_lab_Rec.Location = new System.Drawing.Point(17, 88);
             this.UC_AboutUs_lab_Rec.Name = "UC_AboutUs_lab_Rec";
-            this.UC_AboutUs_lab_Rec.Size = new System.Drawing.Size(110, 28);
+            this.UC_AboutUs_lab_Rec.Size = new System.Drawing.Size(112, 28);
             this.UC_AboutUs_lab_Rec.TabIndex = 12;
-            this.UC_AboutUs_lab_Rec.Text = "Records: 0";
+            this.UC_AboutUs_lab_Rec.Text = "Số dòng: 0";
             // 
             // UC_AboutUs_lab_Fil
             // 
@@ -381,9 +381,9 @@ namespace GUI.UC
             this.UC_AboutUs_lab_Fil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UC_AboutUs_lab_Fil.Location = new System.Drawing.Point(151, 88);
             this.UC_AboutUs_lab_Fil.Name = "UC_AboutUs_lab_Fil";
-            this.UC_AboutUs_lab_Fil.Size = new System.Drawing.Size(85, 28);
+            this.UC_AboutUs_lab_Fil.Size = new System.Drawing.Size(67, 28);
             this.UC_AboutUs_lab_Fil.TabIndex = 13;
-            this.UC_AboutUs_lab_Fil.Text = "Filter: 0";
+            this.UC_AboutUs_lab_Fil.Text = "Lọc: 0";
             // 
             // UC_AboutUs_btn_CheckAdmin
             // 

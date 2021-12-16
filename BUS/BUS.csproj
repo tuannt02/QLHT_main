@@ -46,6 +46,7 @@
     <Compile Include="Hocbong_BUS.cs" />
     <Compile Include="Kqht_BUS.cs" />
     <Compile Include="Login_BUS.cs" />
+    <Compile Include="Manage_BUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting_BUS.cs" />
   </ItemGroup>

@@ -32,6 +32,7 @@ namespace GUI.fDashboard
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBoard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnManage = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lab_time = new System.Windows.Forms.Label();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.fDashboard_DBoard_btn_AboutUs = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -44,43 +45,79 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Dashboard = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
-            this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Gmail1 = new GUI.UC.UC_Gmail();
             this.uC_Dashboard1 = new GUI.UC.UC_Dashboard();
             this.uC_AboutUs1 = new GUI.UC.UC_AboutUs();
             this.uC_Setting1 = new GUI.UC.UC_Setting();
+            this.uC_Scholarship1 = new GUI.UC.UC_Scholarship();
+            this.uC_Study_Main1 = new GUI.UC.UC_Study_Main();
+            this.uC_Gmail1 = new GUI.UC.UC_Gmail();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Manage1 = new GUI.UC.UC_Manage();
+            this.uC_AddSV1 = new GUI.UC.UC_AddSV();
             this.BorderlessF_DBoard = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pic_location = new System.Windows.Forms.PictureBox();
             this.lab_location = new System.Windows.Forms.Label();
             this.lab_breadcrumb = new System.Windows.Forms.Label();
+            this.txt_C = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pic_location = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.lab_time);
             this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_AboutUs);
             this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Setting);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Gmail);
-            this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Study);
-            this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Scholarship);
-            this.panel1.Controls.Add(this.fDashboard_DBoard_btn_Dashboard);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(293, 810);
             this.panel1.TabIndex = 0;
+            // 
+            // btnManage
+            // 
+            this.btnManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnManage.BorderRadius = 20;
+            this.btnManage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnManage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(135)))), ((int)(((byte)(243)))));
+            this.btnManage.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(212)))), ((int)(((byte)(236)))));
+            this.btnManage.CheckedState.Image = global::GUI.Properties.Resources.authorization1;
+            this.btnManage.CheckedState.Parent = this.btnManage;
+            this.btnManage.CustomImages.Parent = this.btnManage;
+            this.btnManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManage.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManage.DisabledState.Parent = this.btnManage;
+            this.btnManage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnManage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.btnManage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManage.ForeColor = System.Drawing.Color.White;
+            this.btnManage.HoverState.Parent = this.btnManage;
+            this.btnManage.Image = global::GUI.Properties.Resources.authorization;
+            this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManage.ImageOffset = new System.Drawing.Point(16, 0);
+            this.btnManage.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnManage.Location = new System.Drawing.Point(3, 263);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.ShadowDecoration.Parent = this.btnManage;
+            this.btnManage.Size = new System.Drawing.Size(259, 59);
+            this.btnManage.TabIndex = 13;
+            this.btnManage.Text = "Quản lý tài khoản";
+            this.btnManage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManage.TextOffset = new System.Drawing.Point(24, 0);
+            this.btnManage.CheckedChanged += new System.EventHandler(this.btnManage_CheckedChange);
             // 
             // lab_time
             // 
@@ -111,9 +148,9 @@ namespace GUI.fDashboard
             this.btn_logout.Location = new System.Drawing.Point(89, 716);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.ShadowDecoration.Parent = this.btn_logout;
-            this.btn_logout.Size = new System.Drawing.Size(121, 45);
+            this.btn_logout.Size = new System.Drawing.Size(130, 45);
             this.btn_logout.TabIndex = 10;
-            this.btn_logout.Text = "Log out";
+            this.btn_logout.Text = "Đăng xuất";
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // fDashboard_DBoard_btn_AboutUs
@@ -146,7 +183,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_AboutUs.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_AboutUs;
             this.fDashboard_DBoard_btn_AboutUs.Size = new System.Drawing.Size(259, 59);
             this.fDashboard_DBoard_btn_AboutUs.TabIndex = 9;
-            this.fDashboard_DBoard_btn_AboutUs.Text = "About Us";
+            this.fDashboard_DBoard_btn_AboutUs.Text = "Giới thiệu";
             this.fDashboard_DBoard_btn_AboutUs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_AboutUs.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_AboutUs.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_AboutUs_CheckedChanged);
@@ -182,7 +219,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Setting.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Setting;
             this.fDashboard_DBoard_btn_Setting.Size = new System.Drawing.Size(259, 59);
             this.fDashboard_DBoard_btn_Setting.TabIndex = 8;
-            this.fDashboard_DBoard_btn_Setting.Text = "Setting";
+            this.fDashboard_DBoard_btn_Setting.Text = "Cài đặt";
             this.fDashboard_DBoard_btn_Setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Setting.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Setting.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Setting_CheckedChanged);
@@ -194,20 +231,20 @@ namespace GUI.fDashboard
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
             this.label3.Location = new System.Drawing.Point(33, 516);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 25);
+            this.label3.Size = new System.Drawing.Size(50, 25);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Other";
+            this.label3.Text = "Khác";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.label2.Location = new System.Drawing.Point(33, 138);
+            this.label2.Location = new System.Drawing.Point(33, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 25);
+            this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Tools";
+            this.label2.Text = "Chức năng";
             // 
             // fDashboard_DBoard_btn_Gmail
             // 
@@ -234,7 +271,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Gmail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Gmail.ImageOffset = new System.Drawing.Point(16, 0);
             this.fDashboard_DBoard_btn_Gmail.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_Gmail.Location = new System.Drawing.Point(16, 363);
+            this.fDashboard_DBoard_btn_Gmail.Location = new System.Drawing.Point(3, 68);
             this.fDashboard_DBoard_btn_Gmail.Name = "fDashboard_DBoard_btn_Gmail";
             this.fDashboard_DBoard_btn_Gmail.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Gmail;
             this.fDashboard_DBoard_btn_Gmail.Size = new System.Drawing.Size(259, 59);
@@ -269,7 +306,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Study.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Study.ImageOffset = new System.Drawing.Point(16, 0);
             this.fDashboard_DBoard_btn_Study.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_Study.Location = new System.Drawing.Point(16, 298);
+            this.fDashboard_DBoard_btn_Study.Location = new System.Drawing.Point(3, 133);
             this.fDashboard_DBoard_btn_Study.Name = "fDashboard_DBoard_btn_Study";
             this.fDashboard_DBoard_btn_Study.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Study;
             this.fDashboard_DBoard_btn_Study.Size = new System.Drawing.Size(259, 59);
@@ -305,7 +342,7 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Scholarship.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Scholarship.ImageOffset = new System.Drawing.Point(16, 0);
             this.fDashboard_DBoard_btn_Scholarship.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_Scholarship.Location = new System.Drawing.Point(16, 233);
+            this.fDashboard_DBoard_btn_Scholarship.Location = new System.Drawing.Point(3, 198);
             this.fDashboard_DBoard_btn_Scholarship.Name = "fDashboard_DBoard_btn_Scholarship";
             this.fDashboard_DBoard_btn_Scholarship.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Scholarship;
             this.fDashboard_DBoard_btn_Scholarship.Size = new System.Drawing.Size(259, 59);
@@ -341,12 +378,12 @@ namespace GUI.fDashboard
             this.fDashboard_DBoard_btn_Dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Dashboard.ImageOffset = new System.Drawing.Point(16, 0);
             this.fDashboard_DBoard_btn_Dashboard.ImageSize = new System.Drawing.Size(24, 24);
-            this.fDashboard_DBoard_btn_Dashboard.Location = new System.Drawing.Point(16, 168);
+            this.fDashboard_DBoard_btn_Dashboard.Location = new System.Drawing.Point(3, 3);
             this.fDashboard_DBoard_btn_Dashboard.Name = "fDashboard_DBoard_btn_Dashboard";
             this.fDashboard_DBoard_btn_Dashboard.ShadowDecoration.Parent = this.fDashboard_DBoard_btn_Dashboard;
             this.fDashboard_DBoard_btn_Dashboard.Size = new System.Drawing.Size(259, 59);
             this.fDashboard_DBoard_btn_Dashboard.TabIndex = 1;
-            this.fDashboard_DBoard_btn_Dashboard.Text = "Dashboard";
+            this.fDashboard_DBoard_btn_Dashboard.Text = "Trang chủ";
             this.fDashboard_DBoard_btn_Dashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.fDashboard_DBoard_btn_Dashboard.TextOffset = new System.Drawing.Point(24, 0);
             this.fDashboard_DBoard_btn_Dashboard.CheckedChanged += new System.EventHandler(this.fDashboard_DBoard_btn_Dashboard_CheckedChanged);
@@ -356,7 +393,7 @@ namespace GUI.fDashboard
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(62, 44);
+            this.label1.Location = new System.Drawing.Point(71, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 48);
             this.label1.TabIndex = 0;
@@ -371,42 +408,12 @@ namespace GUI.fDashboard
             this.panel3.Controls.Add(this.uC_Study_Main1);
             this.panel3.Controls.Add(this.uC_Gmail1);
             this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.uC_Manage1);
+            this.panel3.Controls.Add(this.uC_AddSV1);
             this.panel3.Location = new System.Drawing.Point(293, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 736);
             this.panel3.TabIndex = 2;
-            // 
-            // uC_Scholarship1
-            // 
-            this.uC_Scholarship1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Scholarship1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Scholarship1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Scholarship1.Name = "uC_Scholarship1";
-            this.uC_Scholarship1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Scholarship1.TabIndex = 2;
-            // 
-            // uC_Study_Main1
-            // 
-            this.uC_Study_Main1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Study_Main1.Name = "uC_Study_Main1";
-            this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Study_Main1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panel2.Location = new System.Drawing.Point(272, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(352, 74);
-            this.panel2.TabIndex = 1;
-            // 
-            // uC_Gmail1
-            // 
-            this.uC_Gmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.uC_Gmail1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Gmail1.Name = "uC_Gmail1";
-            this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
-            this.uC_Gmail1.TabIndex = 5;
             // 
             // uC_Dashboard1
             // 
@@ -439,6 +446,53 @@ namespace GUI.fDashboard
             this.uC_Setting1.Size = new System.Drawing.Size(1147, 736);
             this.uC_Setting1.TabIndex = 3;
             // 
+            // uC_Scholarship1
+            // 
+            this.uC_Scholarship1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Scholarship1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Scholarship1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Scholarship1.Name = "uC_Scholarship1";
+            this.uC_Scholarship1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Scholarship1.TabIndex = 2;
+            // 
+            // uC_Study_Main1
+            // 
+            this.uC_Study_Main1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Study_Main1.Name = "uC_Study_Main1";
+            this.uC_Study_Main1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Study_Main1.TabIndex = 4;
+            // 
+            // uC_Gmail1
+            // 
+            this.uC_Gmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Gmail1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Gmail1.Name = "uC_Gmail1";
+            this.uC_Gmail1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Gmail1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel2.Location = new System.Drawing.Point(272, 127);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(352, 74);
+            this.panel2.TabIndex = 1;
+            // 
+            // uC_Manage1
+            // 
+            this.uC_Manage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.uC_Manage1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Manage1.Name = "uC_Manage1";
+            this.uC_Manage1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_Manage1.TabIndex = 6;
+            // 
+            // uC_AddSV1
+            // 
+            this.uC_AddSV1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddSV1.Name = "uC_AddSV1";
+            this.uC_AddSV1.Size = new System.Drawing.Size(1147, 736);
+            this.uC_AddSV1.TabIndex = 7;
+            // 
             // BorderlessF_DBoard
             // 
             this.BorderlessF_DBoard.BorderRadius = 16;
@@ -449,6 +503,29 @@ namespace GUI.fDashboard
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // lab_location
+            // 
+            this.lab_location.AutoSize = true;
+            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.lab_location.Location = new System.Drawing.Point(1116, 26);
+            this.lab_location.Name = "lab_location";
+            this.lab_location.Size = new System.Drawing.Size(103, 28);
+            this.lab_location.TabIndex = 7;
+            this.lab_location.Text = "Qui Nhon";
+            // 
+            // lab_breadcrumb
+            // 
+            this.lab_breadcrumb.AutoSize = true;
+            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
+            this.lab_breadcrumb.Location = new System.Drawing.Point(308, 23);
+            this.lab_breadcrumb.Name = "lab_breadcrumb";
+            this.lab_breadcrumb.Size = new System.Drawing.Size(197, 32);
+            this.lab_breadcrumb.TabIndex = 12;
+            this.lab_breadcrumb.Text = "App > Trang chủ";
             // 
             // txt_C
             // 
@@ -495,28 +572,18 @@ namespace GUI.fDashboard
             this.pic_location.TabIndex = 8;
             this.pic_location.TabStop = false;
             // 
-            // lab_location
+            // flowLayoutPanel1
             // 
-            this.lab_location.AutoSize = true;
-            this.lab_location.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lab_location.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_location.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.lab_location.Location = new System.Drawing.Point(1116, 26);
-            this.lab_location.Name = "lab_location";
-            this.lab_location.Size = new System.Drawing.Size(103, 28);
-            this.lab_location.TabIndex = 7;
-            this.lab_location.Text = "Qui Nhon";
-            // 
-            // lab_breadcrumb
-            // 
-            this.lab_breadcrumb.AutoSize = true;
-            this.lab_breadcrumb.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_breadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(167)))));
-            this.lab_breadcrumb.Location = new System.Drawing.Point(308, 23);
-            this.lab_breadcrumb.Name = "lab_breadcrumb";
-            this.lab_breadcrumb.Size = new System.Drawing.Size(208, 32);
-            this.lab_breadcrumb.TabIndex = 12;
-            this.lab_breadcrumb.Text = "App > Dashboard";
+            this.flowLayoutPanel1.Controls.Add(this.fDashboard_DBoard_btn_Dashboard);
+            this.flowLayoutPanel1.Controls.Add(this.fDashboard_DBoard_btn_Gmail);
+            this.flowLayoutPanel1.Controls.Add(this.fDashboard_DBoard_btn_Study);
+            this.flowLayoutPanel1.Controls.Add(this.fDashboard_DBoard_btn_Scholarship);
+            this.flowLayoutPanel1.Controls.Add(this.btnManage);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 155);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(271, 348);
+            this.flowLayoutPanel1.TabIndex = 15;
             // 
             // DBoard
             // 
@@ -542,6 +609,7 @@ namespace GUI.fDashboard
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_location)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +643,9 @@ namespace GUI.fDashboard
         private System.Windows.Forms.PictureBox pic_location;
         private System.Windows.Forms.Label lab_breadcrumb;
         private System.Windows.Forms.Label lab_location;
+        private Guna.UI2.WinForms.Guna2GradientButton btnManage;
+        private UC.UC_Manage uC_Manage1;
+        private UC.UC_AddSV uC_AddSV1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -31,7 +31,7 @@ namespace GUI.UC
             uC_Study1.BringToFront();
             string MSSV = DBoard_BUS.Instance.GetMSSV();
 
-            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Edit");
+            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Sửa");
             fDashboard.DBoard.flagUpdate = true;
         }
 

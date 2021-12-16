@@ -30,6 +30,21 @@ namespace GUI.fDashboard
         public DBoard()
         {
             InitializeComponent();
+            if(!fLogin.Login.ADMIN)
+            {
+                btnManage.Hide();
+            }
+            else
+            {
+                fDashboard_DBoard_btn_Dashboard.Checked = false;
+                fDashboard_DBoard_btn_Dashboard.Hide();
+                fDashboard_DBoard_btn_Gmail.Checked = true;
+                if (fDashboard_DBoard_btn_Gmail.Checked)
+                {
+                    uC_Gmail1.BringToFront();
+                    lab_breadcrumb.Text = "App > Viết mail";
+                }
+            }
         }
 
         private void guna2GradientButton7_Click(object sender, EventArgs e)
@@ -37,17 +52,25 @@ namespace GUI.fDashboard
            // UC.UC_AboutUs.
         }
 
-        private void uC_AboutUs1_Load(object sender, EventArgs e)
+        private void btnManage_CheckedChange(object sender, EventArgs e)
         {
-
+            if (btnManage.Checked)  
+            {
+                fDashboard_DBoard_btn_AboutUs.Checked = false;
+                fDashboard_DBoard_btn_Setting.Checked = false;
+                uC_Manage1.BringToFront();
+                lab_breadcrumb.Text = "App > Quản lý tài khoản";
+            }
         }
 
         private void fDashboard_DBoard_btn_Dashboard_CheckedChanged(object sender, EventArgs e)
         {
             if (fDashboard_DBoard_btn_Dashboard.Checked) 
             {
+                fDashboard_DBoard_btn_AboutUs.Checked = false;
+                fDashboard_DBoard_btn_Setting.Checked = false;
                 uC_Dashboard1.BringToFront();
-                lab_breadcrumb.Text = "App > Dashboard";
+                lab_breadcrumb.Text = "App > Trang chủ";
             }
         }
 
@@ -55,6 +78,8 @@ namespace GUI.fDashboard
         {
             if (fDashboard_DBoard_btn_Scholarship.Checked) 
             {
+                fDashboard_DBoard_btn_AboutUs.Checked = false;
+                fDashboard_DBoard_btn_Setting.Checked = false;
                 uC_Scholarship1.BringToFront();
                 lab_breadcrumb.Text = "App > Học bổng";
             }
@@ -64,8 +89,10 @@ namespace GUI.fDashboard
         {
             if (fDashboard_DBoard_btn_Study.Checked) 
             {
+                fDashboard_DBoard_btn_AboutUs.Checked = false;
+                fDashboard_DBoard_btn_Setting.Checked = false;
                 uC_Study_Main1.BringToFront();
-                lab_breadcrumb.Text = "App > Học tập > Edit";
+                lab_breadcrumb.Text = "App > Học tập > Sửa";
             }
         }
 
@@ -73,8 +100,13 @@ namespace GUI.fDashboard
         {
             if (fDashboard_DBoard_btn_Setting.Checked) 
             {
+                fDashboard_DBoard_btn_Gmail.Checked = false;
+                fDashboard_DBoard_btn_Dashboard.Checked = false;
+                fDashboard_DBoard_btn_Scholarship.Checked = false;
+                fDashboard_DBoard_btn_Study.Checked = false;
+                btnManage.Checked = false;
                 uC_Setting1.BringToFront();
-                lab_breadcrumb.Text = "App > Setting";
+                lab_breadcrumb.Text = "App > Cài đặt";
             }
         }
 
@@ -82,8 +114,13 @@ namespace GUI.fDashboard
         {
             if (fDashboard_DBoard_btn_AboutUs.Checked) 
             {
+                fDashboard_DBoard_btn_Gmail.Checked = false;
+                fDashboard_DBoard_btn_Dashboard.Checked = false;
+                fDashboard_DBoard_btn_Scholarship.Checked = false;
+                fDashboard_DBoard_btn_Study.Checked = false;
+                btnManage.Checked = false;
                 uC_AboutUs1.BringToFront();
-                lab_breadcrumb.Text = "App > About Us";
+                lab_breadcrumb.Text = "App > Giới thiệu";
             }
         }
         private void fDashboard_DBoard_btn_Gmail_CheckedChanged(object sender, EventArgs e)
@@ -180,10 +217,11 @@ namespace GUI.fDashboard
         {
             string MSSV = DBoard_BUS.Instance.GetMSSV();
 
-            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Edit");
+            DBoard_BUS.Instance.Update_BREADCRUMB(MSSV, "App > Học tập > Sửa");
 
             flagUpdate = true;
 
         }
+
     }
 }

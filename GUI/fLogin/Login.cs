@@ -25,6 +25,8 @@ namespace GUI.fLogin
             private set => instance = value;
         }
 
+        public static bool ADMIN = false; 
+
         // Nút đóng
         private void fLogin_Login_btn_close_Click(object sender, EventArgs e)
         {
@@ -53,6 +55,7 @@ namespace GUI.fLogin
             {
                 if (Login_BUS.Instance.Login(username, password))
                 {
+                    ADMIN = Login_BUS.Instance.checkAdmin(username);
                     Login_BUS.Instance.Insert_Table_Temp(username);
                     fDashboard.DBoard DBoard = new fDashboard.DBoard();
                     Instance.Hide();

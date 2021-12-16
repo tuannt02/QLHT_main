@@ -37,6 +37,10 @@ namespace GUI.UC
         {
             InitializeComponent();
             LoadDataFull();
+            if(!fLogin.Login.ADMIN)
+            {
+                UC_AboutUs_btn_CheckAdmin.Hide();
+            }
         }
 
 
@@ -54,8 +58,8 @@ namespace GUI.UC
             dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFull();
             Recs = listHS.Count;
-            UC_AboutUs_lab_Rec.Text = "Records: " + listHS.Count.ToString();
-            UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
+            UC_AboutUs_lab_Rec.Text = "Số dòng: " + listHS.Count.ToString();
+            UC_AboutUs_lab_Fil.Text = "Lọc: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
 
             foreach (HOCBONG item in listHS)
             {
@@ -86,8 +90,8 @@ namespace GUI.UC
             dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBActive();
             Recs = listHS.Count;
-            UC_AboutUs_lab_Rec.Text = "Records: " + listHS.Count.ToString();
-            UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
+            UC_AboutUs_lab_Rec.Text = "Số dòng: " + listHS.Count.ToString();
+            UC_AboutUs_lab_Fil.Text = "Lọc: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
             foreach (HOCBONG item in listHS)
             {
                 dtgv_ShowHB.Rows.Add(new object[]
@@ -118,9 +122,9 @@ namespace GUI.UC
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBUnActive();
 
             Recs = listHS.Count;
-            UC_AboutUs_lab_Rec.Text = "Records: " + listHS.Count.ToString();
+            UC_AboutUs_lab_Rec.Text = "Số dòng: " + listHS.Count.ToString();
 
-            UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
+            UC_AboutUs_lab_Fil.Text = "Lọc: " + listHS.Count.ToString() + "/" + listHS.Count.ToString();
 
             foreach (HOCBONG item in listHS)
             {
@@ -148,7 +152,7 @@ namespace GUI.UC
             dtgv_ShowHB.Rows.Clear();
             List<HOCBONG> listHS = Hocbong_BUS.Instance.getListHBFilter(UC_AboutUs_txb_Search.Text,flag);
 
-            UC_AboutUs_lab_Fil.Text = "Filter: " + listHS.Count.ToString() + "/" + Recs.ToString();
+            UC_AboutUs_lab_Fil.Text = "Lọc: " + listHS.Count.ToString() + "/" + Recs.ToString();
 
             foreach (HOCBONG item in listHS)
             {

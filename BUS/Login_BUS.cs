@@ -87,5 +87,10 @@ namespace BUS
             ACCOUNT_DAO.Instance.Insert_Table_Temp(username);
         }
 
+        public bool checkAdmin(string username)
+        {
+            return ACCOUNT_DAO.Instance.checkAdmin(username);
+        }
+
     }
 }

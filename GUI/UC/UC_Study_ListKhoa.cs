@@ -45,7 +45,7 @@ namespace GUI.UC
                 if (DS_kqht.Count > 0)
                     lab_TenKhoa.Text = "Khoa " + cb_Khoa.Text;
                 else
-                    lab_TenKhoa.Text = "Not found";
+                    lab_TenKhoa.Text = "Không tìm thấy";
 
 
 
@@ -62,7 +62,7 @@ namespace GUI.UC
                     records++;
                 }
 
-                lab_Recs.Text = "Records: " + records.ToString() + " line";
+                lab_Recs.Text = "Số dòng: " + records.ToString();
             }
         }
 
@@ -98,7 +98,7 @@ namespace GUI.UC
                 svMaster.TBNAM
                 });
 
-                lab_Recs.Text = "Records: " + records.ToString() + " line";
+                lab_Recs.Text = "Số dòng: " + records.ToString();
             }
         }
         #endregion

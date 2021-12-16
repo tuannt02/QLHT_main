@@ -77,6 +77,13 @@ namespace GUI.UC
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ckb3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ckb2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.ckb1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.lab_HocTap = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -88,13 +95,6 @@ namespace GUI.UC
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.txb_name = new System.Windows.Forms.TextBox();
             this.ptb_Anhthe = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ckb2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.ckb1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ckb3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.panel_weather.SuspendLayout();
             this.panel_huma.SuspendLayout();
             this.panel_visi.SuspendLayout();
@@ -123,9 +123,9 @@ namespace GUI.UC
             this.lab_today.ForeColor = System.Drawing.Color.White;
             this.lab_today.Location = new System.Drawing.Point(18, 16);
             this.lab_today.Name = "lab_today";
-            this.lab_today.Size = new System.Drawing.Size(79, 32);
+            this.lab_today.Size = new System.Drawing.Size(114, 32);
             this.lab_today.TabIndex = 4;
-            this.lab_today.Text = "Today";
+            this.lab_today.Text = "Hôm nay";
             // 
             // panel_weather
             // 
@@ -782,152 +782,38 @@ namespace GUI.UC
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(382, 202);
             this.guna2CustomGradientPanel4.TabIndex = 18;
             // 
-            // lab_HocTap
+            // label13
             // 
-            this.lab_HocTap.AutoSize = false;
-            this.lab_HocTap.BackColor = System.Drawing.Color.Transparent;
-            this.lab_HocTap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_HocTap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
-            this.lab_HocTap.Location = new System.Drawing.Point(18, 143);
-            this.lab_HocTap.Name = "lab_HocTap";
-            this.lab_HocTap.Size = new System.Drawing.Size(361, 35);
-            this.lab_HocTap.TabIndex = 3;
-            this.lab_HocTap.Text = "Có 2 học bổng bạn có thể quan tâm";
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label13.Location = new System.Drawing.Point(277, 96);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 25);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Xuất sắc";
             // 
-            // guna2HtmlLabel8
+            // ckb3
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(55, 22);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(77, 30);
-            this.guna2HtmlLabel8.TabIndex = 2;
-            this.guna2HtmlLabel8.Text = "Học tập";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = global::GUI.Properties.Resources.scores__1_;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(21, 22);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 1;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2CustomGradientPanel5
-            // 
-            this.guna2CustomGradientPanel5.BorderRadius = 8;
-            this.guna2CustomGradientPanel5.Controls.Add(this.btn_Edit);
-            this.guna2CustomGradientPanel5.Controls.Add(this.txb_ghichu);
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2HtmlLabel10);
-            this.guna2CustomGradientPanel5.Controls.Add(this.guna2PictureBox5);
-            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(46)))), ((int)(((byte)(81)))));
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(523, 382);
-            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(30)))), ((int)(((byte)(113)))));
-            this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(183, 270);
-            this.guna2CustomGradientPanel5.TabIndex = 19;
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Edit.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Edit.BorderRadius = 8;
-            this.btn_Edit.CheckedState.Parent = this.btn_Edit;
-            this.btn_Edit.CustomImages.Parent = this.btn_Edit;
-            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Edit.DisabledState.Parent = this.btn_Edit;
-            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.HoverState.Parent = this.btn_Edit;
-            this.btn_Edit.Location = new System.Drawing.Point(40, 214);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
-            this.btn_Edit.Size = new System.Drawing.Size(102, 42);
-            this.btn_Edit.TabIndex = 4;
-            this.btn_Edit.Text = "EDIT";
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
-            // 
-            // txb_ghichu
-            // 
-            this.txb_ghichu.AutoSize = false;
-            this.txb_ghichu.BackColor = System.Drawing.Color.Transparent;
-            this.txb_ghichu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ghichu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
-            this.txb_ghichu.Location = new System.Drawing.Point(18, 58);
-            this.txb_ghichu.Name = "txb_ghichu";
-            this.txb_ghichu.Size = new System.Drawing.Size(152, 144);
-            this.txb_ghichu.TabIndex = 3;
-            this.txb_ghichu.Text = "Có 2 học bổng bạn có thể quan tâm";
-            // 
-            // guna2HtmlLabel10
-            // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(55, 22);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(75, 30);
-            this.guna2HtmlLabel10.TabIndex = 2;
-            this.guna2HtmlLabel10.Text = "Ghi chú";
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox5.Image = global::GUI.Properties.Resources.notes__1_;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(21, 22);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
-            this.guna2PictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox5.TabIndex = 1;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // txb_name
-            // 
-            this.txb_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txb_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txb_name.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.txb_name.ForeColor = System.Drawing.Color.White;
-            this.txb_name.Location = new System.Drawing.Point(165, 28);
-            this.txb_name.Name = "txb_name";
-            this.txb_name.Size = new System.Drawing.Size(100, 38);
-            this.txb_name.TabIndex = 20;
-            this.txb_name.Text = "Tuấn";
-            this.txb_name.TextChanged += new System.EventHandler(this.txb_name_TextChanged);
-            this.txb_name.Enter += new System.EventHandler(this.txb_name_Enter);
-            // 
-            // ptb_Anhthe
-            // 
-            this.ptb_Anhthe.Image = global::GUI.Properties.Resources.userdefault;
-            this.ptb_Anhthe.ImageRotate = 0F;
-            this.ptb_Anhthe.Location = new System.Drawing.Point(323, 19);
-            this.ptb_Anhthe.Name = "ptb_Anhthe";
-            this.ptb_Anhthe.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ptb_Anhthe.ShadowDecoration.Parent = this.ptb_Anhthe;
-            this.ptb_Anhthe.Size = new System.Drawing.Size(100, 100);
-            this.ptb_Anhthe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_Anhthe.TabIndex = 16;
-            this.ptb_Anhthe.TabStop = false;
+            this.ckb3.BackColor = System.Drawing.Color.Transparent;
+            this.ckb3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckb3.CheckedState.BorderThickness = 0;
+            this.ckb3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckb3.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.ckb3.CheckedState.Parent = this.ckb3;
+            this.ckb3.Location = new System.Drawing.Point(252, 100);
+            this.ckb3.Name = "ckb3";
+            this.ckb3.ShadowDecoration.Parent = this.ckb3;
+            this.ckb3.Size = new System.Drawing.Size(20, 20);
+            this.ckb3.TabIndex = 40;
+            this.ckb3.Text = "guna2CustomRadioButton1";
+            this.ckb3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.ckb3.UncheckedState.BorderThickness = 2;
+            this.ckb3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.ckb3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.ckb3.UncheckedState.Parent = this.ckb3;
+            this.ckb3.CheckedChanged += new System.EventHandler(this.ckb3_CheckedChanged);
             // 
             // label10
             // 
@@ -1009,38 +895,152 @@ namespace GUI.UC
             this.ckb1.UncheckedState.Parent = this.ckb1;
             this.ckb1.CheckedChanged += new System.EventHandler(this.ckb1_CheckedChanged);
             // 
-            // label13
+            // lab_HocTap
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label13.Location = new System.Drawing.Point(277, 96);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 25);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Xuất sắc";
+            this.lab_HocTap.AutoSize = false;
+            this.lab_HocTap.BackColor = System.Drawing.Color.Transparent;
+            this.lab_HocTap.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_HocTap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
+            this.lab_HocTap.Location = new System.Drawing.Point(18, 143);
+            this.lab_HocTap.Name = "lab_HocTap";
+            this.lab_HocTap.Size = new System.Drawing.Size(361, 35);
+            this.lab_HocTap.TabIndex = 3;
+            this.lab_HocTap.Text = "Có 2 học bổng bạn có thể quan tâm";
             // 
-            // ckb3
+            // guna2HtmlLabel8
             // 
-            this.ckb3.BackColor = System.Drawing.Color.Transparent;
-            this.ckb3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ckb3.CheckedState.BorderThickness = 0;
-            this.ckb3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ckb3.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.ckb3.CheckedState.Parent = this.ckb3;
-            this.ckb3.Location = new System.Drawing.Point(252, 100);
-            this.ckb3.Name = "ckb3";
-            this.ckb3.ShadowDecoration.Parent = this.ckb3;
-            this.ckb3.Size = new System.Drawing.Size(20, 20);
-            this.ckb3.TabIndex = 40;
-            this.ckb3.Text = "guna2CustomRadioButton1";
-            this.ckb3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.ckb3.UncheckedState.BorderThickness = 2;
-            this.ckb3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.ckb3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.ckb3.UncheckedState.Parent = this.ckb3;
-            this.ckb3.CheckedChanged += new System.EventHandler(this.ckb3_CheckedChanged);
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(55, 22);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(77, 30);
+            this.guna2HtmlLabel8.TabIndex = 2;
+            this.guna2HtmlLabel8.Text = "Học tập";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = global::GUI.Properties.Resources.scores__1_;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(21, 22);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 1;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2CustomGradientPanel5
+            // 
+            this.guna2CustomGradientPanel5.BorderRadius = 8;
+            this.guna2CustomGradientPanel5.Controls.Add(this.btn_Edit);
+            this.guna2CustomGradientPanel5.Controls.Add(this.txb_ghichu);
+            this.guna2CustomGradientPanel5.Controls.Add(this.guna2HtmlLabel10);
+            this.guna2CustomGradientPanel5.Controls.Add(this.guna2PictureBox5);
+            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(46)))), ((int)(((byte)(81)))));
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(523, 382);
+            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
+            this.guna2CustomGradientPanel5.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(30)))), ((int)(((byte)(113)))));
+            this.guna2CustomGradientPanel5.ShadowDecoration.Parent = this.guna2CustomGradientPanel5;
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(183, 270);
+            this.guna2CustomGradientPanel5.TabIndex = 19;
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.BorderRadius = 8;
+            this.btn_Edit.CheckedState.Parent = this.btn_Edit;
+            this.btn_Edit.CustomImages.Parent = this.btn_Edit;
+            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Edit.DisabledState.Parent = this.btn_Edit;
+            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.HoverState.Parent = this.btn_Edit;
+            this.btn_Edit.Location = new System.Drawing.Point(40, 214);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
+            this.btn_Edit.Size = new System.Drawing.Size(102, 42);
+            this.btn_Edit.TabIndex = 4;
+            this.btn_Edit.Text = "Sửa";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
+            // txb_ghichu
+            // 
+            this.txb_ghichu.AutoSize = false;
+            this.txb_ghichu.BackColor = System.Drawing.Color.Transparent;
+            this.txb_ghichu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ghichu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(148)))));
+            this.txb_ghichu.Location = new System.Drawing.Point(18, 58);
+            this.txb_ghichu.Name = "txb_ghichu";
+            this.txb_ghichu.Size = new System.Drawing.Size(152, 144);
+            this.txb_ghichu.TabIndex = 3;
+            this.txb_ghichu.Text = "Có 2 học bổng bạn có thể quan tâm";
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(55, 22);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(75, 30);
+            this.guna2HtmlLabel10.TabIndex = 2;
+            this.guna2HtmlLabel10.Text = "Ghi chú";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = global::GUI.Properties.Resources.notes__1_;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(21, 22);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
+            this.guna2PictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox5.TabIndex = 1;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // txb_name
+            // 
+            this.txb_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txb_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txb_name.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.txb_name.ForeColor = System.Drawing.Color.White;
+            this.txb_name.Location = new System.Drawing.Point(165, 28);
+            this.txb_name.Name = "txb_name";
+            this.txb_name.Size = new System.Drawing.Size(100, 38);
+            this.txb_name.TabIndex = 20;
+            this.txb_name.Text = "Tuấn";
+            this.txb_name.TextChanged += new System.EventHandler(this.txb_name_TextChanged);
+            this.txb_name.Enter += new System.EventHandler(this.txb_name_Enter);
+            // 
+            // ptb_Anhthe
+            // 
+            this.ptb_Anhthe.Image = global::GUI.Properties.Resources.userdefault;
+            this.ptb_Anhthe.ImageRotate = 0F;
+            this.ptb_Anhthe.Location = new System.Drawing.Point(323, 19);
+            this.ptb_Anhthe.Name = "ptb_Anhthe";
+            this.ptb_Anhthe.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptb_Anhthe.ShadowDecoration.Parent = this.ptb_Anhthe;
+            this.ptb_Anhthe.Size = new System.Drawing.Size(100, 100);
+            this.ptb_Anhthe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb_Anhthe.TabIndex = 16;
+            this.ptb_Anhthe.TabStop = false;
             // 
             // UC_Dashboard
             // 

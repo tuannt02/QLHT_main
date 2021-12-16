@@ -59,5 +59,13 @@ namespace DAO
             string query = "USP_insert_Temp_Table @USERNAME ";
             DataProvider.Instance.ExecuteNonQuery(query, new object[] { username });
         }
+
+        public bool checkAdmin(string username)
+        {
+            string query = "select ADMIN from ACCOUNT where ADMIN = 1 and USERNAME = '" + username +"'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+
+            return result.Rows.Count > 0;
+        }
     }
 }

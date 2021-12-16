@@ -214,6 +214,8 @@ namespace GUI.UC
                 printInfo("Mật khẩu tối thiểu là 8 ký tự", true, 2, false);
             else if (Login_BUS.Instance.LoginSignUp_CheckPassword(ReNewPW) == 2)
                 printInfo("Mật khẩu phải bao gồm ký tự và chữ cái", true, 2, false);
+            else if (ReNewPW != txb_New_Password.Text)
+                printInfo("Không trùng khớp với mật khẩu mới", true, 2, false);
             else
                 printInfo("Đạt", false, 2, false);
 

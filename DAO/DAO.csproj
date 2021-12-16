@@ -47,6 +47,7 @@
     <Compile Include="GMAIL_DAO.cs" />
     <Compile Include="HOCBONG_DAO.cs" />
     <Compile Include="KQHT_DAO.cs" />
+    <Compile Include="MANAGE_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SETTING_DAO.cs" />
   </ItemGroup>

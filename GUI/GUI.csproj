@@ -108,6 +108,12 @@
     <Compile Include="UC\UC_AboutUs.Designer.cs">
       <DependentUpon>UC_AboutUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_AddSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_AddSV.Designer.cs">
+      <DependentUpon>UC_AddSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="UC\UC_Gmail.Designer.cs">
       <DependentUpon>UC_Gmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Manage.Designer.cs">
+      <DependentUpon>UC_Manage.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_Scholarship.cs">
       <SubType>UserControl</SubType>
@@ -187,11 +199,17 @@
     <EmbeddedResource Include="UC\UC_AboutUs.resx">
       <DependentUpon>UC_AboutUs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_AddSV.resx">
+      <DependentUpon>UC_AddSV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Gmail.resx">
       <DependentUpon>UC_Gmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Manage.resx">
+      <DependentUpon>UC_Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Scholarship.resx">
       <DependentUpon>UC_Scholarship.cs</DependentUpon>
@@ -463,6 +481,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\authorization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\authorization1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

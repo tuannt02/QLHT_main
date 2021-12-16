@@ -57,18 +57,6 @@ namespace DAO
         }
 
 
-
-        //public void Insert_Image(string mssv, byte[] img)
-        //{
-        // string query = "INSERT_IMG @MSSV , @IMG";
-        //
-        // DataTable Data = DataProvider.Instance.ExecuteQuery(query, new object[] { mssv, img });
-        //}
-
-
-
-
-
         public byte[] Get_Image(string mssv)
         {
             DataTable Data = DataProvider.Instance.ExecuteQuery("select ANH from SINHVIEN where MSSV = " + mssv);

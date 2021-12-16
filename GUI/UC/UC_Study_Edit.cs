@@ -31,6 +31,10 @@ namespace GUI.UC
             cb_NamHoc.SelectedIndex = 3;
             cb_HocKy.SelectedIndex = 0;
             cb_Khoa.SelectedIndex = 0;
+            if(!fLogin.Login.ADMIN)
+            {
+                btn_Edit.Hide();
+            }
         }
 
         #region Methods
@@ -77,7 +81,7 @@ namespace GUI.UC
                     if (DS_kqht.Count > 0)
                         UC_Study_lab_Name.Text = DS_kqht[0].HOTEN;
                     else
-                        UC_Study_lab_Name.Text = "Not found";
+                        UC_Study_lab_Name.Text = "Không tìm thấy";
                     foreach (KQHT item in DS_kqht)
                     {
                         dtgv.Rows.Add(new object[] {

@@ -56,9 +56,9 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_lab_loginwith2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_LoginSignUp_lab_loginwith2.Location = new System.Drawing.Point(308, 630);
             this.fLogin_LoginSignUp_lab_loginwith2.Name = "fLogin_LoginSignUp_lab_loginwith2";
-            this.fLogin_LoginSignUp_lab_loginwith2.Size = new System.Drawing.Size(23, 20);
+            this.fLogin_LoginSignUp_lab_loginwith2.Size = new System.Drawing.Size(44, 20);
             this.fLogin_LoginSignUp_lab_loginwith2.TabIndex = 39;
-            this.fLogin_LoginSignUp_lab_loginwith2.Text = "or";
+            this.fLogin_LoginSignUp_lab_loginwith2.Text = "hoặc";
             // 
             // fLogin_LoginSignUp_lab_username
             // 
@@ -67,9 +67,9 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_lab_username.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_LoginSignUp_lab_username.Location = new System.Drawing.Point(26, 252);
             this.fLogin_LoginSignUp_lab_username.Name = "fLogin_LoginSignUp_lab_username";
-            this.fLogin_LoginSignUp_lab_username.Size = new System.Drawing.Size(104, 28);
+            this.fLogin_LoginSignUp_lab_username.Size = new System.Drawing.Size(99, 28);
             this.fLogin_LoginSignUp_lab_username.TabIndex = 36;
-            this.fLogin_LoginSignUp_lab_username.Text = "Username";
+            this.fLogin_LoginSignUp_lab_username.Text = "Tài khoản";
             // 
             // fLogin_LoginSignUp_lab_mssv
             // 
@@ -104,7 +104,7 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_btn_creAcc.ShadowDecoration.Parent = this.fLogin_LoginSignUp_btn_creAcc;
             this.fLogin_LoginSignUp_btn_creAcc.Size = new System.Drawing.Size(396, 56);
             this.fLogin_LoginSignUp_btn_creAcc.TabIndex = 3;
-            this.fLogin_LoginSignUp_btn_creAcc.Text = "Create Account";
+            this.fLogin_LoginSignUp_btn_creAcc.Text = "Tạo tài khoản";
             this.fLogin_LoginSignUp_btn_creAcc.Click += new System.EventHandler(this.fLogin_LoginSignUp_btn_creAcc_Click);
             // 
             // fLogin_LoginSignUp_lab_signup
@@ -114,19 +114,19 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_lab_signup.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.fLogin_LoginSignUp_lab_signup.Location = new System.Drawing.Point(65, 33);
             this.fLogin_LoginSignUp_lab_signup.Name = "fLogin_LoginSignUp_lab_signup";
-            this.fLogin_LoginSignUp_lab_signup.Size = new System.Drawing.Size(134, 45);
+            this.fLogin_LoginSignUp_lab_signup.Size = new System.Drawing.Size(136, 45);
             this.fLogin_LoginSignUp_lab_signup.TabIndex = 31;
-            this.fLogin_LoginSignUp_lab_signup.Text = "Sign up";
+            this.fLogin_LoginSignUp_lab_signup.Text = "Đăng kí";
             // 
             // fLogin_LoginSignUp_lab_loginwith
             // 
             this.fLogin_LoginSignUp_lab_loginwith.AutoSize = true;
             this.fLogin_LoginSignUp_lab_loginwith.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fLogin_LoginSignUp_lab_loginwith.Location = new System.Drawing.Point(172, 630);
+            this.fLogin_LoginSignUp_lab_loginwith.Location = new System.Drawing.Point(148, 630);
             this.fLogin_LoginSignUp_lab_loginwith.Name = "fLogin_LoginSignUp_lab_loginwith";
-            this.fLogin_LoginSignUp_lab_loginwith.Size = new System.Drawing.Size(84, 20);
+            this.fLogin_LoginSignUp_lab_loginwith.Size = new System.Drawing.Size(111, 20);
             this.fLogin_LoginSignUp_lab_loginwith.TabIndex = 30;
-            this.fLogin_LoginSignUp_lab_loginwith.Text = "Log in with";
+            this.fLogin_LoginSignUp_lab_loginwith.Text = "Đăng nhập với";
             // 
             // txb_username
             // 
@@ -192,9 +192,9 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_lab_password.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_LoginSignUp_lab_password.Location = new System.Drawing.Point(26, 402);
             this.fLogin_LoginSignUp_lab_password.Name = "fLogin_LoginSignUp_lab_password";
-            this.fLogin_LoginSignUp_lab_password.Size = new System.Drawing.Size(97, 28);
+            this.fLogin_LoginSignUp_lab_password.Size = new System.Drawing.Size(98, 28);
             this.fLogin_LoginSignUp_lab_password.TabIndex = 27;
-            this.fLogin_LoginSignUp_lab_password.Text = "Password";
+            this.fLogin_LoginSignUp_lab_password.Text = "Mật khẩu";
             // 
             // BorderlessForm
             // 
@@ -294,7 +294,7 @@ namespace GUI.fLogin
             this.fLogin_LoginSignUp_btn_gglogo.HoverState.Parent = this.fLogin_LoginSignUp_btn_gglogo;
             this.fLogin_LoginSignUp_btn_gglogo.Image = global::GUI.Properties.Resources.google_glass_logo__1_;
             this.fLogin_LoginSignUp_btn_gglogo.ImageSize = new System.Drawing.Size(25, 25);
-            this.fLogin_LoginSignUp_btn_gglogo.Location = new System.Drawing.Point(333, 620);
+            this.fLogin_LoginSignUp_btn_gglogo.Location = new System.Drawing.Point(352, 620);
             this.fLogin_LoginSignUp_btn_gglogo.Name = "fLogin_LoginSignUp_btn_gglogo";
             this.fLogin_LoginSignUp_btn_gglogo.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.fLogin_LoginSignUp_btn_gglogo.ShadowDecoration.Parent = this.fLogin_LoginSignUp_btn_gglogo;

@@ -91,7 +91,7 @@ namespace GUI.fLogin
             this.fLogin_Login_btn_signup.Size = new System.Drawing.Size(99, 31);
             this.fLogin_Login_btn_signup.TabIndex = 19;
             this.fLogin_Login_btn_signup.TabStop = false;
-            this.fLogin_Login_btn_signup.Text = "Sign up";
+            this.fLogin_Login_btn_signup.Text = "Đăng kí";
             this.fLogin_Login_btn_signup.Click += new System.EventHandler(this.fLogin_Login_btn_signup_Click);
             // 
             // fLogin_Login_btn_login
@@ -116,7 +116,7 @@ namespace GUI.fLogin
             this.fLogin_Login_btn_login.ShadowDecoration.Parent = this.fLogin_Login_btn_login;
             this.fLogin_Login_btn_login.Size = new System.Drawing.Size(396, 56);
             this.fLogin_Login_btn_login.TabIndex = 2;
-            this.fLogin_Login_btn_login.Text = "Log in";
+            this.fLogin_Login_btn_login.Text = "Đăng nhập";
             this.fLogin_Login_btn_login.Click += new System.EventHandler(this.fLogin_Login_btn_login_Click);
             // 
             // fLogin_Login_picBox_logo
@@ -135,11 +135,11 @@ namespace GUI.fLogin
             this.fLogin_Login_lab_heading.AutoSize = true;
             this.fLogin_Login_lab_heading.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.fLogin_Login_lab_heading.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.fLogin_Login_lab_heading.Location = new System.Drawing.Point(158, 199);
+            this.fLogin_Login_lab_heading.Location = new System.Drawing.Point(127, 199);
             this.fLogin_Login_lab_heading.Name = "fLogin_Login_lab_heading";
-            this.fLogin_Login_lab_heading.Size = new System.Drawing.Size(113, 45);
+            this.fLogin_Login_lab_heading.Size = new System.Drawing.Size(184, 45);
             this.fLogin_Login_lab_heading.TabIndex = 16;
-            this.fLogin_Login_lab_heading.Text = "Log in";
+            this.fLogin_Login_lab_heading.Text = "Đăng nhập";
             // 
             // fLogin_Login_lab_suggest
             // 
@@ -147,9 +147,9 @@ namespace GUI.fLogin
             this.fLogin_Login_lab_suggest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_Login_lab_suggest.Location = new System.Drawing.Point(145, 649);
             this.fLogin_Login_lab_suggest.Name = "fLogin_Login_lab_suggest";
-            this.fLogin_Login_lab_suggest.Size = new System.Drawing.Size(177, 20);
+            this.fLogin_Login_lab_suggest.Size = new System.Drawing.Size(176, 20);
             this.fLogin_Login_lab_suggest.TabIndex = 15;
-            this.fLogin_Login_lab_suggest.Text = "Don\'t have an account?";
+            this.fLogin_Login_lab_suggest.Text = "Bạn chưa có tài khoản?";
             // 
             // fLogin_Login_txb_username
             // 
@@ -211,9 +211,9 @@ namespace GUI.fLogin
             this.fLogin_Login_lab_password.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_Login_lab_password.Location = new System.Drawing.Point(31, 425);
             this.fLogin_Login_lab_password.Name = "fLogin_Login_lab_password";
-            this.fLogin_Login_lab_password.Size = new System.Drawing.Size(97, 28);
+            this.fLogin_Login_lab_password.Size = new System.Drawing.Size(98, 28);
             this.fLogin_Login_lab_password.TabIndex = 12;
-            this.fLogin_Login_lab_password.Text = "Password";
+            this.fLogin_Login_lab_password.Text = "Mật khẩu";
             // 
             // fLogin_Login_lab_username
             // 
@@ -222,9 +222,9 @@ namespace GUI.fLogin
             this.fLogin_Login_lab_username.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fLogin_Login_lab_username.Location = new System.Drawing.Point(26, 299);
             this.fLogin_Login_lab_username.Name = "fLogin_Login_lab_username";
-            this.fLogin_Login_lab_username.Size = new System.Drawing.Size(104, 28);
+            this.fLogin_Login_lab_username.Size = new System.Drawing.Size(99, 28);
             this.fLogin_Login_lab_username.TabIndex = 11;
-            this.fLogin_Login_lab_username.Text = "Username";
+            this.fLogin_Login_lab_username.Text = "Tài khoản";
             // 
             // BorderlessForm
             // 

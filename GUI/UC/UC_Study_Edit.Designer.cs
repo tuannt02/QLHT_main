@@ -235,7 +235,7 @@ namespace GUI.UC
             this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
             this.btn_Edit.Size = new System.Drawing.Size(142, 45);
             this.btn_Edit.TabIndex = 10;
-            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.Text = "Sửa";
             this.btn_Edit.Click += new System.EventHandler(this.UC_Study_btn_Edit_Click);
             // 
             // panel2

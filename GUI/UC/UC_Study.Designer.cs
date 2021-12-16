@@ -93,7 +93,7 @@ namespace GUI.UC
             this.btn_Edit.ShadowDecoration.Parent = this.btn_Edit;
             this.btn_Edit.Size = new System.Drawing.Size(134, 46);
             this.btn_Edit.TabIndex = 0;
-            this.btn_Edit.Text = "Edit";
+            this.btn_Edit.Text = "Sửa";
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // uC_Study1

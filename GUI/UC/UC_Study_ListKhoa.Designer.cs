@@ -45,13 +45,13 @@ namespace GUI.UC
             this.lab_Recs = new System.Windows.Forms.Label();
             this.btn_Svmaster = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.dtgv = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -160,7 +160,7 @@ namespace GUI.UC
             this.lab_TenKhoa.Name = "lab_TenKhoa";
             this.lab_TenKhoa.Size = new System.Drawing.Size(1141, 43);
             this.lab_TenKhoa.TabIndex = 11;
-            this.lab_TenKhoa.Text = "Not found";
+            this.lab_TenKhoa.Text = "Không tìm thấy";
             this.lab_TenKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Search
@@ -207,9 +207,9 @@ namespace GUI.UC
             this.lab_Recs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(222)))));
             this.lab_Recs.Location = new System.Drawing.Point(12, 9);
             this.lab_Recs.Name = "lab_Recs";
-            this.lab_Recs.Size = new System.Drawing.Size(105, 28);
+            this.lab_Recs.Size = new System.Drawing.Size(111, 28);
             this.lab_Recs.TabIndex = 12;
-            this.lab_Recs.Text = "Records: 0";
+            this.lab_Recs.Text = "Số dòng: 0";
             // 
             // btn_Svmaster
             // 
@@ -244,6 +244,27 @@ namespace GUI.UC
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1147, 470);
             this.panel2.TabIndex = 11;
+            // 
+            // UC_AboutUs_scrbar_main
+            // 
+            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
+            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
+            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
+            this.UC_AboutUs_scrbar_main.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
+            this.UC_AboutUs_scrbar_main.InUpdate = false;
+            this.UC_AboutUs_scrbar_main.LargeChange = 10;
+            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(1137, 0);
+            this.UC_AboutUs_scrbar_main.Minimum = 1;
+            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
+            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
+            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
+            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 470);
+            this.UC_AboutUs_scrbar_main.TabIndex = 19;
+            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.UC_AboutUs_scrbar_main.ThumbStyle = Guna.UI2.WinForms.Enums.ThumbStyle.Inset;
+            this.UC_AboutUs_scrbar_main.Value = 1;
             // 
             // dtgv
             // 
@@ -348,27 +369,6 @@ namespace GUI.UC
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            // 
-            // UC_AboutUs_scrbar_main
-            // 
-            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
-            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
-            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
-            this.UC_AboutUs_scrbar_main.Dock = System.Windows.Forms.DockStyle.Right;
-            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
-            this.UC_AboutUs_scrbar_main.InUpdate = false;
-            this.UC_AboutUs_scrbar_main.LargeChange = 10;
-            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(1137, 0);
-            this.UC_AboutUs_scrbar_main.Minimum = 1;
-            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
-            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
-            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
-            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 470);
-            this.UC_AboutUs_scrbar_main.TabIndex = 19;
-            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.UC_AboutUs_scrbar_main.ThumbStyle = Guna.UI2.WinForms.Enums.ThumbStyle.Inset;
-            this.UC_AboutUs_scrbar_main.Value = 1;
             // 
             // UC_Study_ListKhoa
             // 

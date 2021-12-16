@@ -103,7 +103,7 @@ namespace DAO
 
         public void Delete_TempTable()
         {
-            DataProvider.Instance.ExecuteNonQuery("delete from temp_table");
+            DataProvider.Instance.ExecuteNonQuery("drop table temp_table");
         }
 
         public string GetMSSV()

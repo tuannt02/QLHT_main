@@ -38,6 +38,7 @@ namespace GUI.UC
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Search = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.dtgv = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +65,6 @@ namespace GUI.UC
             this.panel4 = new System.Windows.Forms.Panel();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.UC_AboutUs_scrbar_main = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
@@ -116,6 +116,27 @@ namespace GUI.UC
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(397, 614);
             this.panel3.TabIndex = 10;
+            // 
+            // UC_AboutUs_scrbar_main
+            // 
+            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
+            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
+            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
+            this.UC_AboutUs_scrbar_main.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
+            this.UC_AboutUs_scrbar_main.InUpdate = false;
+            this.UC_AboutUs_scrbar_main.LargeChange = 10;
+            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(387, 0);
+            this.UC_AboutUs_scrbar_main.Minimum = 1;
+            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
+            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
+            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
+            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 614);
+            this.UC_AboutUs_scrbar_main.TabIndex = 19;
+            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
+            this.UC_AboutUs_scrbar_main.ThumbStyle = Guna.UI2.WinForms.Enums.ThumbStyle.Inset;
+            this.UC_AboutUs_scrbar_main.Value = 1;
             // 
             // dtgv
             // 
@@ -563,7 +584,7 @@ namespace GUI.UC
             this.btn_send.ShadowDecoration.Parent = this.btn_send;
             this.btn_send.Size = new System.Drawing.Size(123, 45);
             this.btn_send.TabIndex = 7;
-            this.btn_send.Text = "Send";
+            this.btn_send.Text = "Gửi";
             this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
             // 
             // txb_mes
@@ -612,27 +633,6 @@ namespace GUI.UC
             // openFile
             // 
             this.openFile.FileName = "openFileDialog1";
-            // 
-            // UC_AboutUs_scrbar_main
-            // 
-            this.UC_AboutUs_scrbar_main.AutoRoundedCorners = true;
-            this.UC_AboutUs_scrbar_main.BindingContainer = this.dtgv;
-            this.UC_AboutUs_scrbar_main.BorderRadius = 4;
-            this.UC_AboutUs_scrbar_main.Dock = System.Windows.Forms.DockStyle.Right;
-            this.UC_AboutUs_scrbar_main.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.UC_AboutUs_scrbar_main.HoverState.Parent = null;
-            this.UC_AboutUs_scrbar_main.InUpdate = false;
-            this.UC_AboutUs_scrbar_main.LargeChange = 10;
-            this.UC_AboutUs_scrbar_main.Location = new System.Drawing.Point(387, 0);
-            this.UC_AboutUs_scrbar_main.Minimum = 1;
-            this.UC_AboutUs_scrbar_main.Name = "UC_AboutUs_scrbar_main";
-            this.UC_AboutUs_scrbar_main.PressedState.Parent = this.UC_AboutUs_scrbar_main;
-            this.UC_AboutUs_scrbar_main.ScrollbarSize = 10;
-            this.UC_AboutUs_scrbar_main.Size = new System.Drawing.Size(10, 614);
-            this.UC_AboutUs_scrbar_main.TabIndex = 19;
-            this.UC_AboutUs_scrbar_main.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(162)))), ((int)(((byte)(85)))));
-            this.UC_AboutUs_scrbar_main.ThumbStyle = Guna.UI2.WinForms.Enums.ThumbStyle.Inset;
-            this.UC_AboutUs_scrbar_main.Value = 1;
             // 
             // UC_Gmail
             // 
